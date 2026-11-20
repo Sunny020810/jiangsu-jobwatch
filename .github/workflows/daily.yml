@@ -57,3 +57,21 @@ jobs:
             git pull -q --rebase || true
             git push -q
           fi
+                - name: 上传招聘网页
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: docs
+
+  deploy:
+    needs: run
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.publish.outputs.page_url }}
+    steps:
+      - name: 发布招聘网页
+        id: publish
+        uses: actions/deploy-pages@v4
