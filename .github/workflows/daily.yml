@@ -1,0 +1,59 @@
+name: 每日抓取江苏高职招聘
+
+on:
+  schedule:
+    - cron: "17 23 * * *"   # UTC 23:17 = 北京时间每天 07:17（GitHub 定时可能延后几分钟到半小时）
+  workflow_dispatch:         # 允许在 Actions 页面手动点“Run workflow”
+
+permissions:
+  contents: write   # 把抓取结果提交回仓库
+  issues: write     # 每天开一个 Issue 作为日报
+
+concurrency:
+  group: jobwatch
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: 安装依赖（含读取 doc/wps/xls 附件的工具）
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends antiword libreoffice-writer-nogui libreoffice-calc-nogui > /dev/null
+          pip install -q -r requirements.txt
+
+      - name: 抓取、生成报告、推送
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
+          SERVERCHAN_KEY: ${{ secrets.SERVERCHAN_KEY }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          PAGES_ENABLED: ${{ vars.PAGES_ENABLED }}
+        run: python -m jobwatch run
+
+      - name: 保存结果到仓库
+        if: always()
+        run: |
+          git config user.name "jobwatch-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A state data docs REPORT.md || true
+          if git diff --cached --quiet; then
+            echo "没有变化"
+          else
+            git commit -q -m "日报 $(TZ=Asia/Shanghai date +%F)"
+            git pull -q --rebase || true
+            git push -q
+          fi
