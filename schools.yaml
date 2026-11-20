@@ -1,0 +1,118 @@
+# 江苏省高职院校名单（专科 91 所 + 职业本科 6 所）
+# 来源：教育部全国高等学校名单（2026 版，经大学生必备网整理）及江苏省政府升格通知。
+#
+# 字段说明：
+#   name          学校全称（用于在聚合网站、搜索结果里识别）
+#   city          所在城市
+#   type          公办专科 / 民办专科 / 中外合作专科 / 职业本科
+#   homepage      学校官网首页。留空或填错都没关系：程序会自动校验网页标题，
+#                 不匹配时会通过搜索引擎自动找到正确官网，并记在 state/sites.json 里。
+#   recruit_pages 可选。如果你知道学校的人事处“招聘信息”栏目网址，可以直接填在这里，
+#                 程序会优先使用，最稳妥。
+#   aliases       可选。学校的简称或曾用名，用来匹配聚合网站上的标题。
+#
+# 增加学校：照着格式加一段即可。不想看某类学校：在 config.yaml 的 include_types 里去掉。
+
+schools:
+  # ---------------- 公办专科（70） ----------------
+  - {name: 盐城幼儿师范高等专科学校, city: 盐城, type: 公办专科, homepage: ""}
+  - {name: 苏州幼儿师范高等专科学校, city: 苏州, type: 公办专科, homepage: ""}
+  - {name: 江苏工程职业技术学院, city: 南通, type: 公办专科, homepage: "https://www.jcet.edu.cn/"}
+  - {name: 苏州工艺美术职业技术学院, city: 苏州, type: 公办专科, homepage: "https://www.sgmart.edu.cn/"}
+  - {name: 连云港职业技术学院, city: 连云港, type: 公办专科, homepage: "https://www.lygtc.edu.cn/"}
+  - {name: 镇江市高等专科学校, city: 镇江, type: 公办专科, homepage: "https://www.zjc.edu.cn/", aliases: [镇江高专]}
+  - {name: 南通职业大学, city: 南通, type: 公办专科, homepage: "https://www.ntvu.edu.cn/"}
+  - {name: 沙洲职业工学院, city: 苏州, type: 公办专科, homepage: "https://www.szit.edu.cn/"}
+  - {name: 江苏经贸职业技术学院, city: 南京, type: 公办专科, homepage: "https://www.jseti.edu.cn/"}
+  - {name: 泰州职业技术学院, city: 泰州, type: 公办专科, homepage: "https://www.tzpc.edu.cn/"}
+  - {name: 江苏联合职业技术学院, city: 南京, type: 公办专科, homepage: ""}
+  - {name: 江苏海事职业技术学院, city: 南京, type: 公办专科, homepage: "https://www.jmi.edu.cn/"}
+  - {name: 无锡科技职业学院, city: 无锡, type: 公办专科, homepage: ""}
+  - {name: 江苏医药职业学院, city: 盐城, type: 公办专科, homepage: "https://www.jsmc.edu.cn/"}
+  - {name: 扬州环境资源职业技术学院, city: 扬州, type: 公办专科, homepage: ""}
+  - {name: 南通科技职业学院, city: 南通, type: 公办专科, homepage: "https://www.ntst.edu.cn/"}
+  - {name: 苏州经贸职业技术学院, city: 苏州, type: 公办专科, homepage: "https://www.szjm.edu.cn/"}
+  - {name: 苏州工业职业技术学院, city: 苏州, type: 公办专科, homepage: "https://www.siit.edu.cn/"}
+  - {name: 苏州卫生职业技术学院, city: 苏州, type: 公办专科, homepage: "https://www.szhct.edu.cn/"}
+  - {name: 无锡商业职业技术学院, city: 无锡, type: 公办专科, homepage: "https://www.wxic.edu.cn/"}
+  - {name: 江苏航运职业技术学院, city: 南通, type: 公办专科, homepage: ""}
+  - {name: 南京交通职业技术学院, city: 南京, type: 公办专科, homepage: "https://www.njitt.edu.cn/"}
+  - {name: 江苏电子信息职业学院, city: 淮安, type: 公办专科, homepage: "https://www.jsei.edu.cn/"}
+  - {name: 江苏农牧科技职业学院, city: 泰州, type: 公办专科, homepage: "https://www.jsahvc.edu.cn/"}
+  - {name: 常州纺织服装职业技术学院, city: 常州, type: 公办专科, homepage: "https://www.cztgi.edu.cn/"}
+  - {name: 苏州农业职业技术学院, city: 苏州, type: 公办专科, homepage: "https://www.szai.edu.cn/"}
+  - {name: 苏州工业园区职业技术学院, city: 苏州, type: 公办专科, homepage: "https://www.sipivt.edu.cn/"}
+  - {name: 南京科技职业学院, city: 南京, type: 公办专科, homepage: "https://www.njpi.edu.cn/"}
+  - {name: 常州工业职业技术学院, city: 常州, type: 公办专科, homepage: "https://www.ciit.edu.cn/"}
+  - {name: 常州工程职业技术学院, city: 常州, type: 公办专科, homepage: "https://www.czie.edu.cn/"}
+  - {name: 江苏农林职业技术学院, city: 镇江, type: 公办专科, homepage: "https://www.jsafc.edu.cn/"}
+  - {name: 江苏食品药品职业技术学院, city: 淮安, type: 公办专科, homepage: "https://www.jsfpc.edu.cn/"}
+  - {name: 南京铁道职业技术学院, city: 南京, type: 公办专科, homepage: "https://www.njrts.edu.cn/"}
+  - {name: 徐州工业职业技术学院, city: 徐州, type: 公办专科, homepage: "https://www.xzcit.cn/"}
+  - {name: 江苏信息职业技术学院, city: 无锡, type: 公办专科, homepage: "https://www.jsit.edu.cn/"}
+  - {name: 宿迁职业技术学院, city: 宿迁, type: 公办专科, homepage: "https://www.sqc.edu.cn/"}
+  - {name: 南京信息职业技术学院, city: 南京, type: 公办专科, homepage: "https://www.njcit.cn/"}
+  - {name: 常州机电职业技术学院, city: 常州, type: 公办专科, homepage: "https://www.czimt.edu.cn/"}
+  - {name: 江阴职业技术学院, city: 无锡, type: 公办专科, homepage: ""}
+  - {name: 无锡城市职业技术学院, city: 无锡, type: 公办专科, homepage: "https://www.wxcu.edu.cn/"}
+  - {name: 无锡工艺职业技术学院, city: 无锡, type: 公办专科, homepage: ""}
+  - {name: 苏州健雄职业技术学院, city: 苏州, type: 公办专科, homepage: "http://www.csit.edu.cn/"}
+  - {name: 盐城工业职业技术学院, city: 盐城, type: 公办专科, homepage: "https://www.ycit.cn/"}
+  - {name: 江苏财经职业技术学院, city: 淮安, type: 公办专科, homepage: "https://www.jscjxy.cn/"}
+  - {name: 扬州工业职业技术学院, city: 扬州, type: 公办专科, homepage: "https://www.ypi.edu.cn/"}
+  - {name: 江苏城市职业学院, city: 南京, type: 公办专科, homepage: ""}
+  - {name: 南京城市职业学院, city: 南京, type: 公办专科, homepage: ""}
+  - {name: 南京机电职业技术学院, city: 南京, type: 公办专科, homepage: ""}
+  - {name: 南京旅游职业学院, city: 南京, type: 公办专科, homepage: "https://www.nith.edu.cn/"}
+  - {name: 江苏卫生健康职业学院, city: 南京, type: 公办专科, homepage: ""}
+  - {name: 苏州信息职业技术学院, city: 苏州, type: 公办专科, homepage: ""}
+  - {name: 苏州工业园区服务外包职业学院, city: 苏州, type: 公办专科, homepage: "https://www.siso.edu.cn/"}
+  - {name: 徐州幼儿师范高等专科学校, city: 徐州, type: 公办专科, homepage: ""}
+  - {name: 徐州生物工程职业技术学院, city: 徐州, type: 公办专科, homepage: ""}
+  - {name: 江苏商贸职业学院, city: 南通, type: 公办专科, homepage: ""}
+  - {name: 南通师范高等专科学校, city: 南通, type: 公办专科, homepage: "https://www.ntnc.edu.cn/"}
+  - {name: 江苏护理职业学院, city: 淮安, type: 公办专科, homepage: ""}
+  - {name: 江苏财会职业学院, city: 连云港, type: 公办专科, homepage: "http://www.jscfa.edu.cn/"}
+  - {name: 江苏城乡建设职业学院, city: 常州, type: 公办专科, homepage: ""}
+  - {name: 江苏航空职业技术学院, city: 镇江, type: 公办专科, homepage: ""}
+  - {name: 江苏安全技术职业学院, city: 徐州, type: 公办专科, homepage: ""}
+  - {name: 江苏旅游职业学院, city: 扬州, type: 公办专科, homepage: ""}
+  - {name: 常州幼儿师范高等专科学校, city: 常州, type: 公办专科, homepage: ""}
+  - {name: 江苏司法警官职业学院, city: 南京, type: 公办专科, homepage: ""}
+  - {name: 盐城农业科技职业学院, city: 盐城, type: 公办专科, homepage: ""}
+  - {name: 宿迁幼儿师范高等专科学校, city: 宿迁, type: 公办专科, homepage: ""}
+  - {name: 无锡师范高等专科学校, city: 无锡, type: 公办专科, homepage: ""}
+  - {name: 常州铁道职业技术学院, city: 常州, type: 公办专科, homepage: ""}
+  - {name: 苏州旅游职业学院, city: 苏州, type: 公办专科, homepage: ""}
+  - {name: 南通卫生健康职业学院, city: 南通, type: 公办专科, homepage: ""}
+
+  # ---------------- 民办专科（20）+ 中外合作（1） ----------------
+  - {name: 明达职业技术学院, city: 盐城, type: 民办专科, homepage: "http://www.mdut.cn/"}
+  - {name: 九州职业技术学院, city: 徐州, type: 民办专科, homepage: ""}
+  - {name: 硅湖职业技术学院, city: 苏州, type: 民办专科, homepage: ""}
+  - {name: 应天职业技术学院, city: 南京, type: 民办专科, homepage: ""}
+  - {name: 苏州托普信息职业技术学院, city: 苏州, type: 民办专科, homepage: ""}
+  - {name: 太湖创意职业技术学院, city: 无锡, type: 民办专科, homepage: ""}
+  - {name: 炎黄职业技术学院, city: 淮安, type: 民办专科, homepage: ""}
+  - {name: 正德职业技术学院, city: 南京, type: 民办专科, homepage: ""}
+  - {name: 钟山职业技术学院, city: 南京, type: 民办专科, homepage: ""}
+  - {name: 无锡南洋职业技术学院, city: 无锡, type: 民办专科, homepage: ""}
+  - {name: 江南影视艺术职业学院, city: 无锡, type: 民办专科, homepage: ""}
+  - {name: 金肯职业技术学院, city: 南京, type: 民办专科, homepage: ""}
+  - {name: 建东职业技术学院, city: 常州, type: 民办专科, homepage: ""}
+  - {name: 江海职业技术学院, city: 扬州, type: 民办专科, homepage: ""}
+  - {name: 金山职业技术学院, city: 镇江, type: 民办专科, homepage: ""}
+  - {name: 昆山登云科技职业学院, city: 苏州, type: 民办专科, homepage: ""}
+  - {name: 南京视觉艺术职业学院, city: 南京, type: 民办专科, homepage: ""}
+  - {name: 苏州高博职业学院, city: 苏州, type: 民办专科, homepage: ""}
+  - {name: 宿迁泽达职业技术学院, city: 宿迁, type: 民办专科, homepage: ""}
+  - {name: 扬州中瑞酒店职业学院, city: 扬州, type: 民办专科, homepage: ""}
+  - {name: 苏州百年职业学院, city: 苏州, type: 中外合作专科, homepage: ""}
+
+  # ---------------- 职业本科（原高职升格，仍招专科生，岗位性质相近） ----------------
+  - {name: 南京工业职业技术大学, city: 南京, type: 职业本科, homepage: "https://www.niit.edu.cn/"}
+  - {name: 苏州职业技术大学, city: 苏州, type: 职业本科, homepage: "https://www.jssvc.edu.cn/", aliases: [苏州市职业大学]}
+  - {name: 扬州职业技术大学, city: 扬州, type: 职业本科, homepage: "https://www.yzpc.edu.cn/", aliases: [扬州市职业大学]}
+  - {name: 无锡职业技术大学, city: 无锡, type: 职业本科, homepage: "https://www.wxit.edu.cn/", aliases: [无锡职业技术学院]}
+  - {name: 江苏建筑职业技术大学, city: 徐州, type: 职业本科, homepage: "https://www.jsjzi.edu.cn/", aliases: [江苏建筑职业技术学院]}
+  - {name: 常州信息职业技术大学, city: 常州, type: 职业本科, homepage: "https://www.ccit.js.cn/", aliases: [常州信息职业技术学院]}
