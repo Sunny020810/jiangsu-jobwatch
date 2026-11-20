@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>江苏高职招聘日报</title>
+<style>
+/* VOICE: 平实、可靠，像单位门口的公告栏，给不熟悉电脑的人看
+   IDEA: 一张每天更新的红头“招聘公告栏”
+   PICTURE: 顶部三块大数字（对口 / 可能 / 正在报名），下面就是公告卡片本身
+   COLOUR and TYPE: 白纸底、公告红、墨黑字，蓝色只表示“还能报名”；系统中文字体（国内打开不依赖外网字体）
+   LAYOUT: 单栏，最宽 880px，手机优先，按钮 44px 以上 */
+:root{color-scheme:light dark;
+--bg:light-dark(#ffffff,#15171a);--paper:light-dark(#ffffff,#1d2024);--ink:light-dark(#1b1d21,#eceef1);
+--mute:light-dark(#5d636c,#a3a9b2);--line:light-dark(#e3e5e8,#30343a);--soft:light-dark(#f4f5f7,#24282d);
+--red:#b3261e;--redtx:light-dark(#b3261e,#ff9b92);--redsoft:light-dark(#fcebea,#3a1f1d);--amber:light-dark(#8a5a00,#f0c062);--ambersoft:light-dark(#fff4dc,#3a2f17);
+--blue:light-dark(#1557d0,#7fa8ff);--bluesoft:light-dark(#e8f0ff,#1c2a45)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;overflow-x:clip}
+a{color:inherit}
+.head{background:var(--red);color:#fff;padding:22px max(4vw,16px) 26px}
+.head .in,.wrap{max-width:880px;margin:0 auto}
+.head h1{margin:0;font-size:clamp(26px,6vw,36px);line-height:1.15;font-weight:800;letter-spacing:.02em;text-wrap:balance}
+.head p{margin:6px 0 0;font-size:15px;opacity:.92}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;max-width:880px;margin:-16px auto 0;padding:0 max(4vw,16px)}
+.stat{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 14px;text-align:left;cursor:pointer;color:var(--ink);font:inherit;box-shadow:0 2px 10px rgba(0,0,0,.06);min-height:44px}
+.stat b{display:block;font-size:clamp(28px,7vw,40px);line-height:1.1;font-variant-numeric:tabular-nums}
+.stat span{font-size:14px;color:var(--mute)}
+.stat.on{outline:2px solid var(--ink);outline-offset:-2px}
+.stat.a b{color:var(--redtx)}.stat.d b{color:var(--blue)}
+.wrap{padding:0 max(4vw,16px)}
+.tabs{display:flex;gap:6px;margin:20px 0 10px;overflow-x:auto;padding-bottom:2px}
+.tab{flex:none;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:999px;padding:9px 16px;font:inherit;font-size:16px;min-height:44px;cursor:pointer}
+.tab.on{background:var(--ink);color:var(--bg);border-color:var(--ink);font-weight:700}
+.filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+select,input[type=search]{width:100%;font:inherit;font-size:16px;min-height:44px;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink)}
+.row2{display:flex;gap:8px;margin-top:8px;align-items:center;flex-wrap:wrap}
+.row2 input[type=search]{flex:1 1 220px}
+.check{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 4px;font-size:16px;cursor:pointer;white-space:nowrap}
+.check input{width:22px;height:22px;accent-color:var(--blue)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.count{color:var(--mute);font-size:14px;margin:14px 2px 4px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0}
+.card.A{border-color:color-mix(in srgb,var(--red) 45%,var(--line));box-shadow:inset 4px 0 0 var(--red)}
+.card.B{box-shadow:inset 4px 0 0 var(--amber)}
+.meta{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:14px;color:var(--mute)}
+.meta strong{color:var(--ink);font-weight:700}
+.title{display:block;font-size:18px;font-weight:700;line-height:1.45;margin:6px 0 8px;text-decoration:none}
+.title:hover{text-decoration:underline}
+.badges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.bd{font-size:13px;padding:2px 8px;border-radius:6px;background:var(--soft);white-space:nowrap}
+.bd.A{background:var(--redsoft);color:var(--redtx);font-weight:700}.bd.B{background:var(--ambersoft);color:var(--amber);font-weight:700}
+.bd.new{background:var(--red);color:#fff}.bd.open{background:var(--bluesoft);color:var(--blue);font-weight:700}.bd.closed{color:var(--mute)}
+.posts{list-style:none;margin:0 0 8px;padding:0;border-top:1px dashed var(--line)}
+.posts li{padding:7px 0;border-bottom:1px dashed var(--line);font-size:15px}
+.posts .k{font-size:12px;font-weight:700;padding:1px 6px;border-radius:4px;margin-right:6px;vertical-align:1px}
+.posts .k.A{background:var(--redsoft);color:var(--redtx)}.posts .k.B{background:var(--ambersoft);color:var(--amber)}
+.posts small{display:block;color:var(--mute);font-size:14px}
+.why{font-size:14px;color:var(--mute)}
+.warn{font-size:14px;color:var(--amber);background:var(--ambersoft);padding:6px 10px;border-radius:8px;margin-top:8px}
+.acts{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 16px;border-radius:10px;border:1px solid var(--line);background:var(--soft);color:var(--ink);font:inherit;font-size:16px;text-decoration:none;cursor:pointer}
+.btn.main{background:var(--red);border-color:var(--red);color:#fff;font-weight:700}
+.empty{text-align:center;color:var(--mute);padding:40px 10px}
+.more{display:block;width:100%;margin:12px 0}
+details{background:var(--soft);border-radius:12px;padding:12px 16px;margin:12px 0}
+summary{cursor:pointer;font-weight:700;min-height:32px}
+details p,details li{font-size:15px}
+.foot{color:var(--mute);font-size:14px;padding:16px 0 48px}
+@media(max-width:600px){.filters{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.filters select:last-child{grid-column:1/-1}.stat{padding:10px}}
+@media(prefers-reduced-motion:no-preference){.card{animation:in .25s ease-out both}@keyframes in{from{opacity:0;transform:translateY(4px)}}}
+</style>
+</head>
+<body>
+<header class="head"><div class="in">
+<h1>江苏高职招聘日报 · 金融硕士</h1>
+<p id="upd">数据加载中…</p>
+</div></header>
+
+<div class="stats">
+<button class="stat a" data-go="A"><b id="nA">0</b><span>金融对口</span></button>
+<button class="stat b" data-go="B"><b id="nB">0</b><span>可能合适</span></button>
+<button class="stat d" data-go="open"><b id="nO">0</b><span>正在报名</span></button>
+</div>
+
+<main class="wrap">
+<nav class="tabs" id="tabs">
+<button class="tab on" data-t="AB">推荐（对口 + 可能）</button>
+<button class="tab" data-t="A">只看金融对口</button>
+<button class="tab" data-t="ALL">全部招聘公告</button>
+<button class="tab" data-t="P">笔试面试通知</button>
+</nav>
+
+<div class="filters">
+<select id="city" aria-label="城市"><option value="">全部城市</option></select>
+<select id="role" aria-label="岗位类型"><option value="">全部岗位</option><option>专任教师</option><option>辅导员</option><option>行政管理</option><option>实验实训</option></select>
+<select id="stype" aria-label="学校类型"><option value="">公办和民办都看</option><option value="公办专科">只看公办专科</option><option value="民办专科">只看民办专科</option><option value="职业本科">只看职业本科</option></select>
+</div>
+<div class="row2">
+<input type="search" id="q" placeholder="搜学校、岗位、专业，比如：南京、辅导员">
+<label class="check"><input type="checkbox" id="openOnly">只看还能报名的</label>
+</div>
+
+<p class="count" id="count"></p>
+<div id="list"></div>
+<button class="btn more" id="more" hidden>显示更多</button>
+
+<details>
+<summary>怎么用这个页面？</summary>
+<ul>
+<li><b>红色“金融对口”</b>：岗位的专业要求里写了金融，或者写了“经济类”（江苏的招聘专业目录里，金融学、金融硕士都属于经济类），而且接受硕士学历。</li>
+<li><b>黄色“可能合适”</b>：专业不限、相近专业（经济、财会、管理），或者附件没能自动读出来，需要你点开原文看一眼。</li>
+<li><b>正在报名</b>：从公告里识别出的报名截止日期还没到。没识别出日期的公告不会算进去，请以原文为准。</li>
+<li>每天早上 7 点多自动更新一次。<b>报名前一定要点“查看原文”，以学校或人社部门的官方公告为准。</b></li>
+<li>手机上可以把这个页面“添加到主屏幕”或在微信里“收藏”，下次直接打开。</li>
+</ul>
+</details>
+<details id="healthBox"><summary id="healthSum">今天的检查情况</summary><div id="health"></div></details>
+<p class="foot">本页由自动程序汇总公开信息生成，可能有遗漏或识别错误，仅供参考。</p>
+</main>
+
+<script id="payload" type="application/json">{"updated": "2026-11-21 00:37", "today": "2026-11-21", "window": 60, "items": [{"t": "B", "title": "无锡职业技术大学2026年长期公开招聘高层次人才公告", "url": "https://www.wxit.edu.cn/info/1029/176831.htm", "school": "无锡职业技术大学", "city": "无锡", "stype": "职业本科", "date": "2027-08-31", "dl": null, "new": true, "roles": ["专任教师", "行政管理"], "rows": [], "why": "提到相近专业「审计」；正文提到附件/岗位表，但没抓到附件", "manual": true, "alt": []}, {"t": "B", "title": "江苏工程职业技术学院2026年公开招聘高层次人才公告-江苏工程职业技术学院人事处", "url": "https://rsc.jcet.edu.cn:443/info/1251/2419.htm", "school": "江苏工程职业技术学院", "city": "南通", "stype": "公办专科", "date": "2026-12-31", "dl": "2026-05-25", "new": true, "roles": ["专任教师", "行政管理"], "rows": [{"t": "B", "post": "经济管理学院专任教师", "major": "会计学、税务、会计、金融、金融学、审计、会计与金融", "degree": "博士研究生 博士", "count": "1", "school": ""}], "why": "专业含「金融」但仅招博士", "manual": false, "alt": []}, {"t": "C", "title": "关于组织辅导员专项课题结项工作的通知", "url": "https://www.zjc.edu.cn/bgxt/viewnotice.php?id=8771", "school": "镇江市高等专科学校", "city": "镇江", "stype": "公办专科", "date": "2026-12-07", "dl": "2026-12-07", "new": true, "roles": ["辅导员"], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "B", "title": "无锡职业技术大学2026年招聘工作人员公告", "url": "https://www.wxit.edu.cn/info/1029/176391.htm", "school": "无锡职业技术大学", "city": "无锡", "stype": "职业本科", "date": "2026-11-30", "dl": "2026-11-03", "new": true, "roles": ["辅导员", "行政管理"], "rows": [], "why": "正文提到附件/岗位表，但没抓到附件", "manual": true, "alt": []}, {"t": "C", "title": "关于印发《2022年学院专业技术岗位晋级聘用实施办法》的通知-沙洲职业工学院组织人事处", "url": "https://rsc.szit.edu.cn/info/1006/2725.htm", "school": "沙洲职业工学院", "city": "苏州", "stype": "公办专科", "date": null, "dl": null, "new": true, "roles": ["行政管理", "实验实训"], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "C", "title": "高层次暨领军型人才招聘", "url": "https://www.cztgi.edu.cn/_web/_custom/cztgi/link.html?target=https%3A%2F%2Fjshrss.jiangsu.gov.cn%2Fart%2F2026%2F3%2F31%2Fart_78506_11752285.html", "school": "常州纺织服装职业技术学院", "city": "常州", "stype": "公办专科", "date": null, "dl": null, "new": true, "roles": [], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "P", "title": "2026年江苏省职业院校教学能力比赛常州工业职业技术学院参赛教师资格信息公示", "url": "https://www.ciit.edu.cn/2026/0920/c2351a144794/page.htm", "school": "常州工业职业技术学院", "city": "常州", "stype": "公办专科", "date": null, "dl": null, "new": true, "roles": ["辅导员", "行政管理"], "rows": [], "why": "", "manual": false, "alt": ["http://www.ciit.edu.cn/2026/0920/c2351a144794/page.htm"]}, {"t": "C", "title": "【同行·常工业】我校辅导员赴海目星激光智能装备（江苏）有限公司开展调研活动", "url": "https://www.ciit.edu.cn/2026/1120/c1182a146390/page.htm", "school": "常州工业职业技术学院", "city": "常州", "stype": "公办专科", "date": "2026-11-20", "dl": null, "new": true, "roles": ["辅导员", "行政管理"], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "B", "title": "岗位设置管理与聘用办法", "url": "http://xxgk.cztgi.edu.cn/1965/list.htm", "school": "常州纺织服装职业技术学院", "city": "常州", "stype": "公办专科", "date": null, "dl": null, "new": true, "roles": ["专任教师", "辅导员", "行政管理", "实验实训"], "rows": [], "why": "提到相近专业「会计」", "manual": false, "alt": []}, {"t": "P", "title": "镇江市高等专科学校2026年下半年高等学校教师资格通过认定人员公示", "url": "https://www.zjc.edu.cn/bgxt/viewnotice.php?id=8774", "school": "镇江市高等专科学校", "city": "镇江", "stype": "公办专科", "date": null, "dl": null, "new": true, "roles": ["行政管理"], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "C", "title": "关于方轶等9位同志岗位聘用的...", "url": "https://www.nith.edu.cn/rsc/content.jsp?urltype=news.NewsContentUrl&wbtreeid=1149&wbnewsid=17901", "school": "南京旅游职业学院", "city": "南京", "stype": "公办专科", "date": null, "dl": null, "new": true, "roles": [], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "B", "title": "南旅院〔2025〕4号 南京旅游职业学院产业教授聘用管理办法（...", "url": "https://www.nith.edu.cn/rsc/info/1370/17031.htm", "school": "南京旅游职业学院", "city": "南京", "stype": "公办专科", "date": null, "dl": null, "new": true, "roles": [], "rows": [], "why": "附件未能自动解析：南旅院〔2025〕4号 南京旅游职业学院产业教授聘用管理办法：PDF 可能是扫描图片，需人工查看", "manual": true, "alt": []}, {"t": "P", "title": "南通师范高等专科学校2026年公开招聘高层次人才（第二批）面试公告", "url": "https://www.ntnc.edu.cn/2026/1120/c878a43291/page.htm", "school": "南通师范高等专科学校", "city": "南通", "stype": "公办专科", "date": "2026-11-20", "dl": null, "new": true, "roles": ["专任教师", "行政管理"], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "C", "title": "我校学子在第三届全国信息通信行业职业技能竞赛全国总决赛中斩获一等奖、二等奖 11月13日至14日，2026年全国行业职业技能竞赛——第三届全国信息通信行业职业技能竞赛通信网络管理员、传输机务员赛项全国总决赛在重庆工商职业学院举行。我院现代通信工程专业学子首次参赛即斩获全国一等奖1项、二等奖1项。其中，张默轩同学获通信网络管理员赛项全国一等奖，柏贵元同学获传输机务员赛项全国二等奖。本届大赛由中国通信学会、中国就业培训技术指导中心主办。竞赛紧密对接国家职业标准与行业真实岗位需求，分别聚焦空天地智联网与光宽带网络技术方向，是检验信息通信人才培养质量的重要平台。备赛期间，学院认真组织选拔与集训，参赛学生刻苦训练，将理论知识转化为工程实践能力；校企合作单位选派工程师全程提供技术", "url": "https://www.niit.edu.cn/34/6b/c4062a78955/page.htm", "school": "南京工业职业技术大学", "city": "南京", "stype": "职业本科", "date": "2026-11-20", "dl": null, "new": true, "roles": [], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "P", "title": "10 08 2026年上半年扬州职业技术大学公开招聘高层次人才面试成绩（二）", "url": "https://www.yzpc.edu.cn/2026/0811/c388a74744/page.htm", "school": "扬州职业技术大学", "city": "扬州", "stype": "职业本科", "date": null, "dl": null, "new": true, "roles": [], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "C", "title": "苏州托普信息职业技术学院 2026年招聘公告", "url": "https://www.gaoxiaojob.com/company/detail/9886.html", "school": "苏州托普信息职业技术学院", "city": "苏州", "stype": "民办专科", "date": null, "dl": null, "new": true, "roles": [], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "C", "title": "炎黄职业技术学院 2026年招聘公告", "url": "https://www.gaoxiaojob.com/company/detail/2451.html", "school": "炎黄职业技术学院", "city": "淮安", "stype": "民办专科", "date": null, "dl": null, "new": true, "roles": ["专任教师"], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "B", "title": "沙洲职业工学院 2026年公开招聘博士研究生公告", "url": "https://www.gaoxiaojob.com/company/detail/125618.html", "school": "沙洲职业工学院", "city": "苏州", "stype": "公办专科", "date": null, "dl": null, "new": true, "roles": ["专任教师", "实验实训"], "rows": [], "why": "提到相近专业「经济」", "manual": false, "alt": []}, {"t": "C", "title": "南京视觉艺术职业学院 2026年人才引进公告", "url": "https://www.gaoxiaojob.com/company/detail/575.html", "school": "南京视觉艺术职业学院", "city": "南京", "stype": "民办专科", "date": null, "dl": null, "new": true, "roles": [], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "B", "title": "盐城幼儿师范高等专科学校 2026年面向海内外长期引进高层次人才公告", "url": "https://www.gaoxiaojob.com/company/detail/78376.html", "school": "盐城幼儿师范高等专科学校", "city": "盐城", "stype": "公办专科", "date": null, "dl": null, "new": true, "roles": [], "rows": [], "why": "提到相近专业「工商管理」", "manual": false, "alt": ["https://www.gaoxiaojob.com/announcement/detail/382841.html"]}, {"t": "B", "title": "无锡科技职业学院 2026年公开招聘高层次人才公告（长期）", "url": "https://www.gaoxiaojob.com/company/detail/9988.html", "school": "无锡科技职业学院", "city": "无锡", "stype": "公办专科", "date": null, "dl": null, "new": true, "roles": ["专任教师"], "rows": [], "why": "提到相近专业「经济」", "manual": false, "alt": []}, {"t": "B", "title": "苏州工业职业技术学院 2026年面向社会长期招聘高层次人才公告", "url": "https://www.gaoxiaojob.com/company/detail/943.html", "school": "苏州工业职业技术学院", "city": "苏州", "stype": "公办专科", "date": null, "dl": null, "new": true, "roles": [], "rows": [{"t": "B", "post": "经济管理学院专任教师 面议 江苏苏州 博士研究生", "major": "应用经济学,工商管理,数字经济", "degree": "经济管理学院专任教师 面议 江苏苏州 博士研究生 应用经济学,工商管理,数字经济", "count": "", "school": ""}], "why": "专业含「应用经济学」但仅招博士", "manual": false, "alt": ["https://www.gaoxiaojob.com/announcement/detail/382250.html"]}, {"t": "C", "title": "苏州健雄职业技术学院 2026年长期公开招聘公告", "url": "https://www.gaoxiaojob.com/company/detail/8564.html", "school": "苏州健雄职业技术学院", "city": "苏州", "stype": "公办专科", "date": null, "dl": null, "new": true, "roles": [], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "B", "title": "苏州职业技术大学 事业编制！2026年公开招聘高层次人才公告", "url": "https://www.gaoxiaojob.com/company/detail/564.html", "school": "苏州职业技术大学", "city": "苏州", "stype": "职业本科", "date": null, "dl": null, "new": true, "roles": ["专任教师", "行政管理", "实验实训"], "rows": [], "why": "提到相近专业「经济」", "manual": false, "alt": []}, {"t": "C", "title": "苏州百年职业学院 2026年招聘公告", "url": "https://www.gaoxiaojob.com/company/detail/11641.html", "school": "苏州百年职业学院", "city": "苏州", "stype": "中外合作专科", "date": null, "dl": null, "new": true, "roles": [], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "C", "title": "昆山登云科技职业学院 2026年人才招聘", "url": "https://www.gaoxiaojob.com/company/detail/48673.html", "school": "昆山登云科技职业学院", "city": "苏州", "stype": "民办专科", "date": null, "dl": null, "new": true, "roles": ["实验实训"], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "C", "title": "苏州高博职业学院 2026年招聘公告", "url": "https://www.gaoxiaojob.com/company/detail/138.html", "school": "苏州高博职业学院", "city": "苏州", "stype": "民办专科", "date": null, "dl": null, "new": true, "roles": [], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "B", "title": "炎黄职业技术学院2026年招聘专业带头人公告", "url": "https://www.gaoxiaojob.com/announcement/detail/432716.html", "school": "炎黄职业技术学院", "city": "淮安", "stype": "民办专科", "date": "2026-11-20", "dl": null, "new": true, "roles": ["辅导员", "行政管理", "实验实训"], "rows": [{"t": "B", "post": "大数据与会计专业带头人 面议 江苏淮安 硕士研究生 收藏 申请职位", "major": "大数据与会计专业带头人 面议 江苏淮安 硕士研究生 工商管理", "degree": "大数据与会计专业带头人 面议 江苏淮安 硕士研究生 工商管理 收藏 申请职位", "count": "", "school": ""}, {"t": "B", "post": "电子商务专业带头人 面议 江苏淮安 硕士研究生 收藏 申请职位", "major": "电子商务专业带头人 面议 江苏淮安 硕士研究生 工商管理", "degree": "电子商务专业带头人 面议 江苏淮安 硕士研究生 工商管理 收藏 申请职位", "count": "", "school": ""}], "why": "相近专业「会计」；相近专业「工商管理」", "manual": false, "alt": []}, {"t": "C", "title": "无锡职业技术大学2026年工作人员招聘考核（计算机能力测试）公告", "url": "https://www.wxit.edu.cn/info/1029/177651.htm", "school": "无锡职业技术大学", "city": "无锡", "stype": "职业本科", "date": "2026-11-18", "dl": null, "new": true, "roles": ["行政管理"], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "B", "title": "江苏省南通峻华中等职业学校2026年招聘储备人才公告", "url": "https://www.gaoxiaojob.com/announcement/detail/446279.html", "school": "待确认", "city": "", "stype": "", "date": "2026-11-18", "dl": "2027-05-16", "new": true, "roles": ["专任教师", "行政管理", "实验实训"], "rows": [{"t": "B", "post": "会计教师 面议 江苏南通 本科", "major": "会计教师 面议 江苏南通 本科  收藏 申请职位", "degree": "会计教师 面议 江苏南通 本科  收藏 申请职位", "count": "", "school": ""}, {"t": "B", "post": "市场营销、电子商务教师 面议 江苏南通 本科", "major": "市场营销、电子商务教师 面议 江苏南通 本科  收藏 申请职位", "degree": "市场营销、电子商务教师 面议 江苏南通 本科  收藏 申请职位", "count": "", "school": ""}], "why": "相近专业「会计」；相近专业「电子商务」", "manual": false, "alt": []}, {"t": "C", "title": "副校长张军带队赴淮安高新区开展人才需求调研暨访企拓岗活动", "url": "https://www.jsfpc.edu.cn/2026/1116/c42a95018/page.htm", "school": "江苏食品药品职业技术学院", "city": "淮安", "stype": "公办专科", "date": "2026-11-17", "dl": null, "new": true, "roles": ["辅导员", "实验实训"], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "C", "title": "我院微光护行辅导员工作室经验亮相市级志愿服务赋能培训班", "url": "https://www.csit.edu.cn/2026/1112/c3487a56387/page.htm", "school": "苏州健雄职业技术学院", "city": "苏州", "stype": "公办专科", "date": "2026-11-17", "dl": null, "new": true, "roles": ["辅导员"], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "P", "title": "苏州健雄职业技术学院2026年长期公开招聘博士教师考核成绩公示（第三批）", "url": "https://www.csit.edu.cn/2026/1113/c65a56331/page.htm", "school": "苏州健雄职业技术学院", "city": "苏州", "stype": "公办专科", "date": "2026-11-13", "dl": null, "new": true, "roles": ["行政管理"], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "C", "title": "我校举行老药工传承工作室导师聘任暨“工匠课堂”活动", "url": "https://www.jsmc.edu.cn/2026/1112/c788a85728/page.htm", "school": "江苏医药职业学院", "city": "盐城", "stype": "公办专科", "date": "2026-11-12", "dl": null, "new": true, "roles": ["实验实训"], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "C", "title": "苏州健雄职业技术学院2026年长期公开招聘博士研究生教师考核公告（第三批）", "url": "https://www.csit.edu.cn/2026/1111/c65a56282/page.htm", "school": "苏州健雄职业技术学院", "city": "苏州", "stype": "公办专科", "date": "2026-11-11", "dl": null, "new": true, "roles": ["行政管理"], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "P", "title": "高等学校教师资格认定人员公示名册", "url": "https://www.szit.edu.cn/info/1111/62581.htm", "school": "沙洲职业工学院", "city": "苏州", "stype": "公办专科", "date": "2026-11-10", "dl": null, "new": true, "roles": ["专任教师", "辅导员", "行政管理"], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "B", "title": "南通师范高等专科学校2026年公开招聘高层次人才资格复审公告（第二批）", "url": "https://www.ntnc.edu.cn/2026/1110/c878a43188/page.htm", "school": "南通师范高等专科学校", "city": "南通", "stype": "公办专科", "date": "2026-11-10", "dl": null, "new": true, "roles": ["专任教师", "行政管理"], "rows": [], "why": "提到相近专业「经济」", "manual": false, "alt": []}, {"t": "C", "title": "无锡职业技术大学2026年招聘工作人员资格初审及选拔考核的预公告", "url": "https://www.wxit.edu.cn/info/1029/177261.htm", "school": "无锡职业技术大学", "city": "无锡", "stype": "职业本科", "date": "2026-11-10", "dl": "2026-11-12", "new": true, "roles": ["行政管理"], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "P", "title": "苏州健雄职业技术学院2026年长期公开招聘博士研究生教师第三批资格初审通过人员名单公示", "url": "https://www.csit.edu.cn/2026/1110/c65a56247/page.htm", "school": "苏州健雄职业技术学院", "city": "苏州", "stype": "公办专科", "date": "2026-11-09", "dl": "2026-11-10", "new": true, "roles": ["行政管理"], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "C", "title": "2026年下半年苏州职业技术大学长期公开招聘高层次及紧缺人才公告", "url": "https://www.jssvc.edu.cn/xxgg/202610/t20261009_589224.shtml", "school": "苏州职业技术大学", "city": "苏州", "stype": "职业本科", "date": "2026-11-09", "dl": null, "new": true, "roles": [], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "A", "title": "苏州百年职业学院2026年秋季教师招聘公告", "url": "https://www.gaoxiaojob.com/announcement/detail/430522.html", "school": "苏州托普信息职业技术学院 等2所", "city": "苏州", "stype": "民办专科", "date": "2026-11-09", "dl": null, "new": true, "roles": ["专任教师", "辅导员", "行政管理", "实验实训"], "rows": [{"t": "A", "post": "专职教师-电子商务 面议 江苏苏州 硕士研究生", "major": "应用经济学,工商管理", "degree": "专职教师-电子商务 面议 江苏苏州 硕士研究生 应用经济学,工商管理 收藏 申请", "count": "", "school": ""}], "why": "岗位表中有金融对口岗位", "manual": false, "alt": []}, {"t": "B", "title": "昆山登云科技职业学院2026下半年岗位招聘公告", "url": "https://www.gaoxiaojob.com/announcement/detail/416758.html", "school": "苏州托普信息职业技术学院 等2所", "city": "苏州", "stype": "民办专科", "date": "2026-11-09", "dl": null, "new": true, "roles": ["专任教师", "辅导员", "行政管理", "实验实训"], "rows": [], "why": "提到相近专业「经济学」", "manual": false, "alt": []}, {"t": "A", "title": "南京视觉艺术职业学院2026年教育管理岗招聘公告", "url": "https://www.gaoxiaojob.com/announcement/detail/420127.html", "school": "南京视觉艺术职业学院", "city": "南京", "stype": "民办专科", "date": "2026-11-09", "dl": null, "new": true, "roles": ["辅导员", "行政管理", "实验实训"], "rows": [], "why": "正文提到「证券」", "manual": false, "alt": []}, {"t": "B", "title": "2026年下半年苏州职业技术大学长期公开招聘高层次及紧缺人才公告", "url": "https://www.gaoxiaojob.com/announcement/detail/443960.html", "school": "苏州托普信息职业技术学院 等2所", "city": "苏州", "stype": "民办专科", "date": "2026-11-09", "dl": "2026-12-31", "new": true, "roles": ["专任教师", "辅导员", "行政管理", "实验实训"], "rows": [{"t": "B", "post": "金融科技教师", "major": "经济类、计算机类", "degree": "博士研究生", "count": "1", "school": ""}, {"t": "B", "post": "技术经济服务教师", "major": "工商管理类、经济类、计算机类", "degree": "博士研究生", "count": "1", "school": ""}, {"t": "B", "post": "金融科技教师 面议 江苏苏州 博士研究生", "major": "应用经济学,电子科学与技术,信息与通信工程,计算机科学与技术,软件工程,网络空间安全", "degree": "金融科技教师 面议 江苏苏州 博士研究生 应用经济学,电子科学与技术,信息与通信", "count": "", "school": ""}, {"t": "B", "post": "技术经济服务教师 面议 江苏苏州 博士研究生", "major": "应用经济学,电子科学与技术,信息与通信工程,计算机科学与技术,软件工程,网络空间安全,工商管理", "degree": "技术经济服务教师 面议 江苏苏州 博士研究生 应用经济学,电子科学与技术,信息与", "count": "", "school": ""}, {"t": "B", "post": "", "major": "经济类", "degree": "经济类", "count": "", "school": ""}], "why": "专业含「应用经济学」但仅招博士；专业含「经济类」但仅招博士", "manual": false, "alt": []}, {"t": "A", "title": "江苏食品药品职业技术学院2026下半年教师招聘拟聘用人员名单公示", "url": "https://www.jsfpc.edu.cn/2026/1105/c46a94680/page.htm", "school": "江苏食品药品职业技术学院", "city": "淮安", "stype": "公办专科", "date": "2026-11-06", "dl": null, "new": true, "roles": [], "rows": [{"t": "A", "post": "数字经济学院教师", "major": "兰州财经大学/金融", "degree": "硕士研究生", "count": "1", "school": ""}], "why": "岗位表中有金融对口岗位", "manual": false, "alt": []}, {"t": "P", "title": "江苏信息职业技术学院2026年公开招聘工作人员长期入围体检公告（二）", "url": "https://www.jsit.edu.cn/rsc/info/1091/2064.htm", "school": "江苏信息职业技术学院", "city": "无锡", "stype": "公办专科", "date": "2026-11-06", "dl": null, "new": true, "roles": ["专任教师", "行政管理"], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "P", "title": "拟聘任杨荣夕高级工的公示", "url": "https://rsc.zjc.edu.cn/view/elhjm8iw5i81.htm", "school": "镇江市高等专科学校", "city": "镇江", "stype": "公办专科", "date": "2026-11-04", "dl": null, "new": true, "roles": ["行政管理"], "rows": [], "why": "公告正文可能是图片", "manual": true, "alt": []}, {"t": "B", "title": "苏州健雄职业技术学院2026年长期公开招聘博士研究生教师公告", "url": "https://www.gaoxiaojob.com/announcement/detail/383598.html", "school": "苏州健雄职业技术学院 等2所", "city": "苏州", "stype": "公办专科", "date": "2026-11-04", "dl": "2026-12-31", "new": true, "roles": ["专任教师", "辅导员", "行政管理", "实验实训"], "rows": [{"t": "B", "post": "专业带头人", "major": "财务财会类、公共管理类、工商管理类、商务贸易类、经济类、统计类", "degree": "博士研究生", "count": "1", "school": ""}, {"t": "B", "post": "专任教师", "major": "财务财会类、公共管理类、工商管理类、商务贸易类、经济类、统计类", "degree": "博士研究生", "count": "5", "school": ""}, {"t": "B", "post": "专业带头人Z04-经济管理学院 面议 江苏苏州 博士研究生", "major": "理论经济学,应用经济学,统计学,工商管理,公共管理学,数字经济,金融学", "degree": "专业带头人Z04-经济管理学院 面议 江苏苏州 博士研究生 理论经济学,应用经济", "count": "", "school": ""}, {"t": "B", "post": "专任教师B06-经济管理学院 面议 江苏苏州 博士研究生", "major": "理论经济学,应用经济学,统计学,工商管理,公共管理学,数字经济,金融学", "degree": "专任教师B06-经济管理学院 面议 江苏苏州 博士研究生 理论经济学,应用经济学", "count": "", "school": ""}], "why": "专业含「经济类」但仅招博士；专业含「金融」但仅招博士", "manual": false, "alt": []}, {"t": "C", "title": "2026级酒店管理与数字化运营专业国创试点班顺利开班 为充分发挥国家级职业教育教师教学创新团队示范引领作用，进一步推进职业教育改革创新，培育契合文旅产业高质量发展需求的高素质高技能人才，10 月30 日上午，酒店管理与数字化运营专业第二届国创试点班开班仪式在行政楼111 会议室举行。校党委委员、副院长张骏出席，酒店管理学院院长孙爱民，旅游管理学院副院长丁洁，酒店管理学院副院长姜华、党总支副书记陈菊霞及26级国创班全体学生参加。仪式由国创班辅导员金晶主持。张骏在致辞中指出，...", "url": "https://www.nith.edu.cn/info/1065/71521.htm", "school": "南京旅游职业学院", "city": "南京", "stype": "公办专科", "date": "2026-11-02", "dl": null, "new": true, "roles": ["辅导员", "行政管理", "实验实训"], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "P", "title": "苏州健雄职业技术学院2026年公开招聘编外合同制培训师考核成绩公示", "url": "https://www.csit.edu.cn/2026/1031/c65a56058/page.htm", "school": "苏州健雄职业技术学院", "city": "苏州", "stype": "公办专科", "date": "2026-10-31", "dl": null, "new": true, "roles": ["行政管理"], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "B", "title": "江苏省淮安市华丰职业技术学校2026年公开招聘1名紧缺电梯专业教师公告", "url": "https://www.gaoxiaojob.com/announcement/detail/441820.html", "school": "待确认", "city": "", "stype": "", "date": "2026-10-30", "dl": null, "new": true, "roles": ["专任教师", "辅导员", "行政管理", "实验实训"], "rows": [], "why": "提到相近专业「经济学」", "manual": false, "alt": []}, {"t": "P", "title": "2026年沙洲职业工学院公开招聘博士（第三批）面试考生总成绩公示", "url": "https://www.szit.edu.cn/info/1111/62501.htm", "school": "沙洲职业工学院", "city": "苏州", "stype": "公办专科", "date": "2026-10-29", "dl": null, "new": true, "roles": ["专任教师", "行政管理"], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "C", "title": "常州工业职业技术学院2026年招聘劳务派遣员工公告（第二批）", "url": "http://www.ciit.edu.cn/2026/1029/c3234a145638/page.htm", "school": "常州工业职业技术学院", "city": "常州", "stype": "公办专科", "date": "2026-10-29", "dl": "2026-11-04", "new": true, "roles": ["行政管理"], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "C", "title": "我校召开新能源专业人才需求白皮书研讨会", "url": "https://www.ciit.edu.cn/2026/1021/c2353a145455/page.htm", "school": "常州工业职业技术学院", "city": "常州", "stype": "公办专科", "date": "2026-10-16", "dl": null, "new": true, "roles": ["行政管理", "实验实训"], "rows": [], "why": "", "manual": false, "alt": ["http://www.ciit.edu.cn/2026/1021/c2353a145455/page.htm"]}, {"t": "P", "title": "南京旅游职业学院2026年高层次人才招聘拟聘用人员名单公示", "url": "https://www.nith.edu.cn/rsc/info/1082/17781.htm", "school": "南京旅游职业学院", "city": "南京", "stype": "公办专科", "date": "2026-10-15", "dl": null, "new": true, "roles": ["专任教师", "行政管理"], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "P", "title": "江苏财会职业学院2026年长期公开招聘高层次人才第二批面试通知", "url": "https://www.jscfa.edu.cn/2026/0922/c283a42085/page.htm", "school": "江苏财会职业学院", "city": "连云港", "stype": "公办专科", "date": "2026-10-10", "dl": "2026-10-08", "new": true, "roles": ["行政管理", "实验实训"], "rows": [], "why": "", "manual": false, "alt": []}, {"t": "A", "title": "关于2026年下半年教师招聘取消部分岗位及部分岗位增设笔试的公告", "url": "https://www.jsfpc.edu.cn/2026/0923/c46a93485/page.htm", "school": "江苏食品药品职业技术学院", "city": "淮安", "stype": "公办专科", "date": "2026-09-23", "dl": "2026-09-15", "new": true, "roles": ["行政管理"], "rows": [{"t": "A", "post": "", "major": "经济类、工商管理类", "degree": "硕士研究生及以上", "count": "1 80 / 56 ", "school": ""}], "why": "岗位表中有金融对口岗位", "manual": false, "alt": []}, {"t": "A", "title": "江苏省人力资源和社会保障厅 事业 南京铁道职业技术学院公开招聘工作人员公告", "url": "http://jshrss.jiangsu.gov.cn/art/2026/9/23/art_57210_11834041.html", "school": "南京铁道职业技术学院", "city": "南京", "stype": "公办专科", "date": "2026-09-23", "dl": "2026-10-15", "new": true, "roles": ["专任教师", "辅导员", "行政管理", "实验实训"], "rows": [{"t": "A", "post": "招生就业", "major": "计算机（软件）类、经济类", "degree": "硕士研究生及以上 具有相应学位", "count": "1", "school": ""}, {"t": "A", "post": "实验实训管理岗", "major": "教育类，计算机类，经济类，公共管理类，工商管理类", "degree": "硕士研究生及以上 具有相应学位", "count": "1", "school": ""}, {"t": "B", "post": "涉外办学管理", "major": "公共管理类，工商管理类", "degree": "硕士研究生及以上 具有相应学位", "count": "1", "school": ""}], "why": "岗位表中有金融对口岗位", "manual": false, "alt": []}], "health": {"total": 97, "err": 69, "warn": 5, "bad": ["苏州幼儿师范高等专科学校", "盐城幼儿师范高等专科学校", "苏州工艺美术职业技术学院", "江苏联合职业技术学院", "无锡科技职业学院", "扬州环境资源职业技术学院", "江苏经贸职业技术学院", "江苏航运职业技术学院", "连云港职业技术学院", "南通职业大学", "江苏电子信息职业学院", "南京交通职业技术学院", "无锡商业职业技术学院", "宿迁职业技术学院", "江苏农牧科技职业学院", "江阴职业技术学院", "无锡工艺职业技术学院", "盐城工业职业技术学院", "南京科技职业学院", "江苏城市职业学院", "南京城市职业学院", "南京机电职业技术学院", "江苏财经职业技术学院", "江苏卫生健康职业学院", "苏州信息职业技术学院", "江苏农林职业技术学院", "徐州生物工程职业技术学院", "徐州幼儿师范高等专科学校", "江苏商贸职业学院", "江苏护理职业学院", "江苏城乡建设职业学院", "江苏航空职业技术学院", "江苏安全技术职业学院", "江苏旅游职业学院", "常州幼儿师范高等专科学校", "徐州工业职业技术学院", "南京信息职业技术学院", "常州机电职业技术学院", "无锡城市职业技术学院", "扬州工业职业技术学院", "江苏司法警官职业学院", "盐城农业科技职业学院", "宿迁幼儿师范高等专科学校", "无锡师范高等专科学校", "常州铁道职业技术学院", "苏州旅游职业学院", "南通卫生健康职业学院", "明达职业技术学院", "九州职业技术学院", "硅湖职业技术学院", "应天职业技术学院", "苏州托普信息职业技术学院", "太湖创意职业技术学院", "炎黄职业技术学院", "正德职业技术学院", "钟山职业技术学院", "无锡南洋职业技术学院", "江南影视艺术职业学院", "金肯职业技术学院", "建东职业技术学院", "江海职业技术学院", "金山职业技术学院", "昆山登云科技职业学院", "南京视觉艺术职业学院", "苏州高博职业学院", "宿迁泽达职业技术学院", "扬州中瑞酒店职业学院", "苏州百年职业学院", "常州信息职业技术大学", "江苏食品药品职业技术学院", "江苏财会职业学院", "苏州职业技术大学", "无锡职业技术大学", "江苏建筑职业技术大学"], "portals": 17, "portalsOk": 5}}</script>
+<script>
+{
+const D = JSON.parse(document.getElementById('payload').textContent);
+const today = new Date(D.today + 'T00:00:00');
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const daysLeft = d => d ? Math.round((new Date(d + 'T00:00:00') - today) / 864e5) : null;
+const md = d => d ? (+d.slice(5, 7)) + '月' + (+d.slice(8, 10)) + '日' : '';
+let st = {tab: 'AB', city: '', role: '', stype: '', q: '', open: false, shown: 30};
+try { Object.assign(st, JSON.parse(localStorage.getItem('jw-filter') || '{}'), {shown: 30}); } catch (e) {}
+
+const isOpen = i => { const n = daysLeft(i.dl); return n !== null && n >= 0; };
+$('upd').textContent = (D.demo ? '【预览】下面都是示例数据，不是真实招聘公告。' : '') + `更新于 ${D.updated}（北京时间）· 共检查 ${D.health.total} 所学校 · 展示近 ${D.window} 天的公告`;
+$('nA').textContent = D.items.filter(i => i.t === 'A').length;
+$('nB').textContent = D.items.filter(i => i.t === 'B').length;
+$('nO').textContent = D.items.filter(i => 'AB'.includes(i.t) && isOpen(i)).length;
+[...new Set(D.items.map(i => i.city).filter(Boolean))].sort().forEach(c => $('city').insertAdjacentHTML('beforeend', `<option>${esc(c)}</option>`));
+
+function card(i) {
+  const n = daysLeft(i.dl);
+  const dl = i.dl ? (n >= 0 ? `<span class="bd open">报名截止 ${md(i.dl)} · ${n === 0 ? '今天截止' : '还剩 ' + n + ' 天'}</span>` : `<span class="bd closed">报名已截止（${md(i.dl)}）</span>`) : '';
+  const tag = i.t === 'A' ? '<span class="bd A">金融对口</span>' : i.t === 'B' ? '<span class="bd B">可能合适</span>' : i.t === 'P' ? '<span class="bd">笔试面试通知</span>' : '<span class="bd">其他岗位</span>';
+  const posts = i.rows.length ? `<ul class="posts">${i.rows.map(r => `<li><span class="k ${r.t}">${r.t === 'A' ? '对口' : '可能'}</span>${esc([r.school, r.post].filter(Boolean).join(' · ') || '岗位')}${r.count ? ' · 招 ' + esc(r.count) + ' 人' : ''}<small>专业：${esc(r.major || '见原文')}${r.degree ? '　学历：' + esc(r.degree) : ''}</small></li>`).join('')}</ul>` : '';
+  return `<article class="card ${i.t}">
+<div class="meta"><strong>${esc(i.school)}</strong>${i.city ? `<span>${esc(i.city)}</span>` : ''}${i.stype ? `<span>${esc(i.stype)}</span>` : ''}<span>发布 ${esc(i.date || '日期未知')}</span></div>
+<a class="title" href="${esc(i.url)}" target="_blank" rel="noopener">${esc(i.title)}</a>
+<div class="badges">${i.new ? '<span class="bd new">今天新发现</span>' : ''}${tag}${dl}${i.roles.map(r => `<span class="bd">${esc(r)}</span>`).join('')}</div>
+${posts}${!i.rows.length && i.why ? `<div class="why">${esc(i.why)}</div>` : ''}
+${i.manual ? '<div class="warn">这条公告的岗位表没能自动读出来，请点“查看原文”，看附件里有没有金融相关岗位。</div>' : ''}
+<div class="acts"><a class="btn main" href="${esc(i.url)}" target="_blank" rel="noopener">查看原文</a>${i.alt.map((u, k) => `<a class="btn" href="${esc(u)}" target="_blank" rel="noopener">其他来源${i.alt.length > 1 ? k + 1 : ''}</a>`).join('')}</div>
+</article>`;
+}
+
+function render() {
+  try { const {shown, ...keep} = st; localStorage.setItem('jw-filter', JSON.stringify(keep)); } catch (e) {}
+  document.querySelectorAll('.tab').forEach(b => b.classList.toggle('on', b.dataset.t === st.tab));
+  document.querySelectorAll('.stat').forEach(b => b.classList.toggle('on', (b.dataset.go === st.tab) || (b.dataset.go === 'open' && st.open && st.tab === 'AB')));
+  $('city').value = st.city; $('role').value = st.role; $('stype').value = st.stype; $('q').value = st.q; $('openOnly').checked = st.open;
+  const want = {AB: 'AB', A: 'A', ALL: 'ABC', P: 'P'}[st.tab];
+  const q = st.q.trim();
+  const rows = D.items.filter(i => want.includes(i.t)
+    && (!st.city || i.city === st.city) && (!st.role || i.roles.includes(st.role))
+    && (!st.stype || i.stype === st.stype) && (!st.open || isOpen(i))
+    && (!q || (i.title + i.school + i.city + i.why + i.rows.map(r => r.post + r.major).join('')).includes(q)));
+  rows.sort((a, b) => (isOpen(b) - isOpen(a)) || ('ABCP'.indexOf(a.t) - 'ABCP'.indexOf(b.t)) || String(b.date).localeCompare(String(a.date)));
+  $('count').textContent = `共 ${rows.length} 条`;
+  $('list').innerHTML = rows.length ? rows.slice(0, st.shown).map(card).join('') : '<div class="empty">没有符合条件的公告。可以试试放宽上面的筛选条件。</div>';
+  $('more').hidden = rows.length <= st.shown;
+}
+
+$('tabs').addEventListener('click', e => { const b = e.target.closest('.tab'); if (b) { st.tab = b.dataset.t; st.shown = 30; render(); } });
+document.querySelectorAll('.stat').forEach(b => b.addEventListener('click', () => {
+  if (b.dataset.go === 'open') { st.tab = 'AB'; st.open = true; } else { st.tab = b.dataset.go; st.open = false; }
+  st.shown = 30; render(); $('count').scrollIntoView({behavior: 'smooth', block: 'start'});
+}));
+['city', 'role', 'stype'].forEach(k => $(k).addEventListener('change', e => { st[k] = e.target.value; st.shown = 30; render(); }));
+$('q').addEventListener('input', e => { st.q = e.target.value; st.shown = 30; render(); });
+$('openOnly').addEventListener('change', e => { st.open = e.target.checked; st.shown = 30; render(); });
+$('more').addEventListener('click', () => { st.shown += 30; render(); });
+
+const H = D.health;
+$('healthSum').textContent = `今天的检查情况：${H.total} 所学校中 ${H.total - H.err} 所正常${H.err ? '，' + H.err + ' 所没打开' : ''}`;
+$('health').innerHTML = `<p>学校官网正常 ${H.total - H.err - H.warn} 所，部分正常 ${H.warn} 所，没打开 ${H.err} 所。没打开的学校仍会通过人社厅、高校人才网和搜索引擎补充查找。</p>`
+  + (H.bad.length ? `<p>没打开或需要补充网址的学校：${H.bad.map(esc).join('、')}</p>` : '')
+  + `<p>汇总网站（人社厅、高校人才网等）正常 ${H.portalsOk} / ${H.portals} 个。</p>`;
+render();
+}
+</script>
+</body>
+</html>
