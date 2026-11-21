@@ -57,49 +57,68 @@ class Runner:
     def crawl_school(self, s: dict) -> list[Candidate]:
         name = s["name"]
         site = self.state.sites.get(name, {})
-        h = {"status": "ok", "detail": "", "home": site.get("home", ""), "lists": site.get("lists", [])}
+        configured = s.get("homepage") or ""
+        manual = s.get("recruit_pages") or []
+        home_changed = configured != site.get("configured_home", site.get("home") or "")
+        cached = [] if home_changed else [u for u in site.get("lists", []) if u not in site.get("manual_lists", [])]
+        h = {"status": "ok", "detail": "", "home": site.get("home", ""), "lists": []}
         cands: list[Candidate] = []
         try:
-            stale = (not site.get("home") or not site.get("lists") or not site.get("discovered") or
+            stale = (home_changed or not site.get("home") or not (manual or cached) or not site.get("discovered") or
                      date.fromisoformat(site["discovered"]) <= self.today - timedelta(days=self.cfg["rediscover_days"]))
             home_page = None
+            problems = []
             if stale or site.get("home_failed"):
+                entry = configured if home_changed else site.get("home") or configured
                 home, home_page, note = resolve_homepage(self.f, name, s.get("aliases") or [],
-                                                         site.get("home") or s.get("homepage", ""))
+                                                         entry)
                 h["home"] = home or ""
                 if home_page is None:
-                    h.update(status="error", detail=note)
+                    problems.append(note)
                     site.update(home=home or "", home_failed=True)
                 else:
-                    manual = s.get("recruit_pages") or []
-                    lists = manual + [u for u in find_recruit_lists(self.f, home_page.url, home_page.text) if u not in manual]
-                    site.update(home=home_page.url, lists=lists, discovered=self.today.isoformat(), home_failed=False,
+                    cached = find_recruit_lists(self.f, home_page.url, home_page.text)
+                    site.update(home=home_page.url, discovered=self.today.isoformat(), home_failed=False,
                                 note=note)
-                    h["lists"] = lists
-                    if not lists:
-                        h.update(status="warn", detail="没找到招聘栏目，只能靠首页、聚合网站和搜索补漏")
             else:
                 try:
                     home_page = self.f.get(site["home"])
+                    if not page_matches(home_page, [name, *(s.get("aliases") or [])]):
+                        home_page = None
+                        raise FetchError("页面未显示可确认的校名")
                 except FetchError as e:
                     site["home_failed"] = True
-                    h.update(status="error", detail=f"首页打不开：{e}")
-            pages = []
-            if home_page is not None:
-                pages.append(home_page)
-            for u in site.get("lists", []):
+                    problems.append(f"首页未能读取：{e}")
+            lists = list(dict.fromkeys([*manual, *cached]))
+            site.update(configured_home=configured, lists=lists, manual_lists=list(manual))
+            h["lists"] = lists
+            page_links = [extract_links(home_page.text, home_page.url)] if home_page is not None else []
+            list_count = 0
+            for u in lists:
                 try:
-                    pages.append(self.f.get(u, referer=site.get("home")))
+                    pg = self.f.get(u, referer=site.get("home") or None)
+                    links = extract_links(pg.text, pg.url)
+                    if not any(article_like(link) for link in links):
+                        raise FetchError("未读到公告列表内容")
+                    page_links.append(links)
+                    list_count += 1
                 except FetchError as e:
-                    h.update(status="warn", detail=f"招聘栏目打不开（{e}），下次会重新探测")
+                    problems.append(f"栏目未能读取：{e}")
                     site["discovered"] = "2000-01-01"
-            list_urls = set(site.get("lists", [])) | {site.get("home", "")}
-            for pg in pages:
-                for l in extract_links(pg.text, pg.url):
+            if home_page is not None and not lists:
+                problems.append("首页可读，未定位到招聘栏目")
+            if problems:
+                detail = "；".join(dict.fromkeys(problems))
+                if list_count:
+                    detail = f"已读取 {list_count} 个栏目；{detail}"
+                h.update(status="warn" if page_links else "error", detail=detail)
+            list_urls = set(lists) | {site.get("home", "")}
+            for links in page_links:
+                for l in links:
                     if article_like(l) and l.url not in list_urls and is_recruit_title(l.title):
                         cands.append(Candidate(l, f"官网·{name}", school=name))
             # 列表页里一条招聘都没有，也提示
-            if pages and not cands and h["status"] == "ok":
+            if page_links and not cands and h["status"] == "ok":
                 h.update(status="ok", detail="页面正常，暂无招聘标题")
         except Exception as e:  # 单个学校出错不影响其他学校
             h.update(status="error", detail=f"{type(e).__name__}: {e}")

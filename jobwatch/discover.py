@@ -31,13 +31,15 @@ def page_matches(page: Page, names: list[str]) -> bool:
 def resolve_homepage(fetcher: Fetcher, name: str, aliases: list[str], configured: str) -> tuple[str | None, Page | None, str]:
     """返回 (首页地址, 首页内容, 说明)。"""
     names = [name, *aliases]
+    note = "没有配置官网地址"
     if configured:
         try:
             pg = fetcher.get(configured)
             if page_matches(pg, names):
                 return pg.url, pg, "官网已验证"
-        except FetchError:
-            pass
+            note = f"首页有响应，但未匹配到校名（标题：{page_title(pg.text)[:45]}）"
+        except FetchError as e:
+            note = f"配置的首页请求失败：{e}"
     for q in (f"{name} 官网", f"{name}"):
         for link in search(fetcher, q)[:8]:
             if not not_blacklisted(link.url):
@@ -51,7 +53,7 @@ def resolve_homepage(fetcher: Fetcher, name: str, aliases: list[str], configured
                 continue
             if page_matches(pg, names):
                 return pg.url, pg, "官网由搜索自动找到"
-    return (configured or None), None, "官网无法访问或无法确认"
+    return (configured or None), None, note + "；搜索也未能确认官网"
 
 
 def _usable_nav(link, home: str) -> bool:

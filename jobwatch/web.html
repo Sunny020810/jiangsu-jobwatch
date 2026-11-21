@@ -183,10 +183,10 @@ $('openOnly').addEventListener('change', e => { st.open = e.target.checked; st.s
 $('more').addEventListener('click', () => { st.shown += 30; render(); });
 
 const H = D.health;
-$('healthSum').textContent = `今天的检查情况：${H.total} 所学校中 ${H.total - H.err} 所正常${H.err ? '，' + H.err + ' 所没打开' : ''}`;
-$('health').innerHTML = `<p>学校官网正常 ${H.total - H.err - H.warn} 所，部分正常 ${H.warn} 所，没打开 ${H.err} 所。没打开的学校仍会通过人社厅、高校人才网和搜索引擎补充查找。</p>`
-  + (H.bad.length ? `<p>没打开或需要补充网址的学校：${H.bad.map(esc).join('、')}</p>` : '')
-  + `<p>汇总网站（人社厅、高校人才网等）正常 ${H.portalsOk} / ${H.portals} 个。</p>`;
+$('healthSum').textContent = `已检查 ${H.total} 所学校，正常 ${H.total - H.err - H.warn} 所，部分可读 ${H.warn} 所，未能读取或确认 ${H.err} 所`;
+$('health').innerHTML = (H.errors.length ? `<p>未能读取或确认（${H.err} 所）　${H.errors.map(esc).join('、')}</p>` : '')
+  + (H.warnings.length ? `<p>部分可读（${H.warn} 所）　${H.warnings.map(esc).join('、')}</p>` : '')
+  + `<p>汇总网站可读 ${H.portalsOk} / ${H.portals} 个。补充搜索有结果 ${H.searchOk} 次，无结果或请求失败 ${H.searchEmpty} 次。</p>`;
 render();
 }
 </script>

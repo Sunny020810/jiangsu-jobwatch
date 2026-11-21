@@ -207,6 +207,35 @@ def test_end_to_end(env):
     assert "南京信息职业技术学院" in body
 
 
+def test_manual_list_available_when_homepage_is_down(env):
+    root, cfg, schools, _ = env
+    school = dict(schools[0], homepage="https://offline.invalid/",
+                  recruit_pages=["https://rsc.jscfa.edu.cn/zpxx/list.htm"])
+    state = State(str(root))
+    runner = pl.Runner(cfg, [school], state)
+    found = runner.crawl_school(school)
+    assert any("专任教师" in item.link.title for item in found)
+    check = runner.health.schools[school["name"]]
+    assert check["status"] == "warn" and "已读取 1 个栏目" in check["detail"]
+    state.save()
+    school["recruit_pages"] = ["https://missing.invalid/notices"]
+    retried = pl.Runner(cfg, [school], State(str(root)))
+    assert retried.crawl_school(school) == []
+    assert retried.health.schools[school["name"]]["status"] == "error"
+
+
+def test_corrected_home_overrides_legacy_failure_cache(env):
+    root, cfg, schools, calls = env
+    school = schools[0]
+    state = State(str(root))
+    state.sites[school["name"]] = {"home": "https://old.invalid/", "home_failed": True,
+                                   "lists": ["https://old.invalid/list"]}
+    runner = pl.Runner(cfg, [school], state)
+    assert runner.crawl_school(school)
+    assert school["homepage"] in calls
+    assert not any("old.invalid" in url for url in calls)
+
+
 def test_units():
     assert parse_date("发布时间：2026年11月8日") .isoformat() == "2026-11-08"
     assert parse_date("[2026/3/5]").isoformat() == "2026-03-05"

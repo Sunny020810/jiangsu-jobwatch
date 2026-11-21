@@ -98,7 +98,7 @@ def build_health_md(health) -> list[str]:
            ""]
     if warn or err:
         out += ["### 需要关注的学校", "",
-                "异常的学校仍会被高校人才网、人社厅和搜索引擎覆盖，但最好把正确的官网或招聘栏目网址填进 `schools.yaml`。", "",
+                "这些学校的官网检查不完整。其他来源可能提供补充公告，实际结果见下方汇总网站及搜索统计。", "",
                 "| 学校 | 状态 | 说明 | 帮你找 |", "|---|---|---|---|"]
         for n in err + warn:
             h = sch[n]
@@ -149,8 +149,9 @@ def build_message(items, new_ids, health, repo_url: str, pages_url: str, run_inf
         lines += ["今天没有发现新的招聘公告。", ""]
     sch = health.schools
     bad = [n for n, h in sch.items() if h["status"] == "error"]
-    lines.append(f"🩺 学校官网正常 {sum(1 for h in sch.values() if h['status'] != 'error')}/{len(sch)}"
-                 + (f"，打不开：{'、'.join(bad[:10])}{'等' if len(bad) > 10 else ''}" if bad else ""))
+    ok = sum(1 for h in sch.values() if h['status'] == 'ok')
+    lines.append(f"🩺 {len(sch)} 所学校中，正常 {ok}，部分可读 {len(sch) - ok - len(bad)}，未能读取或确认 {len(bad)}"
+                 + (f"（{'、'.join(bad[:10])}{'等' if len(bad) > 10 else ''}）" if bad else ""))
     if repo_url:
         lines.append(f"\n📄 [完整报告]({repo_url}/blob/main/REPORT.md)" + (f"　🌐 [网页版]({pages_url})" if pages_url else ""))
     return title, "\n".join(lines)
@@ -178,7 +179,8 @@ def build_html(items, new_ids, health, cfg, today) -> str:
     payload = {
         "updated": f"{datetime.now(CN_TZ):%Y-%m-%d %H:%M}", "today": today.isoformat(), "window": win,
         "items": data,
-        "health": {"total": len(sch), "err": len(err), "warn": len(warn), "bad": err + warn,
+        "health": {"total": len(sch), "err": len(err), "warn": len(warn), "errors": err, "warnings": warn,
+                   "searchOk": health.search.ok, "searchEmpty": health.search.empty,
                    "portals": len(health.portals),
                    "portalsOk": sum(1 for h in health.portals.values() if h["status"] == "ok")},
     }
