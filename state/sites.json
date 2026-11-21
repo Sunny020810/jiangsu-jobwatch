@@ -1,23 +1,59 @@
 {
  "苏州幼儿师范高等专科学校": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "https://www.szys.net/",
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.szys.net/",
+  "lists": [
+   "https://www.szys.net/zqdh/gljg/rsc1",
+   "https://www.szys.net/tzgg/gggs",
+   "https://www.szys.net/xxgk1/rssz",
+   "https://www.szys.net/xxgk1"
+  ],
+  "manual_lists": [
+   "https://www.szys.net/zqdh/gljg/rsc1",
+   "https://www.szys.net/tzgg/gggs"
+  ]
  },
  "盐城幼儿师范高等专科学校": {
-  "home": "",
+  "home": "https://www.yyz.edu.cn/",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "https://www.yyz.edu.cn/",
+  "lists": [
+   "https://www.yyz.edu.cn/rczp/list.htm"
+  ],
+  "manual_lists": [
+   "https://www.yyz.edu.cn/rczp/list.htm"
+  ],
+  "discovered": "2000-01-01"
  },
  "苏州工艺美术职业技术学院": {
   "home": "https://www.sgmart.edu.cn/",
-  "home_failed": true,
-  "last_status": "error"
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.sgmart.edu.cn/",
+  "lists": [
+   "https://xxgk.sgmart.edu.cn/"
+  ],
+  "manual_lists": []
  },
  "江苏联合职业技术学院": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "http://www.juti.cn/",
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "http://www.juti.cn/",
+  "lists": [
+   "http://www.juti.cn/jxms/",
+   "http://www.juti.cn/zsjy/tzgg/"
+  ],
+  "manual_lists": []
  },
  "沙洲职业工学院": {
   "home": "https://www.szit.edu.cn/",
@@ -28,7 +64,9 @@
   "discovered": "2026-11-20",
   "home_failed": false,
   "note": "官网已验证",
-  "last_status": "ok"
+  "last_status": "ok",
+  "configured_home": "https://www.szit.edu.cn/",
+  "manual_lists": []
  },
  "江苏工程职业技术学院": {
   "home": "https://www.jcet.edu.cn/",
@@ -38,20 +76,30 @@
    "https://rsc.jcet.edu.cn:443/szjs/tzgg.htm",
    "https://xxgk.jcet.edu.cn:443/"
   ],
-  "discovered": "2026-11-20",
+  "discovered": "2000-01-01",
   "home_failed": false,
   "note": "官网已验证",
-  "last_status": "ok"
+  "last_status": "warn",
+  "configured_home": "https://www.jcet.edu.cn/",
+  "manual_lists": []
  },
  "无锡科技职业学院": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "https://www.wxstc.cn/",
+  "home_failed": false,
+  "last_status": "warn",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.wxstc.cn/",
+  "lists": [],
+  "manual_lists": []
  },
  "扬州环境资源职业技术学院": {
   "home": "",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "",
+  "lists": [],
+  "manual_lists": []
  },
  "江苏海事职业技术学院": {
   "home": "https://www.jmi.edu.cn/",
@@ -64,7 +112,9 @@
   "discovered": "2026-11-20",
   "home_failed": false,
   "note": "官网已验证",
-  "last_status": "ok"
+  "last_status": "ok",
+  "configured_home": "https://www.jmi.edu.cn/",
+  "manual_lists": []
  },
  "泰州职业技术学院": {
   "home": "https://www.tzpc.edu.cn/",
@@ -77,7 +127,9 @@
   "discovered": "2026-11-20",
   "home_failed": false,
   "note": "官网已验证",
-  "last_status": "ok"
+  "last_status": "ok",
+  "configured_home": "https://www.tzpc.edu.cn/",
+  "manual_lists": []
  },
  "苏州经贸职业技术学院": {
   "home": "https://www.szjm.edu.cn/",
@@ -89,12 +141,22 @@
   "discovered": "2026-11-20",
   "home_failed": false,
   "note": "官网已验证",
-  "last_status": "ok"
+  "last_status": "ok",
+  "configured_home": "https://www.szjm.edu.cn/",
+  "manual_lists": []
  },
  "江苏经贸职业技术学院": {
-  "home": "https://www.jseti.edu.cn/",
+  "home": "http://www.jvic.edu.cn/",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "http://www.jvic.edu.cn/",
+  "lists": [
+   "https://www.jvic.edu.cn/rsc/"
+  ],
+  "manual_lists": [
+   "https://www.jvic.edu.cn/rsc/"
+  ],
+  "discovered": "2000-01-01"
  },
  "南通科技职业学院": {
   "home": "https://www.ntst.edu.cn/",
@@ -105,7 +167,9 @@
   "discovered": "2026-11-20",
   "home_failed": false,
   "note": "官网已验证",
-  "last_status": "ok"
+  "last_status": "ok",
+  "configured_home": "https://www.ntst.edu.cn/",
+  "manual_lists": []
  },
  "江苏医药职业学院": {
   "home": "https://www.jsmc.edu.cn/main.htm",
@@ -113,15 +177,27 @@
    "https://xwgk.jsmc.edu.cn/main.htm",
    "https://www.jsmc.edu.cn/746/list.htm"
   ],
-  "discovered": "2026-11-20",
+  "discovered": "2026-11-21",
   "home_failed": false,
   "note": "官网已验证",
-  "last_status": "ok"
+  "last_status": "ok",
+  "configured_home": "https://www.jsmc.edu.cn/",
+  "manual_lists": []
  },
  "江苏航运职业技术学院": {
-  "home": "",
+  "home": "https://www.jssc.edu.cn/",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "https://www.jssc.edu.cn/",
+  "lists": [
+   "https://www.jssc.edu.cn/688/list.htm",
+   "https://www.jssc.edu.cn/711/list.htm"
+  ],
+  "manual_lists": [
+   "https://www.jssc.edu.cn/688/list.htm",
+   "https://www.jssc.edu.cn/711/list.htm"
+  ],
+  "discovered": "2000-01-01"
  },
  "苏州卫生职业技术学院": {
   "home": "https://www.szhct.edu.cn/",
@@ -132,7 +208,9 @@
   "discovered": "2026-11-20",
   "home_failed": false,
   "note": "官网已验证",
-  "last_status": "ok"
+  "last_status": "ok",
+  "configured_home": "https://www.szhct.edu.cn/",
+  "manual_lists": []
  },
  "苏州工业职业技术学院": {
   "home": "https://www.siit.edu.cn/",
@@ -142,7 +220,9 @@
   "discovered": "2026-11-20",
   "home_failed": false,
   "note": "官网已验证",
-  "last_status": "ok"
+  "last_status": "ok",
+  "configured_home": "https://www.siit.edu.cn/",
+  "manual_lists": []
  },
  "常州纺织服装职业技术学院": {
   "home": "https://www.cztgi.edu.cn/",
@@ -152,12 +232,22 @@
   "discovered": "2026-11-20",
   "home_failed": false,
   "note": "官网已验证",
-  "last_status": "ok"
+  "last_status": "ok",
+  "configured_home": "https://www.cztgi.edu.cn/",
+  "manual_lists": []
  },
  "连云港职业技术学院": {
   "home": "https://www.lygtc.edu.cn/",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "https://www.lygtc.edu.cn/",
+  "lists": [
+   "http://www.lygtc.edu.cn/rsc/rczp.htm"
+  ],
+  "manual_lists": [
+   "http://www.lygtc.edu.cn/rsc/rczp.htm"
+  ],
+  "discovered": "2000-01-01"
  },
  "苏州农业职业技术学院": {
   "home": "https://www.szai.edu.cn/",
@@ -168,12 +258,17 @@
   "discovered": "2026-11-20",
   "home_failed": false,
   "note": "官网已验证",
-  "last_status": "ok"
+  "last_status": "ok",
+  "configured_home": "https://www.szai.edu.cn/",
+  "manual_lists": []
  },
  "南通职业大学": {
   "home": "https://www.ntvu.edu.cn/",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "https://www.ntvu.edu.cn/",
+  "lists": [],
+  "manual_lists": []
  },
  "常州工业职业技术学院": {
   "home": "https://www.ciit.edu.cn/",
@@ -184,12 +279,22 @@
   "discovered": "2026-11-20",
   "home_failed": false,
   "note": "官网已验证",
-  "last_status": "ok"
+  "last_status": "ok",
+  "configured_home": "https://www.ciit.edu.cn/",
+  "manual_lists": []
  },
  "江苏电子信息职业学院": {
   "home": "https://www.jsei.edu.cn/",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "https://www.jsei.edu.cn/",
+  "lists": [
+   "https://www.jsei.edu.cn/zpxx.htm"
+  ],
+  "manual_lists": [
+   "https://www.jsei.edu.cn/zpxx.htm"
+  ],
+  "discovered": "2000-01-01"
  },
  "常州工程职业技术学院": {
   "home": "https://www.czie.edu.cn/",
@@ -200,7 +305,9 @@
   "discovered": "2026-11-20",
   "home_failed": false,
   "note": "官网已验证",
-  "last_status": "ok"
+  "last_status": "ok",
+  "configured_home": "https://www.czie.edu.cn/",
+  "manual_lists": []
  },
  "苏州工业园区职业技术学院": {
   "home": "https://www.ivt.edu.cn/",
@@ -210,10 +317,12 @@
    "https://www.ivt.edu.cn/xinxigongkai.htm",
    "https://www.ivt.edu.cn/info/1086/13440.htm"
   ],
-  "discovered": "2026-11-20",
+  "discovered": "2026-11-21",
   "home_failed": false,
   "note": "官网已验证",
-  "last_status": "ok"
+  "last_status": "ok",
+  "configured_home": "https://www.sipivt.edu.cn/",
+  "manual_lists": []
  },
  "南京铁道职业技术学院": {
   "home": "https://www.njrts.edu.cn/",
@@ -223,25 +332,53 @@
   "discovered": "2026-11-20",
   "home_failed": false,
   "note": "官网已验证",
-  "last_status": "ok"
+  "last_status": "ok",
+  "configured_home": "https://www.njrts.edu.cn/",
+  "manual_lists": []
  },
  "南京交通职业技术学院": {
-  "home": "https://www.njitt.edu.cn/",
+  "home": "http://www.njitt.edu.cn/",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "http://www.njitt.edu.cn/",
+  "lists": [
+   "http://www.njitt.edu.cn/rsc/"
+  ],
+  "manual_lists": [
+   "http://www.njitt.edu.cn/rsc/"
+  ],
+  "discovered": "2000-01-01"
  },
  "江苏食品药品职业技术学院": {
   "home": "https://www.jsfpc.edu.cn/",
-  "lists": [],
-  "discovered": "2026-11-20",
+  "lists": [
+   "https://www.jsfpc.edu.cn/tzgg/list.htm",
+   "https://rsc.jsfpc.edu.cn/1120/list.htm"
+  ],
+  "discovered": "2000-01-01",
   "home_failed": false,
   "note": "官网已验证",
-  "last_status": "warn"
+  "last_status": "warn",
+  "configured_home": "https://www.jsfpc.edu.cn/",
+  "manual_lists": [
+   "https://www.jsfpc.edu.cn/tzgg/list.htm",
+   "https://rsc.jsfpc.edu.cn/1120/list.htm"
+  ]
  },
  "无锡商业职业技术学院": {
   "home": "https://www.wxic.edu.cn/",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "https://www.wxic.edu.cn/",
+  "lists": [
+   "https://www.wxic.edu.cn/216/list.htm",
+   "https://rs.wxic.edu.cn/1259/list.htm"
+  ],
+  "manual_lists": [
+   "https://www.wxic.edu.cn/216/list.htm",
+   "https://rs.wxic.edu.cn/1259/list.htm"
+  ],
+  "discovered": "2000-01-01"
  },
  "江苏信息职业技术学院": {
   "home": "https://www.jsit.edu.cn/",
@@ -254,27 +391,50 @@
   "discovered": "2026-11-20",
   "home_failed": false,
   "note": "官网已验证",
-  "last_status": "ok"
+  "last_status": "ok",
+  "configured_home": "https://www.jsit.edu.cn/",
+  "manual_lists": []
  },
  "宿迁职业技术学院": {
-  "home": "https://www.sqc.edu.cn/",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "https://www.sqzyxy.com/",
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.sqzyxy.com",
+  "lists": [
+   "https://www.sqzyxy.com/zp/rczp/",
+   "https://www.sqzyxy.com/zp/",
+   "https://www.sqzyxy.com/zp/rczp/2018/0130/374.html",
+   "https://www.sqzyxy.com/xwdt/tzgg/"
+  ],
+  "manual_lists": [
+   "https://www.sqzyxy.com/zp/rczp/"
+  ]
  },
  "江苏农牧科技职业学院": {
   "home": "https://www.jsahvc.edu.cn/",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "https://www.jsahvc.edu.cn/",
+  "lists": [],
+  "manual_lists": []
  },
  "江阴职业技术学院": {
-  "home": "",
+  "home": "https://www.jypc.edu.cn/",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "https://www.jypc.edu.cn/",
+  "lists": [],
+  "manual_lists": []
  },
  "无锡工艺职业技术学院": {
-  "home": "",
+  "home": "https://www.wxgyxy.cn/",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "https://www.wxgyxy.cn/",
+  "lists": [],
+  "manual_lists": []
  },
  "苏州健雄职业技术学院": {
   "home": "https://www.csit.edu.cn/main.htm",
@@ -284,20 +444,32 @@
    "https://www.csit.edu.cn/3462/list.htm",
    "https://www.csit.edu.cn/gbrmwryzp/list.htm"
   ],
-  "discovered": "2026-11-20",
+  "discovered": "2026-11-21",
   "home_failed": false,
   "note": "官网已验证",
-  "last_status": "ok"
+  "last_status": "ok",
+  "configured_home": "http://www.csit.edu.cn/",
+  "manual_lists": []
  },
  "盐城工业职业技术学院": {
-  "home": "https://www.ycit.cn/",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "https://www.ycpc.edu.cn/",
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.ycpc.edu.cn/",
+  "lists": [
+   "https://www.ycpc.edu.cn/szdwjs/list.htm"
+  ],
+  "manual_lists": []
  },
  "南京科技职业学院": {
   "home": "https://www.njpi.edu.cn/",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "https://www.njpi.edu.cn/",
+  "lists": [],
+  "manual_lists": []
  },
  "镇江市高等专科学校": {
   "home": "https://www.zjc.edu.cn/",
@@ -308,42 +480,87 @@
   "discovered": "2026-11-20",
   "home_failed": false,
   "note": "官网已验证",
-  "last_status": "ok"
+  "last_status": "ok",
+  "configured_home": "https://www.zjc.edu.cn/",
+  "manual_lists": []
  },
  "江苏城市职业学院": {
-  "home": "",
+  "home": "https://www.jscvc.cn/",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "https://www.jscvc.cn/",
+  "lists": [],
+  "manual_lists": []
  },
  "南京城市职业学院": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "https://www.ncc.edu.cn/",
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.ncc.edu.cn/",
+  "lists": [
+   "https://www.ncc.edu.cn/ryzpxx/list.htm",
+   "https://www.ncc.edu.cn/rsszxx/list.htm",
+   "https://www.ncc.edu.cn/xxgk_3909/list.htm",
+   "https://www.ncc.edu.cn/xxgksl/list.htm"
+  ],
+  "manual_lists": []
  },
  "南京机电职业技术学院": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "https://www.nimt.edu.cn/",
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.nimt.edu.cn/",
+  "lists": [
+   "http://www.nimt.edu.cn/xxgk/"
+  ],
+  "manual_lists": []
  },
  "江苏财经职业技术学院": {
-  "home": "https://www.jscjxy.cn/",
+  "home": "https://www.jscj.edu.cn/",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "https://www.jscj.edu.cn/",
+  "lists": [
+   "https://rsc.jscj.edu.cn/"
+  ],
+  "manual_lists": [
+   "https://rsc.jscj.edu.cn/"
+  ],
+  "discovered": "2000-01-01"
  },
  "江苏卫生健康职业学院": {
-  "home": "",
+  "home": "https://www.jshvc.edu.cn/",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "https://www.jshvc.edu.cn/",
+  "lists": [],
+  "manual_lists": []
  },
  "苏州信息职业技术学院": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "https://www.szitu.edu.cn/",
+  "home_failed": false,
+  "last_status": "warn",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "http://www.szitu.edu.cn/",
+  "lists": [],
+  "manual_lists": []
  },
  "江苏农林职业技术学院": {
   "home": "https://www.jsafc.edu.cn/",
-  "home_failed": true,
-  "last_status": "error"
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.jsafc.edu.cn/",
+  "lists": [
+   "https://xxgk.jsafc.edu.cn/index.htm"
+  ],
+  "manual_lists": []
  },
  "南京旅游职业学院": {
   "home": "https://www.nith.edu.cn/",
@@ -356,22 +573,50 @@
   "discovered": "2026-11-20",
   "home_failed": false,
   "note": "官网已验证",
-  "last_status": "ok"
+  "last_status": "ok",
+  "configured_home": "https://www.nith.edu.cn/",
+  "manual_lists": []
  },
  "徐州生物工程职业技术学院": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "https://www.xzsw.net.cn/",
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.xzsw.net.cn/",
+  "lists": [
+   "https://rsc.xzsw.net.cn/",
+   "https://xxgk.xzsw.net.cn/"
+  ],
+  "manual_lists": [
+   "https://rsc.xzsw.net.cn/"
+  ]
  },
  "徐州幼儿师范高等专科学校": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "https://www.xzyz.edu.cn/",
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.xzyz.edu.cn/",
+  "lists": [
+   "https://www.xzyz.edu.cn/index/tzgg.htm",
+   "https://zxc.xzyz.edu.cn/jsgz/rczp.htm",
+   "https://zxc.xzyz.edu.cn/index/gsgg.htm",
+   "https://zxc.xzyz.edu.cn/",
+   "https://zxc.xzyz.edu.cn/info/1078/1690.htm"
+  ],
+  "manual_lists": [
+   "https://www.xzyz.edu.cn/index/tzgg.htm"
+  ]
  },
  "江苏商贸职业学院": {
-  "home": "",
+  "home": "http://www.jsbc.edu.cn/",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "http://www.jsbc.edu.cn/",
+  "lists": [],
+  "manual_lists": []
  },
  "苏州工业园区服务外包职业学院": {
   "home": "https://www.siso.edu.cn/",
@@ -383,7 +628,9 @@
   "discovered": "2026-11-20",
   "home_failed": false,
   "note": "官网已验证",
-  "last_status": "ok"
+  "last_status": "ok",
+  "configured_home": "https://www.siso.edu.cn/",
+  "manual_lists": []
  },
  "南通师范高等专科学校": {
   "home": "https://www.ntnc.edu.cn/",
@@ -393,175 +640,383 @@
   "discovered": "2026-11-20",
   "home_failed": false,
   "note": "官网已验证",
-  "last_status": "ok"
+  "last_status": "ok",
+  "configured_home": "https://www.ntnc.edu.cn/",
+  "manual_lists": []
  },
  "江苏护理职业学院": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "https://www.jscn.edu.cn/",
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.jscn.edu.cn/",
+  "lists": [
+   "https://www.jscn.edu.cn/index/tzgg.htm",
+   "https://www.jscn.edu.cn/xxgkw/"
+  ],
+  "manual_lists": [
+   "https://www.jscn.edu.cn/index/tzgg.htm"
+  ]
  },
  "江苏财会职业学院": {
   "home": "https://www.jscfa.edu.cn/",
-  "lists": [],
-  "discovered": "2026-11-20",
+  "lists": [
+   "https://www.jscfa.edu.cn/xxgkw/ryzp/list.htm"
+  ],
+  "discovered": "2026-11-21",
   "home_failed": false,
   "note": "官网已验证",
-  "last_status": "warn"
+  "last_status": "ok",
+  "configured_home": "http://www.jscfa.edu.cn/",
+  "manual_lists": [
+   "https://www.jscfa.edu.cn/xxgkw/ryzp/list.htm"
+  ]
  },
  "江苏城乡建设职业学院": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "https://www.jscc.edu.cn/",
+  "home_failed": false,
+  "last_status": "warn",
+  "discovered": "2000-01-01",
+  "note": "官网已验证",
+  "configured_home": "https://www.jscc.edu.cn/",
+  "lists": [
+   "https://rsc.jscc.edu.cn/29585/",
+   "https://rsc.jscc.edu.cn/29567/",
+   "https://rsc.jscc.edu.cn/29587/",
+   "https://xxgk.jscc.edu.cn/"
+  ],
+  "manual_lists": [
+   "https://rsc.jscc.edu.cn/29585/"
+  ]
  },
  "江苏航空职业技术学院": {
-  "home": "",
+  "home": "https://www.jatc.edu.cn/",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "https://www.jatc.edu.cn/",
+  "lists": [],
+  "manual_lists": []
  },
  "江苏安全技术职业学院": {
-  "home": "",
+  "home": "https://www.jscst.edu.cn/",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "https://www.jscst.edu.cn/",
+  "lists": [
+   "https://www.jscst.edu.cn/2161/list.htm"
+  ],
+  "manual_lists": [
+   "https://www.jscst.edu.cn/2161/list.htm"
+  ],
+  "discovered": "2000-01-01"
  },
  "江苏旅游职业学院": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "https://www.jstc.edu.cn/",
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.jstc.edu.cn/",
+  "lists": [
+   "https://www.jstc.edu.cn/rsc/rczp.htm",
+   "http://www.jstc.edu.cn/rsc/rczp.htm",
+   "http://www.jstc.edu.cn/rsc/",
+   "https://www.jstc.edu.cn/xxgk/",
+   "http://www.jstc.edu.cn/rsc/info/1007/5062.htm"
+  ],
+  "manual_lists": [
+   "https://www.jstc.edu.cn/rsc/rczp.htm"
+  ]
  },
  "常州幼儿师范高等专科学校": {
-  "home": "",
+  "home": "https://cyzedu.cn/",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "https://cyzedu.cn/",
+  "lists": [],
+  "manual_lists": []
  },
  "徐州工业职业技术学院": {
-  "home": "https://www.xzcit.cn/",
+  "home": "https://www.xzcit.edu.cn/",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "https://www.xzcit.edu.cn/",
+  "lists": [],
+  "manual_lists": []
  },
  "南京信息职业技术学院": {
   "home": "https://www.njcit.cn/",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "https://www.njcit.cn/",
+  "lists": [],
+  "manual_lists": []
  },
  "常州机电职业技术学院": {
   "home": "https://www.czimt.edu.cn/",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "https://www.czimt.edu.cn/",
+  "lists": [],
+  "manual_lists": []
  },
  "无锡城市职业技术学院": {
   "home": "https://www.wxcu.edu.cn/",
-  "home_failed": true,
-  "last_status": "error"
+  "home_failed": false,
+  "last_status": "warn",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.wxcu.edu.cn/",
+  "lists": [],
+  "manual_lists": []
  },
  "扬州工业职业技术学院": {
   "home": "https://www.ypi.edu.cn/",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "https://www.ypi.edu.cn/",
+  "lists": [
+   "https://rsc.ypi.edu.cn/rczp/list.htm"
+  ],
+  "manual_lists": [
+   "https://rsc.ypi.edu.cn/rczp/list.htm"
+  ],
+  "discovered": "2000-01-01"
  },
  "江苏司法警官职业学院": {
-  "home": "",
+  "home": "https://www.jssfjy.cn/default.html",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "https://www.jssfjy.cn/default.html",
+  "lists": [],
+  "manual_lists": []
  },
  "盐城农业科技职业学院": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "https://www.ycac.edu.cn/",
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.ycac.edu.cn/",
+  "lists": [
+   "https://www.ycac.edu.cn/info/"
+  ],
+  "manual_lists": []
  },
  "宿迁幼儿师范高等专科学校": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "https://www.sqsf.cn/",
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.sqsf.cn",
+  "lists": [
+   "https://www.sqsf.cn/xxgk1/rsgl.htm",
+   "https://www.sqsf.cn/szdw.htm",
+   "https://www.sqsf.cn/szdw/szjj.htm",
+   "https://www.sqsf.cn/xxgk1/xxgkzn.htm"
+  ],
+  "manual_lists": []
  },
  "无锡师范高等专科学校": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "https://www.wxnc.edu.cn/",
+  "home_failed": false,
+  "last_status": "warn",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.wxnc.edu.cn/",
+  "lists": [],
+  "manual_lists": []
  },
  "常州铁道职业技术学院": {
-  "home": "",
+  "home": "https://www.cztdxy.cn/main.htm",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "https://www.cztdxy.cn/main.htm",
+  "lists": [],
+  "manual_lists": []
  },
  "苏州旅游职业学院": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "https://www.szlyzyxy.cn/default.html",
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.szlyzyxy.cn/default.html",
+  "lists": [
+   "https://www.szlyzyxy.cn/szdw.html"
+  ],
+  "manual_lists": []
  },
  "南通卫生健康职业学院": {
-  "home": "",
+  "home": "http://www.nthvc.cn/",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "http://www.nthvc.cn/",
+  "lists": [],
+  "manual_lists": []
  },
  "明达职业技术学院": {
-  "home": "http://www.mdut.cn/",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "https://www.mdut.cn/",
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.mdut.cn/",
+  "lists": [
+   "https://rens.mdut.cn//rczp/C4104index_1.htm",
+   "https://www.mdut.cn/tzgg/A1611index_1.htm",
+   "https://www.mdut.cn/xxgs/jbxx/A161501index_1.htm",
+   "https://rens.mdut.cn//tzgg/C4103index_1.htm"
+  ],
+  "manual_lists": [
+   "https://rens.mdut.cn//rczp/C4104index_1.htm"
+  ]
  },
  "九州职业技术学院": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "http://www.jzp.edu.cn/",
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "http://www.jzp.edu.cn/",
+  "lists": [
+   "http://www.jzp.edu.cn/xxgk/"
+  ],
+  "manual_lists": []
  },
  "硅湖职业技术学院": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "http://www.usl.edu.cn/",
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "http://www.usl.edu.cn/",
+  "lists": [
+   "http://www.usl.edu.cn/index.php?c=category&id=18"
+  ],
+  "manual_lists": []
  },
  "应天职业技术学院": {
   "home": "",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "",
+  "lists": [],
+  "manual_lists": []
  },
  "苏州托普信息职业技术学院": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "https://www.szetop.edu.cn/",
+  "home_failed": false,
+  "last_status": "warn",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.szetop.edu.cn/",
+  "lists": [],
+  "manual_lists": []
  },
  "太湖创意职业技术学院": {
-  "home": "",
+  "home": "http://www.wxthcy.edu.cn/s/index",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "http://www.wxthcy.edu.cn/s/index",
+  "lists": [],
+  "manual_lists": []
  },
  "炎黄职业技术学院": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "http://www.yhjyjt.cn/",
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "http://www.yhjyjt.cn/",
+  "lists": [
+   "http://www.yhjyjt.cn/rczp/zpxx.htm",
+   "http://www.yhjyjt.cn/index/yhgg.htm",
+   "http://www.yhjyjt.cn/info/1027/21501.htm",
+   "http://www.yhjyjt.cn/xxgk.htm"
+  ],
+  "manual_lists": [
+   "http://www.yhjyjt.cn/rczp/zpxx.htm"
+  ]
  },
  "正德职业技术学院": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "https://www.zdxy.cn/",
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.zdxy.cn/",
+  "lists": [
+   "https://www.zdxy.cn/channels/1474.html"
+  ],
+  "manual_lists": []
  },
  "钟山职业技术学院": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "https://www.zscollege.com/",
+  "home_failed": false,
+  "last_status": "warn",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.zscollege.com/",
+  "lists": [],
+  "manual_lists": []
  },
  "无锡南洋职业技术学院": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "http://www.wsoc.edu.cn/",
+  "home_failed": false,
+  "last_status": "warn",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "http://www.wsoc.edu.cn/",
+  "lists": [],
+  "manual_lists": []
  },
  "江南影视艺术职业学院": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "http://www.jnys.cn/",
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "http://www.jnys.cn/",
+  "lists": [
+   "http://www.jnys.cn/xxgk1.htm",
+   "http://www.jnys.cn/szdw/dwjs/sdsf.htm"
+  ],
+  "manual_lists": []
  },
  "金肯职业技术学院": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "https://www.njjku.com/",
+  "home_failed": false,
+  "last_status": "warn",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.njjku.com/",
+  "lists": [],
+  "manual_lists": []
  },
  "建东职业技术学院": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "http://www.czjdu.com/",
+  "home_failed": false,
+  "last_status": "warn",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "http://www.czjdu.com/",
+  "lists": [],
+  "manual_lists": []
  },
  "江海职业技术学院": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "https://www.jhu.cn/",
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.jhu.cn/",
+  "lists": [
+   "https://www.jhu.cn/xxgk/"
+  ],
+  "manual_lists": []
  },
  "南京工业职业技术大学": {
   "home": "https://www.niit.edu.cn/",
@@ -573,41 +1028,79 @@
   "discovered": "2026-11-20",
   "home_failed": false,
   "note": "官网已验证",
-  "last_status": "ok"
+  "last_status": "ok",
+  "configured_home": "https://www.niit.edu.cn/",
+  "manual_lists": []
  },
  "苏州职业技术大学": {
   "home": "https://www.jssvc.edu.cn/",
-  "lists": [],
+  "lists": [
+   "https://www.jssvc.edu.cn/xxgg/"
+  ],
   "discovered": "2026-11-20",
   "home_failed": false,
   "note": "官网已验证",
-  "last_status": "warn"
+  "last_status": "ok",
+  "configured_home": "https://www.jssvc.edu.cn/",
+  "manual_lists": [
+   "https://www.jssvc.edu.cn/xxgg/"
+  ]
  },
  "金山职业技术学院": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "https://www.jscu.cn/",
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.jscu.cn/",
+  "lists": [
+   "https://www.jscu.cn/list.php?cid=7&lid=52",
+   "https://www.jscu.cn/list.php?cid=3&lid=44",
+   "https://www.jscu.cn/list.php?cid=7&lid=7",
+   "https://www.jscu.cn/list.php?cid=3&lid=3"
+  ],
+  "manual_lists": []
  },
  "无锡职业技术大学": {
   "home": "https://www.wxit.edu.cn/",
-  "lists": [],
+  "lists": [
+   "https://www.wxit.edu.cn/index/rczp.htm"
+  ],
   "discovered": "2026-11-20",
   "home_failed": false,
   "note": "官网已验证",
-  "last_status": "warn"
+  "last_status": "ok",
+  "configured_home": "https://www.wxit.edu.cn/",
+  "manual_lists": [
+   "https://www.wxit.edu.cn/index/rczp.htm"
+  ]
  },
  "江苏建筑职业技术大学": {
   "home": "https://www.jsjzi.edu.cn/",
-  "lists": [],
+  "lists": [
+   "https://rsc.jsviat.edu.cn/1421/list.htm"
+  ],
   "discovered": "2026-11-20",
   "home_failed": false,
   "note": "官网已验证",
-  "last_status": "warn"
+  "last_status": "ok",
+  "configured_home": "https://www.jsjzi.edu.cn/",
+  "manual_lists": [
+   "https://rsc.jsviat.edu.cn/1421/list.htm"
+  ]
  },
  "昆山登云科技职业学院": {
-  "home": "",
+  "home": "https://www.dyc.edu.cn/",
   "home_failed": true,
-  "last_status": "error"
+  "last_status": "error",
+  "configured_home": "https://www.dyc.edu.cn/",
+  "lists": [
+   "https://www.dyc.edu.cn/27/list.htm"
+  ],
+  "manual_lists": [
+   "https://www.dyc.edu.cn/27/list.htm"
+  ],
+  "discovered": "2000-01-01"
  },
  "扬州职业技术大学": {
   "home": "https://www.yzpc.edu.cn/",
@@ -617,7 +1110,9 @@
   "discovered": "2026-11-20",
   "home_failed": false,
   "note": "官网已验证",
-  "last_status": "ok"
+  "last_status": "ok",
+  "configured_home": "https://www.yzpc.edu.cn/",
+  "manual_lists": []
  },
  "portal:江苏省教育厅": {
   "home": "https://jyt.jiangsu.gov.cn/"
@@ -631,42 +1126,99 @@
   "home": "https://jshrss.jiangsu.gov.cn/"
  },
  "南京视觉艺术职业学院": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "https://www.niva.cn/",
+  "home_failed": false,
+  "last_status": "warn",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.niva.cn/",
+  "lists": [],
+  "manual_lists": []
  },
  "苏州高博职业学院": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "http://www.gist.edu.cn/",
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "http://www.gist.edu.cn/",
+  "lists": [
+   "http://www.gist.edu.cn/26/list.htm",
+   "http://www.gist.edu.cn/xxgk/list.htm",
+   "http://www.gist.edu.cn/48/list.htm",
+   "http://www.gist.edu.cn/117/list.htm"
+  ],
+  "manual_lists": [
+   "http://www.gist.edu.cn/26/list.htm"
+  ]
  },
  "portal:苏州市人力资源和社会保障局": {},
  "portal:无锡市人力资源和社会保障局": {},
  "宿迁泽达职业技术学院": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "https://www.zdct.cn/",
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.zdct.cn/",
+  "lists": [
+   "https://www.zdct.cn/xxgk.htm"
+  ],
+  "manual_lists": []
  },
  "portal:常州市人力资源和社会保障局": {},
  "扬州中瑞酒店职业学院": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "https://www.yhvc.edu.cn/",
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.yhvc.edu.cn/",
+  "lists": [
+   "https://www.yhvc.edu.cn/list_74/",
+   "https://www.yhvc.edu.cn/list_245/",
+   "https://www.yhvc.edu.cn/list_58/",
+   "https://www.yhvc.edu.cn/list_68/"
+  ],
+  "manual_lists": [
+   "https://www.yhvc.edu.cn/list_74/"
+  ]
  },
  "portal:镇江市人力资源和社会保障局": {},
  "苏州百年职业学院": {
-  "home": "",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "https://www.scc.edu.cn/",
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.scc.edu.cn/",
+  "lists": [
+   "https://www.scc.edu.cn/158/list.htm",
+   "https://www.scc.edu.cn/xxgk/list.htm",
+   "https://www.scc.edu.cn/27/list.htm",
+   "https://www.scc.edu.cn/114/list.htm"
+  ],
+  "manual_lists": [
+   "https://www.scc.edu.cn/158/list.htm"
+  ]
  },
  "portal:扬州市人力资源和社会保障局": {},
  "portal:泰州市人力资源和社会保障局": {},
  "portal:南通市人力资源和社会保障局": {},
  "portal:盐城市人力资源和社会保障局": {},
  "常州信息职业技术大学": {
-  "home": "https://www.ccit.js.cn/",
-  "home_failed": true,
-  "last_status": "error"
+  "home": "https://www.czit.edu.cn/index.htm",
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-21",
+  "note": "官网已验证",
+  "configured_home": "https://www.czit.edu.cn/index.htm",
+  "lists": [
+   "https://www.czit.edu.cn/info/1359/29663.htm",
+   "https://www.czit.edu.cn/info/1056/29205.htm",
+   "https://www.czit.edu.cn/index/tzgg1.htm"
+  ],
+  "manual_lists": []
  },
  "portal:连云港市人力资源和社会保障局": {},
  "portal:淮安市人力资源和社会保障局": {},
