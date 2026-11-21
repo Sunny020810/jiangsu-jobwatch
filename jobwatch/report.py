@@ -82,7 +82,9 @@ def build_markdown(items, new_ids, health, cfg, today, run_info) -> str:
             out.append(f"| {i.get('pub_date') or '未知'} | {_md_escape(school_label(i))} | "
                        f"{flag}[{_md_escape(i['title'])}]({i['url']}) | {_md_escape(note)[:300]} |")
         out.append("")
-    out += build_health_md(health)
+    if run_info.get("local_note"):
+        out += [run_info["local_note"], ""]
+    out += run_info.get("cloud_health_md") or build_health_md(health)
     return "\n".join(out)
 
 
@@ -166,7 +168,7 @@ def build_message(items, new_ids, health, repo_url: str, pages_url: str, run_inf
     return title, "\n".join(lines)
 
 
-def build_html(items, new_ids, health, cfg, today) -> str:
+def build_html(items, new_ids, health, cfg, today, run_info=None) -> str:
     win = cfg["report_window_days"]
     shown = sorted([i for i in items if in_window(i, win, today)], key=_sort_key, reverse=True)
     data = []
@@ -194,6 +196,11 @@ def build_html(items, new_ids, health, cfg, today) -> str:
                    "portals": len(health.portals),
                    "portalsOk": sum(1 for h in health.portals.values() if h["status"] == "ok")},
     }
+    if run_info:
+        if "cloud_health" in run_info:
+            payload["health"] = run_info["cloud_health"]
+        payload["local_note"] = run_info.get("local_note", "")
+        payload["local_receipts"] = run_info.get("local_receipts", [])
     tpl_path = os.path.join(os.path.dirname(__file__), "web.html")
     with open(tpl_path, encoding="utf-8") as f:
         tpl = f.read()
@@ -201,11 +208,11 @@ def build_html(items, new_ids, health, cfg, today) -> str:
 
 
 def write_all(root, items, new_ids, health, cfg, run_info):
-    today = today_cn()
+    today = date.fromisoformat(run_info["report_day"]) if "report_day" in run_info else today_cn()
     md = build_markdown(items, new_ids, health, cfg, today, run_info)
     with open(os.path.join(root, "REPORT.md"), "w", encoding="utf-8") as f:
         f.write(md)
     os.makedirs(os.path.join(root, "docs"), exist_ok=True)
     with open(os.path.join(root, "docs", "index.html"), "w", encoding="utf-8") as f:
-        f.write(build_html(items, new_ids, health, cfg, today))
+        f.write(build_html(items, new_ids, health, cfg, today, run_info))
     return md

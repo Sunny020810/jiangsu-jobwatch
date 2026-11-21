@@ -2,8 +2,11 @@ name: 每日抓取江苏高职招聘
 
 on:
   schedule:
-    - cron: "0 20 * * *"   # UTC 23:17 = 北京时间每天 07:17（GitHub 定时可能延后几分钟到半小时）
+    - cron: "0 20 * * *"   # UTC 20:00 对应次日北京时间 04:00
   workflow_dispatch:         # 允许在 Actions 页面手动点“Run workflow”
+  push:
+    branches: [main]
+    paths: ['local-inbox/*.json']
 
 permissions:
   contents: write   # 把抓取结果提交回仓库
@@ -11,7 +14,7 @@ permissions:
 
 concurrency:
   group: jobwatch
-  cancel-in-progress: false
+  queue: max
 
 jobs:
   run:
@@ -19,6 +22,9 @@ jobs:
     timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -27,11 +33,14 @@ jobs:
 
       - name: 安装依赖（含读取 doc/wps/xls 附件的工具）
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq --no-install-recommends antiword libreoffice-writer-nogui libreoffice-calc-nogui > /dev/null
+          if [ "$GITHUB_EVENT_NAME" != "push" ]; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq --no-install-recommends antiword libreoffice-writer-nogui libreoffice-calc-nogui > /dev/null
+          fi
           pip install -q -r requirements.txt
 
       - name: 抓取、生成报告、推送
+        if: github.event_name != 'push'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
@@ -44,18 +53,24 @@ jobs:
           PAGES_ENABLED: ${{ vars.PAGES_ENABLED }}
         run: python -m jobwatch run
 
+      - name: 合并本地补查并更新日报
+        run: python -m jobwatch.supplement merge
+
       - name: 保存结果到仓库
-        if: always()
         run: |
           git config user.name "jobwatch-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A state data docs REPORT.md || true
+          git add -A -- state data docs REPORT.md local-inbox
           if git diff --cached --quiet; then
             echo "没有变化"
           else
             git commit -q -m "日报 $(TZ=Asia/Shanghai date +%F)"
-            git pull -q --rebase || true
-            git push -q
+            for attempt in 1 2 3 4; do
+              git pull -q --rebase origin main
+              if git push -q origin HEAD:main; then exit 0; fi
+              sleep "$attempt"
+            done
+            exit 1
           fi
 
       - name: 上传招聘网页

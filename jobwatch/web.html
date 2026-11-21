@@ -183,6 +183,11 @@ $('openOnly').addEventListener('change', e => { st.open = e.target.checked; st.s
 $('more').addEventListener('click', () => { st.shown += 30; render(); });
 
 const H = D.health;
+if (D.local_note) {
+  const note = document.createElement('p');
+  note.textContent = D.local_note;
+  $('upd').after(note);
+}
 $('healthSum').textContent = `已检查 ${H.total} 所学校，正常 ${H.total - H.err - H.warn} 所，部分可读 ${H.warn} 所，未能读取或确认 ${H.err} 所`;
 $('health').innerHTML = (H.errors.length ? `<p>未能读取或确认（${H.err} 所）　${H.errors.map(esc).join('、')}</p>` : '')
   + (H.warnings.length ? `<p>部分可读（${H.warn} 所）　${H.warnings.map(esc).join('、')}</p>` : '')

@@ -1,0 +1,13 @@
+江苏高职招聘日报 · 本地补查
+
+解压整个文件夹，双击「双击本地补查.cmd」。推荐在早上的 GitHub 日报发布之后运行。
+首次会安装所需的 Python 包，并在需要时打开 GitHub 官方授权。请使用 Sunny020810 登录。
+Windows 需要 Git for Windows 和 Python 3.10 或以上。装有 Codex 自带 Python 的电脑也可以直接使用。
+
+程序从 main 读取北京时间今天的日报，仅补查“部分可读”和“未能读取”的学校。今天已在本机补全的学校会跳过。
+窗口显示“网页已更新”后，打开 https://sunny020810.github.io/jiangsu-jobwatch/ 即可看到合并后的日报。
+上午的 GitHub 任务仍按北京时间 04:00 定时启动，本地合并会与它排队发布。
+
+GitHub 无法连接或发布中断时，可以再次双击。尚未确认上线的一批结果保存在
+%LOCALAPPDATA%\JiangsuJobwatch\pending.json，重复提交会按批次和公告去重。
+本机具备 LibreOffice / antiword 时可解析更多旧式附件；无法读取的附件会在公告旁提示人工查看。

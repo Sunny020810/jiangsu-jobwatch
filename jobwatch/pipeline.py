@@ -325,14 +325,16 @@ class Runner:
         return item if is_new else None
 
     # ------------------------------------------------------------------ 总调度
-    def run(self, use_search=True, only_school: str | None = None) -> list[dict]:
-        schools = [s for s in self.schools if not only_school or only_school in s["name"]]
+    def run(self, use_search=True, only_school: str | None = None, *, school_names: set[str] | None = None) -> list[dict]:
+        schools = [s for s in self.schools if (school_names is None or s["name"] in school_names)
+                   and (not only_school or only_school in s["name"])]
+        school_only = bool(only_school) or school_names is not None
         cands: list[Candidate] = []
-        portals = [] if only_school else self.cfg.get("portals", [])
+        portals = [] if school_only else self.cfg.get("portals", [])
         start = monotonic()
         self.log(f"开始检查 {len(schools)} 所学校、{len(portals)} 个汇总来源")
         with ThreadPoolExecutor(self.cfg.get("source_workers", self.cfg["workers"])) as ex:
-            search_job = ex.submit(self.crawl_search) if use_search and not only_school else None
+            search_job = ex.submit(self.crawl_search) if use_search and not school_only else None
             school_jobs, portal_jobs = [], []
             for school, portal in zip_longest(schools, portals):
                 if school is not None:
