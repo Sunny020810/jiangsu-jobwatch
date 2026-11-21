@@ -7,9 +7,9 @@ from urllib.parse import urlparse
 from bs4 import BeautifulSoup
 
 from .fetch import Fetcher, FetchError, Page
-from .htmlutil import clean, extract_links, page_title, same_site
+from .htmlutil import Link, clean, extract_links, page_title, same_site
 from .match import is_recruit_title
-from .search import not_blacklisted, search
+from .search import SearchStatus, not_blacklisted, search
 
 NAV_RE = re.compile(r"人才招聘|招聘信息|招聘公告|人才引进|招贤纳士|诚聘|人事招聘|招聘|人事处|人事部|人力资源|组织人事|教师工作部|人事|师资")
 NOTICE_RE = re.compile(r"通知公告|公告通知|信息公开|公示公告|通知")
@@ -28,7 +28,8 @@ def page_matches(page: Page, names: list[str]) -> bool:
     return any(n in title or n in body for n in names if n)
 
 
-def resolve_homepage(fetcher: Fetcher, name: str, aliases: list[str], configured: str) -> tuple[str | None, Page | None, str]:
+def resolve_homepage(fetcher: Fetcher, name: str, aliases: list[str], configured: str,
+                     status: SearchStatus | None = None) -> tuple[str | None, Page | None, str]:
     """返回 (首页地址, 首页内容, 说明)。"""
     names = [name, *aliases]
     note = "没有配置官网地址"
@@ -41,7 +42,7 @@ def resolve_homepage(fetcher: Fetcher, name: str, aliases: list[str], configured
         except FetchError as e:
             note = f"配置的首页请求失败：{e}"
     for q in (f"{name} 官网", f"{name}"):
-        for link in search(fetcher, q)[:8]:
+        for link in search(fetcher, q, status=status)[:8]:
             if not not_blacklisted(link.url):
                 continue
             host = urlparse(link.url).hostname or ""
@@ -62,17 +63,27 @@ def _usable_nav(link, home: str) -> bool:
         and len(link.title) <= 12
 
 
-def score_list_page(html: str, url: str) -> int:
-    return sum(1 for l in extract_links(html, url) if is_recruit_title(l.title))
-
-
-def find_recruit_lists(fetcher: Fetcher, home: str, home_html: str, max_lists: int = 4) -> list[str]:
+def find_recruit_lists(fetcher: Fetcher, home: str, home_html: str, max_lists: int = 4,
+                      *, parsed_pages: dict[str, list[Link]] | None = None) -> list[str]:
     """从首页出发，最多两层，找“招聘信息/人才引进/通知公告”这类列表页，按其中招聘标题数量排序。"""
     links = extract_links(home_html, home)
+    if parsed_pages is not None:
+        parsed_pages[home] = links
     level1 = [l for l in links if _usable_nav(l, home) and (NAV_RE.search(l.title) or NOTICE_RE.search(l.title))]
     # 人事/招聘优先，通知公告其次
     level1.sort(key=lambda l: (0 if NAV_RE.search(l.title) else 1, len(l.title)))
     scored: dict[str, int] = {}
+
+    def read_nav(url):
+        pg = fetcher.get(url, referer=home)
+        links = extract_links(pg.text, pg.url)
+        score = sum(is_recruit_title(link.title) for link in links)
+        if score:
+            scored[pg.url] = max(score, scored.get(pg.url, 0))
+            if parsed_pages is not None:
+                parsed_pages[url] = parsed_pages[pg.url] = links
+        return links
+
     visited = set()
     level2 = []
     for l in level1[:12]:
@@ -80,14 +91,11 @@ def find_recruit_lists(fetcher: Fetcher, home: str, home_html: str, max_lists: i
             continue
         visited.add(l.url)
         try:
-            pg = fetcher.get(l.url, referer=home)
+            nav_links = read_nav(l.url)
         except FetchError:
             continue
-        s = score_list_page(pg.text, pg.url)
-        if s:
-            scored[pg.url] = s
         if NAV_RE.search(l.title):  # 进入人事处网站后，再找“招聘信息”子栏目
-            for l2 in extract_links(pg.text, pg.url):
+            for l2 in nav_links:
                 if _usable_nav(l2, home) and re.search(r"招聘|引进|招贤|诚聘|公告", l2.title) and l2.url not in visited:
                     level2.append(l2)
     for l2 in level2[:10]:
@@ -95,11 +103,8 @@ def find_recruit_lists(fetcher: Fetcher, home: str, home_html: str, max_lists: i
             continue
         visited.add(l2.url)
         try:
-            pg = fetcher.get(l2.url, referer=home)
+            read_nav(l2.url)
         except FetchError:
             continue
-        s = score_list_page(pg.text, pg.url)
-        if s:
-            scored[pg.url] = max(s, scored.get(pg.url, 0))
     best = sorted(scored.items(), key=lambda kv: -kv[1])
     return [u for u, _ in best[:max_lists]]

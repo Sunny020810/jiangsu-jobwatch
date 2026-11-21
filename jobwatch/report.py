@@ -86,6 +86,14 @@ def build_markdown(items, new_ids, health, cfg, today, run_info) -> str:
     return "\n".join(out)
 
 
+def _search_summary(status) -> str:
+    counts = f"有结果 {status.ok} 次，确认无结果 {status.empty} 次，请求失败或无法识别结果页 {status.failed} 次"
+    if status.engine_errors:
+        attempts = "、".join(f"{reason} {count} 次" for reason, count in sorted(status.engine_errors.items()))
+        return f"{counts}（按引擎统计：{attempts}）"
+    return counts
+
+
 def build_health_md(health) -> list[str]:
     sch = health.schools
     ok = [n for n, h in sch.items() if h["status"] == "ok"]
@@ -93,7 +101,8 @@ def build_health_md(health) -> list[str]:
     err = [n for n, h in sch.items() if h["status"] == "error"]
     out = ["## 🩺 抓取健康情况", "",
            f"- 学校官网：正常 {len(ok)}，提示 {len(warn)}，异常 {len(err)}（共 {len(sch)} 所）",
-           f"- 搜索引擎：成功 {health.search.ok} 次，无结果/被拦截 {health.search.empty} 次",
+           f"- 招聘公告补搜：{_search_summary(health.search)}",
+           f"- 查找官网入口：{_search_summary(health.lookup)}",
            f"- 详情页打不开 {health.detail_errors} 次（会自动重试 3 天），附件未能解析 {health.attachments_failed} 个（已标为需人工查看）",
            ""]
     if warn or err:
@@ -180,7 +189,8 @@ def build_html(items, new_ids, health, cfg, today) -> str:
         "updated": f"{datetime.now(CN_TZ):%Y-%m-%d %H:%M}", "today": today.isoformat(), "window": win,
         "items": data,
         "health": {"total": len(sch), "err": len(err), "warn": len(warn), "errors": err, "warnings": warn,
-                   "searchOk": health.search.ok, "searchEmpty": health.search.empty,
+                   "searchOk": health.search.ok, "searchEmpty": health.search.empty, "searchFailed": health.search.failed,
+                   "searchSummary": _search_summary(health.search), "lookupSummary": _search_summary(health.lookup),
                    "portals": len(health.portals),
                    "portalsOk": sum(1 for h in health.portals.values() if h["status"] == "ok")},
     }

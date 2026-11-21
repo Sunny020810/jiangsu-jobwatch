@@ -25,10 +25,12 @@ role_keywords:
   其他: []
 
 # ---------- 抓取设置 ----------
-request_timeout: 25        # 单个请求超时（秒）
+request_timeout: 25        # 读取超时，最后一次连接也给足这个时间（秒）
+connect_timeout: 6         # 前两次建立连接的等待时间（秒）
 request_retries: 2         # 失败重试次数
 request_delay: 0.4         # 同一线程两次请求之间的间隔（秒），别太快，避免被封
-workers: 8                 # 并发线程数
+source_workers: 12         # 不同学校和汇总网站的并发任务数
+workers: 8                 # 公告详情、附件的并发任务数
 allow_insecure_ssl: true   # 很多学校网站证书有问题，允许跳过校验（只读取公开信息）
 max_attachment_mb: 15      # 附件最大下载体积
 rediscover_days: 7         # 每隔多少天重新探测一次学校的招聘栏目
@@ -46,18 +48,19 @@ portals:
   - {name: 高校人才网-江苏, type: list, url: "https://www.gaoxiaojob.com/column/21.html"}
   - {name: 高校人才网-高校招聘, type: list, url: "https://www.gaoxiaojob.com/column/1.html"}
   - {name: 南京市人力资源和社会保障局, type: portal, url: "https://rsj.nanjing.gov.cn/", nav: [事业单位招聘, 公开招聘, 人事考试]}
-  - {name: 苏州市人力资源和社会保障局, type: portal, url: "", nav: [事业单位招聘, 公开招聘, 人事考试]}
-  - {name: 无锡市人力资源和社会保障局, type: portal, url: "", nav: [事业单位招聘, 公开招聘, 人事考试]}
-  - {name: 常州市人力资源和社会保障局, type: portal, url: "", nav: [事业单位招聘, 公开招聘, 人事考试]}
-  - {name: 镇江市人力资源和社会保障局, type: portal, url: "", nav: [事业单位招聘, 公开招聘, 人事考试]}
-  - {name: 扬州市人力资源和社会保障局, type: portal, url: "", nav: [事业单位招聘, 公开招聘, 人事考试]}
-  - {name: 泰州市人力资源和社会保障局, type: portal, url: "", nav: [事业单位招聘, 公开招聘, 人事考试]}
-  - {name: 南通市人力资源和社会保障局, type: portal, url: "", nav: [事业单位招聘, 公开招聘, 人事考试]}
-  - {name: 盐城市人力资源和社会保障局, type: portal, url: "", nav: [事业单位招聘, 公开招聘, 人事考试]}
-  - {name: 淮安市人力资源和社会保障局, type: portal, url: "", nav: [事业单位招聘, 公开招聘, 人事考试]}
-  - {name: 连云港市人力资源和社会保障局, type: portal, url: "", nav: [事业单位招聘, 公开招聘, 人事考试]}
-  - {name: 宿迁市人力资源和社会保障局, type: portal, url: "", nav: [事业单位招聘, 公开招聘, 人事考试]}
-  - {name: 徐州市人力资源和社会保障局, type: portal, url: "", nav: [事业单位招聘, 公开招聘, 人事考试]}
+  - {name: 苏州市人力资源和社会保障局, type: portal, url: "https://hrss.suzhou.gov.cn/", nav: [事业单位招聘, 公开招聘, 人事考试]}
+  - {name: 无锡市人力资源和社会保障局, type: portal, url: "https://hrss.wuxi.gov.cn/", nav: [事业单位招聘, 公开招聘, 人事考试]}
+  - {name: 常州市人力资源和社会保障局, type: portal, url: "https://rsj.changzhou.gov.cn/", nav: [事业单位招聘, 公开招聘, 人事考试]}
+  - {name: 镇江市人力资源和社会保障局, type: portal, url: "https://hrss.zhenjiang.gov.cn/", nav: [事业单位招聘, 公开招聘, 人事考试]}
+  - {name: 扬州市人力资源和社会保障局, type: portal, url: "https://hrss.yangzhou.gov.cn/", nav: [事业单位招聘, 公开招聘, 人事考试]}
+  - {name: 泰州市人力资源和社会保障局, type: portal, url: "https://rsj.taizhou.gov.cn/", nav: [事业单位招聘, 公开招聘, 人事考试]}
+  - {name: 南通市人力资源和社会保障局, type: portal, url: "https://rsj.nantong.gov.cn/", nav: [事业单位招聘, 公开招聘, 人事考试]}
+  - {name: 南通市直属事业单位招录, type: list, url: "https://rsj.nantong.gov.cn/ntsrsj/ntszsydwzk/ntszsydwzk.html"}
+  - {name: 盐城市人力资源和社会保障局, type: portal, url: "https://jsychrss.yancheng.gov.cn/", nav: [事业单位招聘, 公开招聘, 人事考试]}
+  - {name: 淮安市人力资源和社会保障局, type: portal, url: "https://rsj.huaian.gov.cn/", nav: [事业单位招聘, 公开招聘, 人事考试]}
+  - {name: 连云港市人力资源和社会保障局, type: portal, url: "https://rsj.lyg.gov.cn/", nav: [事业单位招聘, 公开招聘, 人事考试]}
+  - {name: 宿迁市人力资源和社会保障局, type: portal, url: "https://sqhrss.suqian.gov.cn/", nav: [事业单位招聘, 公开招聘, 人事考试]}
+  - {name: 徐州市人力资源和社会保障局, type: portal, url: "https://hrss.xz.gov.cn/", nav: [事业单位招聘, 公开招聘, 人事考试]}
 
 # 每天都跑的全局搜索（只取最近一周的结果）
 search_queries:

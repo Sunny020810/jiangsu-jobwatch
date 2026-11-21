@@ -5,8 +5,11 @@ import io
 import os
 import shutil
 import sys
+from threading import Barrier
+from unittest.mock import MagicMock
 
 import pytest
+import requests
 import yaml
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -14,9 +17,10 @@ sys.path.insert(0, ROOT)
 
 from jobwatch import pipeline as pl  # noqa: E402
 from jobwatch import discover  # noqa: E402
+from jobwatch import search as websearch  # noqa: E402
 from jobwatch.attachments import parse_attachment  # noqa: E402
-from jobwatch.fetch import FetchError, Page  # noqa: E402
-from jobwatch.htmlutil import extract_links, parse_date  # noqa: E402
+from jobwatch.fetch import FetchError, Fetcher, Page  # noqa: E402
+from jobwatch.htmlutil import Link, extract_links, parse_date  # noqa: E402
 from jobwatch.match import analyze, degree_ok, is_recruit_title  # noqa: E402
 from jobwatch.report import build_message, write_all  # noqa: E402
 from jobwatch.state import State  # noqa: E402
@@ -205,6 +209,191 @@ def test_end_to_end(env):
     title, body = build_message(state.items, ids, runner.health, "https://github.com/u/r", "", {"baseline": True})
     assert "重点2" in title, title
     assert "南京信息职业技术学院" in body
+
+
+def test_newly_discovered_list_is_read_once_and_refreshed_next_run(env, monkeypatch):
+    root, cfg, schools, calls = env
+    school = schools[0]
+    url = "https://rsc.jscfa.edu.cn/zpxx/list.htm"
+    school["recruit_pages"] = [url]
+    runner = pl.Runner(cfg, schools, State(str(root)))
+    first = runner.crawl_school(school)
+    assert calls.count(url) == 1 and any("辅导员" in c.link.title for c in first)
+    runner.state.save()
+    second = pl.Runner(cfg, schools, State(str(root)))
+    get = second.f.get
+
+    def updated(url_in, **kwargs):
+        page = get(url_in, **kwargs)
+        if url_in == url:
+            page.text += '<a href="/new.htm">江苏财会职业学院新一轮公开招聘教师公告</a>'
+        return page
+
+    monkeypatch.setattr(second.f, "get", updated)
+    assert any(c.link.url.endswith("/new.htm") for c in second.crawl_school(school))
+    assert calls.count(url) == 2
+
+
+def test_failed_discovery_retries_manual_list_in_same_run(env, monkeypatch):
+    root, cfg, schools, calls = env
+    school = schools[0]
+    url = "https://rsc.jscfa.edu.cn/zpxx/list.htm"
+    school["recruit_pages"] = [url]
+    runner = pl.Runner(cfg, schools, State(str(root)))
+    get = runner.f.get
+    unavailable = [True]
+
+    def flaky(url_in, **kwargs):
+        if url_in == url and unavailable:
+            unavailable.pop()
+            raise FetchError("暂时无法连接")
+        return get(url_in, **kwargs)
+
+    monkeypatch.setattr(runner.f, "get", flaky)
+    assert any("辅导员" in c.link.title for c in runner.crawl_school(school))
+    assert not unavailable and url in calls
+
+
+def test_parallel_search_keeps_queries_rotation_and_school_filter(env, monkeypatch):
+    root, cfg, _, _ = env
+    with open(os.path.join(ROOT, "schools.yaml"), encoding="utf-8") as f:
+        schools = yaml.safe_load(f)["schools"]
+    with open(os.path.join(ROOT, "config.yaml"), encoding="utf-8") as f:
+        queries = yaml.safe_load(f)["search_queries"]
+    cfg["search_queries"] = queries
+    runner = pl.Runner(cfg, schools, State(str(root)))
+    schools = runner.schools
+    runner.state.meta["rotation"] = len(schools) - 2
+    expected = schools[-2:] + schools[:cfg["search_schools_per_day"] - 2]
+    calls = []
+    both_started = Barrier(2, timeout=5)
+
+    def lookup(fetcher, query, fresh, status):
+        calls.append((query, fresh))
+        if query in queries[:2]:
+            both_started.wait()
+        if query == queries[-1]:
+            raise ValueError("一个搜索源暂时失败")
+        name = query.removesuffix(" 招聘") if fresh == "month" else schools[0]["name"]
+        return [Link(name + "公开招聘教师公告", query), Link("其他地区学校公开招聘公告", "unrelated")]
+
+    monkeypatch.setattr(pl, "search", lookup)
+    results = runner.crawl_search()
+    assert sorted(calls) == sorted([(q, "week") for q in queries] +
+                                   [(s["name"] + " 招聘", "month") for s in expected])
+    assert [c.school for c in results if c.school] == [s["name"] for s in expected]
+    assert len([c for c in results if not c.school]) == len(queries) - 1
+    assert all(c.link.url != "unrelated" for c in results)
+    assert runner.state.meta["rotation"] % len(schools) == cfg["search_schools_per_day"] - 2
+
+
+@pytest.mark.parametrize("available", [True, False])
+def test_city_portal_uses_configured_entry_or_search_fallback(env, monkeypatch, available):
+    root, cfg, schools, _ = env
+    runner = pl.Runner(cfg, schools, State(str(root)))
+    name = "无锡市人力资源和社会保障局"
+    configured, alternate = "https://entry.wuxi.gov.cn/", "https://other.wuxi.gov.cn/"
+    portal = dict(name=name, url=configured, type="portal", nav=["公开招聘"])
+    runner.state.sites["portal:" + name] = {"home": "https://retired.wuxi.gov.cn/"}
+    calls = []
+
+    def fetch(url, **kwargs):
+        if "retired" in url:
+            raise FetchError("旧入口已停用")
+        html = '<title>' + name + '</title><a href="/news">江苏财会职业学院公开招聘教师公告</a>'
+        if url.endswith("/news"):
+            html = "<h1>江苏财会职业学院公开招聘教师公告</h1>"
+        if url == configured and not available:
+            html = "<title>页面维护中</title>"
+        return Page(url, 200, html, b"", "text/html")
+
+    def lookup(fetcher, query, status):
+        assert status is runner.health.lookup
+        calls.append(query)
+        return [Link(name, alternate)]
+
+    monkeypatch.setattr(runner.f, "get", fetch)
+    monkeypatch.setattr(pl, "search", lookup)
+    result = runner.crawl_portal(portal)
+    assert [c.link.url for c in result] == [(configured if available else alternate) + "news"]
+    assert calls == ([] if available else [name + " 官网"])
+
+
+@pytest.mark.parametrize("bing,ddg,expected", [
+    ('<li class="b_no">没有找到相关结果</li>', '<div class="no-results">No results found</div>', (0, 1, 0)),
+    ('<h1>服务暂不可用</h1>', '<div class="no-results">No results found</div>', (0, 0, 1)),
+    (FetchError("连接超时"), '<title>等待验证</title>', (0, 0, 1)),
+    (FetchError("连接超时"), '<div class="result"><a class="result__a" href="https://school.edu.cn/notice">招聘公告</a></div>', (1, 0, 0)),
+])
+def test_search_distinguishes_empty_results_from_failed_checks(bing, ddg, expected):
+    fetcher = MagicMock()
+
+    def get(url):
+        content = bing if "bing.com" in url else ddg
+        if isinstance(content, FetchError):
+            raise content
+        return Page(url, 200, content, b"", "text/html")
+
+    fetcher.get.side_effect = get
+    status = websearch.SearchStatus()
+    hits = websearch.search(fetcher, "高校 招聘", status=status)
+    assert len(hits) == expected[0]
+    assert (status.ok, status.empty, status.failed) == expected
+    if isinstance(bing, FetchError):
+        assert status.engine_errors["Bing 请求失败"] == 1
+    if ddg == "<title>等待验证</title>":
+        assert status.engine_errors["DuckDuckGo 页面无法识别"] == 1
+
+
+def test_report_separates_job_search_from_homepage_lookup(env, monkeypatch):
+    import json
+    from bs4 import BeautifulSoup
+
+    root, cfg, schools, _ = env
+    runner = pl.Runner(cfg, schools, State(str(root)))
+
+    def lookup(fetcher, query, status):
+        assert status is runner.health.lookup
+        status.record(False, failed=True)
+        return []
+
+    monkeypatch.setattr(discover, "search", lookup)
+    runner.crawl_school(schools[1])
+    runner.health.search.record(False)
+    report = write_all(str(root), [], set(), runner.health, cfg, {"baseline": False})
+    page = BeautifulSoup((root / "docs" / "index.html").read_text(encoding="utf8"), "lxml")
+    health = json.loads(page.select_one("#payload").string)["health"]
+    assert health["searchSummary"] in report and health["lookupSummary"] in report
+    assert "确认无结果 1 次" in health["searchSummary"] and "无法识别结果页 0 次" in health["searchSummary"]
+    assert "无法识别结果页 2 次" in health["lookupSummary"]
+
+
+def test_slow_connection_keeps_final_attempt_and_full_attachment_read_timeout(monkeypatch):
+    fetcher = Fetcher(timeout=25, retries=2, delay=0, connect_timeout=6)
+    response = MagicMock()
+    response.__enter__.return_value = response
+    response.status_code = 200
+    response.iter_content.return_value = [b"attachment"]
+    get = MagicMock(side_effect=[requests.ConnectTimeout(), requests.ConnectTimeout(), response])
+    monkeypatch.setattr(fetcher._session(), "get", get)
+    monkeypatch.setattr("jobwatch.fetch.time.sleep", lambda _: None)
+    assert fetcher.get("https://example.edu.cn/jobs.xlsx", binary=True).content == b"attachment"
+    assert [call.kwargs["timeout"] for call in get.call_args_list] == [(6, 25), (6, 25), (25, 25)]
+    response.__exit__.assert_called_once()
+
+
+def test_http_error_closes_response_without_reading_error_body(monkeypatch):
+    fetcher = Fetcher()
+    response = MagicMock()
+    response.__enter__.return_value = response
+    response.status_code = 404
+    get = MagicMock(return_value=response)
+    monkeypatch.setattr(fetcher._session(), "get", get)
+    with pytest.raises(FetchError, match="HTTP 404"):
+        fetcher.get("http://example.edu.cn/missing")
+    get.assert_called_once()
+    response.iter_content.assert_not_called()
+    response.__exit__.assert_called_once()
 
 
 def test_manual_list_available_when_homepage_is_down(env):

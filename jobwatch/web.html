@@ -113,7 +113,7 @@ details p,details li{font-size:15px}
 <li><b>红色“金融对口”</b>：岗位的专业要求里写了金融，或者写了“经济类”（江苏的招聘专业目录里，金融学、金融硕士都属于经济类），而且接受硕士学历。</li>
 <li><b>黄色“可能合适”</b>：专业不限、相近专业（经济、财会、管理），或者附件没能自动读出来，需要你点开原文看一眼。</li>
 <li><b>正在报名</b>：从公告里识别出的报名截止日期还没到。没识别出日期的公告不会算进去，请以原文为准。</li>
-<li>每天早上 7 点多自动更新一次。<b>报名前一定要点“查看原文”，以学校或人社部门的官方公告为准。</b></li>
+<li>日报每天在抓取和发布完成后更新。<b>报名前一定要点“查看原文”，以学校或人社部门的官方公告为准。</b></li>
 <li>手机上可以把这个页面“添加到主屏幕”或在微信里“收藏”，下次直接打开。</li>
 </ul>
 </details>
@@ -186,7 +186,8 @@ const H = D.health;
 $('healthSum').textContent = `已检查 ${H.total} 所学校，正常 ${H.total - H.err - H.warn} 所，部分可读 ${H.warn} 所，未能读取或确认 ${H.err} 所`;
 $('health').innerHTML = (H.errors.length ? `<p>未能读取或确认（${H.err} 所）　${H.errors.map(esc).join('、')}</p>` : '')
   + (H.warnings.length ? `<p>部分可读（${H.warn} 所）　${H.warnings.map(esc).join('、')}</p>` : '')
-  + `<p>汇总网站可读 ${H.portalsOk} / ${H.portals} 个。补充搜索有结果 ${H.searchOk} 次，无结果或请求失败 ${H.searchEmpty} 次。</p>`;
+  + `<p>汇总网站可读 ${H.portalsOk} / ${H.portals} 个。</p>`
+  + `<p>招聘公告补搜：${esc(H.searchSummary)}。</p><p>查找官网入口：${esc(H.lookupSummary)}。</p>`;
 render();
 }
 </script>
