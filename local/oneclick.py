@@ -56,7 +56,8 @@ def install(repo):
 
 
 def environment(repo):
-    prefix = BASE / ("python-%s.%s" % sys.version_info[:2])
+    # Packaged Windows apps can redirect LocalAppData across drives, breaking pip's atomic renames.
+    prefix = Path.home() / ".jiangsu-jobwatch" / ("python-%s.%s" % sys.version_info[:2])
     python = prefix / ("Scripts/python.exe" if os.name == "nt" else "bin/python")
     if not python.exists():
         subprocess.run([sys.executable, "-m", "venv", str(prefix)], check=True)
