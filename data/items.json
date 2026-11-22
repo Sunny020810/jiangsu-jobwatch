@@ -9175,5 +9175,122 @@
    }
   ],
   "needs_manual": true
+ },
+ {
+  "title": "江苏建筑职业技术学院 江苏省绿色智慧城市和遗产保护协同创新中心主任招聘公告",
+  "url": "http://www.jsjzi.edu.cn/2025/0529/c8a145814/page.htm",
+  "source": "官网·江苏建筑职业技术大学",
+  "school": "江苏建筑职业技术大学",
+  "city": "徐州",
+  "stype": "职业本科",
+  "deadline": null,
+  "schools": [
+   "江苏建筑职业技术大学"
+  ],
+  "pub_date": null,
+  "first_seen": "2026-11-22",
+  "tier": "B",
+  "kind": "招聘公告",
+  "reasons": [
+   "附件未能自动解析：详情页连续 3 天打不开（FetchError: HTTP 410）"
+  ],
+  "roles": [],
+  "snippets": [],
+  "rows": [],
+  "needs_manual": true
+ },
+ {
+  "title": "江苏建筑职业技术学院2025年公开招聘高层次人才公告",
+  "url": "http://www.jsjzi.edu.cn/2025/0526/c8a145693/page.htm",
+  "source": "官网·江苏建筑职业技术大学",
+  "school": "江苏建筑职业技术大学",
+  "city": "徐州",
+  "stype": "职业本科",
+  "deadline": null,
+  "schools": [
+   "江苏建筑职业技术大学"
+  ],
+  "pub_date": null,
+  "first_seen": "2026-11-22",
+  "tier": "B",
+  "kind": "招聘公告",
+  "reasons": [
+   "附件未能自动解析：详情页连续 3 天打不开（FetchError: HTTP 410）"
+  ],
+  "roles": [],
+  "snippets": [],
+  "rows": [],
+  "needs_manual": true
+ },
+ {
+  "title": "江苏建筑职业技术学院湖西校区2025年公开招聘人事代理工作人员公告",
+  "url": "http://www.jsjzi.edu.cn/2025/0113/c8a141636/page.htm",
+  "source": "官网·江苏建筑职业技术大学",
+  "school": "江苏建筑职业技术大学",
+  "city": "徐州",
+  "stype": "职业本科",
+  "deadline": null,
+  "schools": [
+   "江苏建筑职业技术大学"
+  ],
+  "pub_date": null,
+  "first_seen": "2026-11-22",
+  "tier": "B",
+  "kind": "招聘公告",
+  "reasons": [
+   "附件未能自动解析：详情页连续 3 天打不开（FetchError: HTTP 410）"
+  ],
+  "roles": [
+   "行政管理"
+  ],
+  "snippets": [],
+  "rows": [],
+  "needs_manual": true
+ },
+ {
+  "title": "江苏旅游职业学院岗位设置与聘用实施办法（试行）",
+  "url": "http://www.jstc.edu.cn/rsc/content.jsp?urltype=news.NewsContentUrl&wbtreeid=1005&wbnewsid=2472",
+  "source": "官网·江苏旅游职业学院",
+  "school": "江苏旅游职业学院",
+  "city": "扬州",
+  "stype": "公办专科",
+  "deadline": null,
+  "schools": [
+   "江苏旅游职业学院"
+  ],
+  "pub_date": null,
+  "first_seen": "2026-11-22",
+  "tier": "B",
+  "kind": "招聘公告",
+  "reasons": [
+   "附件未能自动解析：详情页连续 3 天打不开（FetchError: HTTP 403）"
+  ],
+  "roles": [],
+  "snippets": [],
+  "rows": [],
+  "needs_manual": true
+ },
+ {
+  "title": "校内中层干部任免、人员招聘信息",
+  "url": "https://www.jstc.edu.cn/xxgk/rssz/xnzcgbrm_ryzpxx.htm",
+  "source": "官网·江苏旅游职业学院",
+  "school": "江苏旅游职业学院",
+  "city": "扬州",
+  "stype": "公办专科",
+  "deadline": null,
+  "schools": [
+   "江苏旅游职业学院"
+  ],
+  "pub_date": null,
+  "first_seen": "2026-11-22",
+  "tier": "B",
+  "kind": "招聘公告",
+  "reasons": [
+   "附件未能自动解析：详情页连续 3 天打不开（FetchError: HTTP 403）"
+  ],
+  "roles": [],
+  "snippets": [],
+  "rows": [],
+  "needs_manual": true
  }
 ]
