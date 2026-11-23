@@ -9,7 +9,9 @@ import subprocess
 import sys
 import tempfile
 import time
+import urllib.request
 from urllib.error import URLError
+from urllib.parse import urlsplit
 from urllib.request import Request, urlopen
 from uuid import uuid4
 
@@ -27,15 +29,74 @@ def git(repo, *args, check=True, capture=False):
                           stdout=subprocess.PIPE if capture else None, text=True, encoding="utf-8", errors="replace")
 
 
+def windows_proxy(repo):
+    """Respect explicit Git/environment proxy settings and the user's Windows bypass list."""
+    if os.name != "nt":
+        return None
+    env = urllib.request.getproxies_environment()
+    if env.get("https") or env.get("all") or urllib.request.proxy_bypass_environment("github.com", env):
+        return None
+    if git(repo, "config", "--get-urlmatch", "http.proxy", REMOTE, capture=True, check=False).returncode == 0:
+        return None
+    if urllib.request.proxy_bypass_registry("github.com"):
+        return None
+    proxy = urllib.request.getproxies_registry().get("https")
+    if proxy:
+        try:
+            address = urlsplit(proxy)
+        except ValueError:
+            return None
+        if address.hostname and address.scheme in ("http", "https", "socks4", "socks5", "socks5h") and address.username is None:
+            return proxy
+    return None
+
+
+def network_git(repo, *args):
+    transient = ("failed to connect", "could not connect", "couldn't connect", "could not resolve",
+                 "timed out", "timeout", "connection reset", "connection was reset", "connection refused",
+                 "connection was aborted", "operation too slow", "early eof", "remote end hung up", "recv failure", "send failure",
+                 "tls connection was non-properly terminated", "ssl_error_syscall", "http 502", "http 503", "http 504",
+                 "error: 502", "error: 503", "error: 504")
+    proxy = windows_proxy(repo)
+    for attempt in range(3):
+        options = ["-c", "http.lowSpeedLimit=1", "-c", "http.lowSpeedTime=30"]
+        if proxy and attempt != 1:
+            options.extend(["-c", f"http.https://github.com/.proxy={proxy}"])
+        result = subprocess.run(["git", "-C", str(repo), *options, *args], stderr=subprocess.PIPE,
+                                text=True, encoding="utf-8", errors="replace", env={**os.environ, "LC_ALL": "C"})
+        if result.returncode == 0:
+            return result
+        if not any(reason in result.stderr.lower() for reason in transient):
+            print(result.stderr.strip(), file=sys.stderr)
+            return result
+        if attempt < 2:
+            route = "Windows 系统代理" if attempt == 1 and proxy else "现有 Git 网络设置"
+            print(f"GitHub 连接中断，将使用{route}重试（第 {attempt + 2}/3 次）。", flush=True)
+            time.sleep(2 + attempt * 3)
+    print(result.stderr.strip(), file=sys.stderr)
+    raise RuntimeError("连续 3 次未连通 GitHub。请检查网络或系统代理后重新双击；如已有待发布结果，它会保留在本机。")
+
+
+def checkout_latest(repo):
+    git(repo.parent, "init", "-q", str(repo))
+    git(repo, "remote", "add", "origin", REMOTE)
+    git(repo, "remote", "set-url", "--push", "origin", PUSH_URL)
+    print("正在从 GitHub 获取最新日报…", flush=True)
+    network_git(repo, "fetch", "-q", "--depth=1", "origin", "refs/heads/main:refs/remotes/origin/main").check_returncode()
+    git(repo, "checkout", "-q", "-B", "main", "--track", "origin/main")
+
+
 def publish_commit(repo, message):
     git(repo, "-c", "user.name=Jobwatch Local", "-c", "user.email=jobwatch-local@users.noreply.github.com",
         "commit", "-qm", message)
     for attempt in range(4):
         base_revision = git(repo, "rev-parse", "origin/main", capture=True).stdout.strip()
-        pushed = git(repo, "push", "origin", "HEAD:main", check=False)
+        pushed = network_git(repo, "push", "origin", "HEAD:main")
         if pushed.returncode == 0:
             return
-        git(repo, "fetch", "-q", "origin", "main")
+        network_git(repo, "fetch", "-q", "origin", "main").check_returncode()
+        if git(repo, "merge-base", "--is-ancestor", "HEAD", "origin/main", check=False).returncode == 0:
+            return
         if git(repo, "rev-parse", "origin/main", capture=True).stdout.strip() == base_revision:
             raise RuntimeError("GitHub 未确认提交。请查看上方提示，并用 Sunny020810 授权后重新双击。")
         git(repo, "-c", "user.name=Jobwatch Local", "-c", "user.email=jobwatch-local@users.noreply.github.com",
@@ -129,9 +190,12 @@ def main():
     BASE.mkdir(parents=True, exist_ok=True)
     pending = BASE / "pending.json"
     with single_instance(), tempfile.TemporaryDirectory(prefix="jobwatch-") as tmp:
+        if pending.exists() and visible(json.loads(pending.read_text(encoding="utf-8"))["id"]):
+            pending.unlink()
+            print("已确认上一次的补查发布成功。")
+            return
         repo = Path(tmp) / "repo"
-        subprocess.run(["git", "clone", "-q", "--branch", "main", "--single-branch", REMOTE, str(repo)], check=True)
-        git(repo, "remote", "set-url", "--push", "origin", PUSH_URL)
+        checkout_latest(repo)
         install(repo)
         if pending.exists():
             print("正在恢复上一次的补查批次。", flush=True)
