@@ -1,9 +1,9 @@
 {
  "苏州幼儿师范高等专科学校": {
   "home": "https://www.szys.net/",
-  "home_failed": false,
-  "last_status": "ok",
-  "discovered": "2026-11-21",
+  "home_failed": true,
+  "last_status": "error",
+  "discovered": "2000-01-01",
   "note": "官网已验证",
   "configured_home": "https://www.szys.net/",
   "lists": [
@@ -221,12 +221,14 @@
  "苏州工业职业技术学院": {
   "home": "https://www.siit.edu.cn/",
   "lists": [
+   "https://rsszc.siit.edu.cn/",
+   "https://rsszc.siit.edu.cn/1222/list.htm",
    "https://www.siit.edu.cn/2535/list.htm"
   ],
   "discovered": "2000-01-01",
-  "home_failed": true,
+  "home_failed": false,
   "note": "官网已验证",
-  "last_status": "error",
+  "last_status": "warn",
   "configured_home": "https://www.siit.edu.cn/",
   "manual_lists": []
  },
@@ -551,7 +553,7 @@
   "home": "https://www.szitu.edu.cn/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-22",
+  "discovered": "2026-11-23",
   "note": "官网已验证",
   "configured_home": "http://www.szitu.edu.cn/",
   "lists": [],
@@ -791,7 +793,7 @@
   "home": "https://www.wxcu.edu.cn/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-22",
+  "discovered": "2026-11-23",
   "note": "官网已验证",
   "configured_home": "https://www.wxcu.edu.cn/",
   "lists": [],
@@ -812,11 +814,17 @@
  },
  "江苏司法警官职业学院": {
   "home": "https://www.jssfjy.cn/default.html",
-  "home_failed": true,
-  "last_status": "error",
+  "home_failed": false,
+  "last_status": "ok",
   "configured_home": "https://www.jssfjy.cn/default.html",
-  "lists": [],
-  "manual_lists": []
+  "lists": [
+   "https://www.jssfjy.cn/type/100023212004.html",
+   "https://www.jssfjy.cn/type/1000212.html",
+   "https://www.jssfjy.cn/type/100023212001.html"
+  ],
+  "manual_lists": [],
+  "discovered": "2026-11-23",
+  "note": "官网已验证"
  },
  "盐城农业科技职业学院": {
   "home": "https://www.ycac.edu.cn/",
@@ -940,7 +948,7 @@
   "home": "https://www.szetop.edu.cn/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-22",
+  "discovered": "2026-11-23",
   "note": "官网已验证",
   "configured_home": "https://www.szetop.edu.cn/",
   "lists": [],
@@ -1001,7 +1009,7 @@
   "home": "http://www.wsoc.edu.cn/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-22",
+  "discovered": "2026-11-23",
   "note": "官网已验证",
   "configured_home": "http://www.wsoc.edu.cn/",
   "lists": [],
@@ -1024,7 +1032,7 @@
   "home": "https://www.njjku.com/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-22",
+  "discovered": "2026-11-23",
   "note": "官网已验证",
   "configured_home": "https://www.njjku.com/",
   "lists": [],
@@ -1034,7 +1042,7 @@
   "home": "http://www.czjdu.com/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-22",
+  "discovered": "2026-11-23",
   "note": "官网已验证",
   "configured_home": "http://www.czjdu.com/",
   "lists": [],
