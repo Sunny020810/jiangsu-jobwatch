@@ -1,5 +1,5 @@
 """Windows 双击入口。首次安装发布流程，以后只提交本机的补查批次。"""
-from contextlib import contextmanager
+from contextlib import contextmanager, nullcontext
 import hashlib
 import json
 import os
@@ -20,7 +20,8 @@ REPO = "Sunny020810/jiangsu-jobwatch"
 REMOTE = f"https://github.com/{REPO}.git"
 PUSH_URL = f"https://Sunny020810@github.com/{REPO}.git"
 SITE = "https://sunny020810.github.io/jiangsu-jobwatch/"
-BASE = Path(os.environ.get("LOCALAPPDATA", Path.home())) / "JiangsuJobwatch"
+BASE = Path.home() / ".jiangsu-jobwatch"
+LEGACY_BASE = Path(os.environ.get("LOCALAPPDATA", Path.home())) / "JiangsuJobwatch"
 PATCH = Path(__file__).with_name("install.patch")
 
 
@@ -118,7 +119,7 @@ def install(repo):
 
 def environment(repo):
     # Packaged Windows apps can redirect LocalAppData across drives, breaking pip's atomic renames.
-    prefix = Path.home() / ".jiangsu-jobwatch" / ("python-%s.%s" % sys.version_info[:2])
+    prefix = BASE / ("python-%s.%s" % sys.version_info[:2])
     python = prefix / ("Scripts/python.exe" if os.name == "nt" else "bin/python")
     if not python.exists():
         subprocess.run([sys.executable, "-m", "venv", str(prefix)], check=True)
@@ -163,10 +164,37 @@ def send_pending(repo, pending):
     raise RuntimeError("暂未在网页看到本批次。结果已保存在本机，查看 Actions 后重新双击即可续传。")
 
 
+def recover_pending(pending):
+    if pending.exists():
+        return
+    for old in (pending.with_suffix(".tmp"), LEGACY_BASE / "pending.json", LEGACY_BASE / "pending.tmp"):
+        if not old.is_file():
+            continue
+        data = old.read_bytes()
+        try:
+            batch = json.loads(data)
+            valid = (isinstance(batch, dict) and isinstance(batch.get("id"), str) and len(batch["id"]) == 32
+                     and isinstance(batch.get("day"), str) and isinstance(batch.get("schools"), dict)
+                     and isinstance(batch.get("items"), list))
+        except (UnicodeError, ValueError):
+            valid = False
+        if not valid:
+            if old.suffix == ".json":
+                raise ValueError(f"已有待发布文件损坏，请检查 {old}")
+            continue
+        # Rename only within the new directory; Windows may map the old directory to a different drive.
+        staged = pending.with_suffix(".recovering")
+        staged.write_bytes(data)
+        staged.replace(pending)
+        old.unlink()
+        print(f"已恢复 {batch['day']} 的完整补查结果。", flush=True)
+        return
+
+
 @contextmanager
-def single_instance():
+def single_instance(directory):
     import msvcrt
-    with (BASE / "running.lock").open("a+b") as handle:
+    with (directory / "running.lock").open("a+b") as handle:
         if handle.tell() == 0:
             handle.write(b"0")
             handle.flush()
@@ -189,7 +217,9 @@ def main():
         raise RuntimeError("请先安装 Git for Windows（含 Git Credential Manager），再双击。")
     BASE.mkdir(parents=True, exist_ok=True)
     pending = BASE / "pending.json"
-    with single_instance(), tempfile.TemporaryDirectory(prefix="jobwatch-") as tmp:
+    legacy_lock = single_instance(LEGACY_BASE) if LEGACY_BASE.is_dir() else nullcontext()
+    with single_instance(BASE), legacy_lock, tempfile.TemporaryDirectory(prefix="jobwatch-") as tmp:
+        recover_pending(pending)
         if pending.exists() and visible(json.loads(pending.read_text(encoding="utf-8"))["id"]):
             pending.unlink()
             print("已确认上一次的补查发布成功。")

@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 import subprocess
 import tempfile
@@ -12,6 +13,25 @@ def result(code, message=""):
 
 
 class LauncherNetworkTests(unittest.TestCase):
+    def test_recovers_completed_temp_file_and_preserves_other_batches(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            legacy = root / "legacy"
+            legacy.mkdir()
+            pending = root / "pending.json"
+            original = {"day": "2026-11-23", "id": "1" * 32, "items": [], "schools": {}}
+            (legacy / "pending.tmp").write_text(json.dumps(original))
+            pending.write_text("existing")
+            with patch.object(oneclick, "LEGACY_BASE", legacy):
+                oneclick.recover_pending(pending)
+                self.assertEqual(pending.read_text(), "existing")
+                self.assertTrue((legacy / "pending.tmp").exists())
+                pending.unlink()
+                pending.with_suffix(".tmp").write_text('{"unfinished":')
+                oneclick.recover_pending(pending)
+                self.assertEqual(json.loads(pending.read_bytes()), original)
+                self.assertFalse((legacy / "pending.tmp").exists())
+
     def test_windows_proxy_and_fallback_after_timeout(self):
         proxy = "http://127.0.0.1:8888"
         with patch.object(oneclick, "windows_proxy", return_value=proxy), patch("time.sleep"), \

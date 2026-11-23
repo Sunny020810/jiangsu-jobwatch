@@ -10,5 +10,5 @@ Windows 需要 Git for Windows 和 Python 3.10 或以上。装有 Codex 自带 P
 
 下载或上传时，如果 Windows 为 GitHub 启用了系统代理，且 Git 没有指定其他设置，程序会优先使用系统代理。连接超时会切换连接方式，最多尝试三次。这只对本次 Git 命令生效。
 如果三次都未连通，请在网络恢复后再次双击。尚未确认上线的一批结果保存在
-%LOCALAPPDATA%\JiangsuJobwatch\pending.json，重复提交会按批次和公告去重。
+%USERPROFILE%\.jiangsu-jobwatch\pending.json，重复提交会按批次和公告去重。旧版已写完整的待发布文件会自动恢复。
 本机具备 LibreOffice / antiword 时可解析更多旧式附件；无法读取的附件会在公告旁提示人工查看。
