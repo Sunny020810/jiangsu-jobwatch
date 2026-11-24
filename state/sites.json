@@ -272,11 +272,15 @@
  },
  "南通职业大学": {
   "home": "https://www.ntvu.edu.cn/",
-  "home_failed": true,
-  "last_status": "error",
+  "home_failed": false,
+  "last_status": "ok",
   "configured_home": "https://www.ntvu.edu.cn/",
-  "lists": [],
-  "manual_lists": []
+  "lists": [
+   "https://xxgk.ntvu.edu.cn/"
+  ],
+  "manual_lists": [],
+  "discovered": "2026-11-24",
+  "note": "官网已验证"
  },
  "常州工业职业技术学院": {
   "home": "https://www.ciit.edu.cn/",
@@ -553,7 +557,7 @@
   "home": "https://www.szitu.edu.cn/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-23",
+  "discovered": "2026-11-24",
   "note": "官网已验证",
   "configured_home": "http://www.szitu.edu.cn/",
   "lists": [],
@@ -793,7 +797,7 @@
   "home": "https://www.wxcu.edu.cn/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-23",
+  "discovered": "2026-11-24",
   "note": "官网已验证",
   "configured_home": "https://www.wxcu.edu.cn/",
   "lists": [],
@@ -948,7 +952,7 @@
   "home": "https://www.szetop.edu.cn/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-23",
+  "discovered": "2026-11-24",
   "note": "官网已验证",
   "configured_home": "https://www.szetop.edu.cn/",
   "lists": [],
@@ -1009,7 +1013,7 @@
   "home": "http://www.wsoc.edu.cn/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-23",
+  "discovered": "2026-11-24",
   "note": "官网已验证",
   "configured_home": "http://www.wsoc.edu.cn/",
   "lists": [],
@@ -1032,7 +1036,7 @@
   "home": "https://www.njjku.com/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-23",
+  "discovered": "2026-11-24",
   "note": "官网已验证",
   "configured_home": "https://www.njjku.com/",
   "lists": [],
@@ -1042,7 +1046,7 @@
   "home": "http://www.czjdu.com/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-23",
+  "discovered": "2026-11-24",
   "note": "官网已验证",
   "configured_home": "http://www.czjdu.com/",
   "lists": [],
@@ -1149,10 +1153,10 @@
   "lists": [
    "https://www.yzpc.edu.cn/2554/list.htm"
   ],
-  "discovered": "2026-11-20",
-  "home_failed": false,
+  "discovered": "2000-01-01",
+  "home_failed": true,
   "note": "官网已验证",
-  "last_status": "ok",
+  "last_status": "error",
   "configured_home": "https://www.yzpc.edu.cn/",
   "manual_lists": []
  },
