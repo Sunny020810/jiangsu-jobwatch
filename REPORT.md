@@ -1,6 +1,6 @@
 # 江苏高职招聘日报（金融专业硕士）
 
-更新时间：2026-11-24 11:14（北京时间）　·　展示近 60 天公告　·　🆕 = 本次新发现
+更新时间：2026-11-24 12:48（北京时间）　·　展示近 60 天公告　·　🆕 = 本次新发现
 
 **本次新增**：重点 1　可能 3　其他 10　进展 2
 
@@ -213,7 +213,7 @@
 
 ## 🩺 抓取健康情况
 
-- 学校官网：正常 59，提示 10，异常 28（共 97 所）
+- 学校官网：正常 60，提示 11，异常 26（共 97 所）
 - 招聘公告补搜：有结果 0 次，确认无结果 0 次，请求失败或无法识别结果页 22 次（按引擎统计：Bing 页面无法识别 22 次、DuckDuckGo 页面无法识别 22 次）
 - 查找官网入口：有结果 0 次，确认无结果 0 次，请求失败或无法识别结果页 61 次（按引擎统计：Bing 页面无法识别 61 次、DuckDuckGo 请求失败 33 次、DuckDuckGo 页面无法识别 28 次）
 - 详情页打不开 2 次（会自动重试 3 天），附件未能解析 0 个（已标为需人工查看）
@@ -231,26 +231,24 @@
 | 江苏农牧科技职业学院 | ❌ | 配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.jsahvc.edu.cn', port=80): Max retries exceeded with url: / (Caus | [搜索](https://cn.bing.com/search?q=%E6%B1%9F%E8%8B%8F%E5%86%9C%E7%89%A7%E7%A7%91%E6%8A%80%E8%81%8C%E4%B8%9A%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 南京科技职业学院 | ❌ | 配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.njpi.edu.cn', port=80): Max retries exceeded with url: / (Caused | [搜索](https://cn.bing.com/search?q=%E5%8D%97%E4%BA%AC%E7%A7%91%E6%8A%80%E8%81%8C%E4%B8%9A%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 江苏电子信息职业学院 | ❌ | 配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.jsei.edu.cn', port=80): Max retries exceeded with url: / (Caused | [搜索](https://cn.bing.com/search?q=%E6%B1%9F%E8%8B%8F%E7%94%B5%E5%AD%90%E4%BF%A1%E6%81%AF%E8%81%8C%E4%B8%9A%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
-| 江苏航运职业技术学院 | ❌ | 配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.jssc.edu.cn', port=80): Max retries exceeded with url: / (Caused | [搜索](https://cn.bing.com/search?q=%E6%B1%9F%E8%8B%8F%E8%88%AA%E8%BF%90%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 盐城幼儿师范高等专科学校 | ❌ | 配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.yyz.edu.cn', port=80): Max retries exceeded with url: / (Caused  | [搜索](https://cn.bing.com/search?q=%E7%9B%90%E5%9F%8E%E5%B9%BC%E5%84%BF%E5%B8%88%E8%8C%83%E9%AB%98%E7%AD%89%E4%B8%93%E7%A7%91%E5%AD%A6%E6%A0%A1%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 南京信息职业技术学院 | ❌ | 配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.njcit.cn', port=80): Max retries exceeded with url: / (Caused by | [搜索](https://cn.bing.com/search?q=%E5%8D%97%E4%BA%AC%E4%BF%A1%E6%81%AF%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 江阴职业技术学院 | ❌ | 配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.jypc.edu.cn', port=80): Max retries exceeded with url: / (Caused | [搜索](https://cn.bing.com/search?q=%E6%B1%9F%E9%98%B4%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 无锡工艺职业技术学院 | ❌ | 配置的首页请求失败：ConnectTimeout: HTTPConnectionPool(host='www.wxgyxy.cn', port=80): Max retries exceeded with url: / (Caused by | [搜索](https://cn.bing.com/search?q=%E6%97%A0%E9%94%A1%E5%B7%A5%E8%89%BA%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
+| 江苏航运职业技术学院 | ❌ | 配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.jssc.edu.cn', port=80): Max retries exceeded with url: / (Caused | [搜索](https://cn.bing.com/search?q=%E6%B1%9F%E8%8B%8F%E8%88%AA%E8%BF%90%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 徐州工业职业技术学院 | ❌ | 配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.xzcit.edu.cn', port=80): Max retries exceeded with url: / (Cause | [搜索](https://cn.bing.com/search?q=%E5%BE%90%E5%B7%9E%E5%B7%A5%E4%B8%9A%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
-| 江苏财经职业技术学院 | ❌ | 配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.jscj.edu.cn', port=80): Max retries exceeded with url: / (Caused | [搜索](https://cn.bing.com/search?q=%E6%B1%9F%E8%8B%8F%E8%B4%A2%E7%BB%8F%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 扬州工业职业技术学院 | ❌ | 配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.ypi.edu.cn', port=80): Max retries exceeded with url: / (Caused  | [搜索](https://cn.bing.com/search?q=%E6%89%AC%E5%B7%9E%E5%B7%A5%E4%B8%9A%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
+| 江苏财经职业技术学院 | ❌ | 配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.jscj.edu.cn', port=80): Max retries exceeded with url: / (Caused | [搜索](https://cn.bing.com/search?q=%E6%B1%9F%E8%8B%8F%E8%B4%A2%E7%BB%8F%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 常州机电职业技术学院 | ❌ | 配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.czimt.edu.cn', port=80): Max retries exceeded with url: / (Cause | [搜索](https://cn.bing.com/search?q=%E5%B8%B8%E5%B7%9E%E6%9C%BA%E7%94%B5%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
-| 苏州幼儿师范高等专科学校 | ❌ | 配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.szys.net', port=80): Max retries exceeded with url: / (Caused by | [搜索](https://cn.bing.com/search?q=%E8%8B%8F%E5%B7%9E%E5%B9%BC%E5%84%BF%E5%B8%88%E8%8C%83%E9%AB%98%E7%AD%89%E4%B8%93%E7%A7%91%E5%AD%A6%E6%A0%A1%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 江苏城市职业学院 | ❌ | 配置的首页请求失败：ReadTimeout: HTTPConnectionPool(host='www.jscvc.cn', port=80): Read timed out. (read timeout=25)；搜索也未能确认官网 | [搜索](https://cn.bing.com/search?q=%E6%B1%9F%E8%8B%8F%E5%9F%8E%E5%B8%82%E8%81%8C%E4%B8%9A%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 应天职业技术学院 | ❌ | 没有配置官网地址；搜索也未能确认官网 | [搜索](https://cn.bing.com/search?q=%E5%BA%94%E5%A4%A9%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 南通卫生健康职业学院 | ❌ | 配置的首页请求失败：ConnectTimeout: HTTPConnectionPool(host='www.nthvc.cn', port=80): Max retries exceeded with url: / (Caused by  | [搜索](https://cn.bing.com/search?q=%E5%8D%97%E9%80%9A%E5%8D%AB%E7%94%9F%E5%81%A5%E5%BA%B7%E8%81%8C%E4%B8%9A%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
+| 太湖创意职业技术学院 | ❌ | 首页有响应，但未匹配到校名（标题：）；搜索也未能确认官网 | [搜索](https://cn.bing.com/search?q=%E5%A4%AA%E6%B9%96%E5%88%9B%E6%84%8F%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 江苏航空职业技术学院 | ❌ | 配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.jatc.edu.cn', port=80): Max retries exceeded with url: / (Caused | [搜索](https://cn.bing.com/search?q=%E6%B1%9F%E8%8B%8F%E8%88%AA%E7%A9%BA%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
+| 无锡商业职业技术学院 | ❌ | 配置的首页请求失败：ReadTimeout: HTTPSConnectionPool(host='www.wxic.edu.cn', port=443): Read timed out. (read timeout=25)；搜索也未能确认官 | [搜索](https://cn.bing.com/search?q=%E6%97%A0%E9%94%A1%E5%95%86%E4%B8%9A%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 常州幼儿师范高等专科学校 | ❌ | 配置的首页请求失败：ConnectTimeout: HTTPConnectionPool(host='cyzedu.cn', port=80): Max retries exceeded with url: / (Caused by Con | [搜索](https://cn.bing.com/search?q=%E5%B8%B8%E5%B7%9E%E5%B9%BC%E5%84%BF%E5%B8%88%E8%8C%83%E9%AB%98%E7%AD%89%E4%B8%93%E7%A7%91%E5%AD%A6%E6%A0%A1%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 常州铁道职业技术学院 | ❌ | 配置的首页请求失败：ConnectTimeout: HTTPConnectionPool(host='www.cztdxy.cn', port=80): Max retries exceeded with url: /main.htm (C | [搜索](https://cn.bing.com/search?q=%E5%B8%B8%E5%B7%9E%E9%93%81%E9%81%93%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
-| 无锡商业职业技术学院 | ❌ | 配置的首页请求失败：ReadTimeout: HTTPSConnectionPool(host='www.wxic.edu.cn', port=443): Read timed out. (read timeout=25)；搜索也未能确认官 | [搜索](https://cn.bing.com/search?q=%E6%97%A0%E9%94%A1%E5%95%86%E4%B8%9A%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
-| 太湖创意职业技术学院 | ❌ | 首页有响应，但未匹配到校名（标题：）；搜索也未能确认官网 | [搜索](https://cn.bing.com/search?q=%E5%A4%AA%E6%B9%96%E5%88%9B%E6%84%8F%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 江苏卫生健康职业学院 | ❌ | 配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.jshvc.edu.cn', port=80): Max retries exceeded with url: / (Cause | [搜索](https://cn.bing.com/search?q=%E6%B1%9F%E8%8B%8F%E5%8D%AB%E7%94%9F%E5%81%A5%E5%BA%B7%E8%81%8C%E4%B8%9A%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
-| 扬州职业技术大学 | ❌ | 首页未能读取：ConnectionError: HTTPConnectionPool(host='www.yzpc.edu.cn', port=80): Max retries exceeded with url: / (Caused by | [搜索](https://cn.bing.com/search?q=%E6%89%AC%E5%B7%9E%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%A4%A7%E5%AD%A6%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 昆山登云科技职业学院 | ❌ | 配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.dyc.edu.cn', port=80): Max retries exceeded with url: / (Caused  | [搜索](https://cn.bing.com/search?q=%E6%98%86%E5%B1%B1%E7%99%BB%E4%BA%91%E7%A7%91%E6%8A%80%E8%81%8C%E4%B8%9A%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 江苏工程职业技术学院 | ⚠️ | 已读取 3 个栏目；栏目未能读取：未读到公告列表内容 | [搜索](https://cn.bing.com/search?q=%E6%B1%9F%E8%8B%8F%E5%B7%A5%E7%A8%8B%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 苏州工业职业技术学院 | ⚠️ | 已读取 2 个栏目；栏目未能读取：未读到公告列表内容 | [搜索](https://cn.bing.com/search?q=%E8%8B%8F%E5%B7%9E%E5%B7%A5%E4%B8%9A%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
@@ -258,6 +256,7 @@
 | 苏州信息职业技术学院 | ⚠️ | 首页可读，未定位到招聘栏目 | [搜索](https://cn.bing.com/search?q=%E8%8B%8F%E5%B7%9E%E4%BF%A1%E6%81%AF%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 江苏商贸职业学院 | ⚠️ | 已读取 1 个栏目；配置的首页请求失败：FetchError: HTTP 412；搜索也未能确认官网 | [搜索](https://cn.bing.com/search?q=%E6%B1%9F%E8%8B%8F%E5%95%86%E8%B4%B8%E8%81%8C%E4%B8%9A%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 江苏城乡建设职业学院 | ⚠️ | 已读取 3 个栏目；栏目未能读取：未读到公告列表内容 | [搜索](https://cn.bing.com/search?q=%E6%B1%9F%E8%8B%8F%E5%9F%8E%E4%B9%A1%E5%BB%BA%E8%AE%BE%E8%81%8C%E4%B8%9A%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
+| 苏州幼儿师范高等专科学校 | ⚠️ | 已读取 4 个栏目；配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.szys.net', port=80): Max retries exceeded with url: /  | [搜索](https://cn.bing.com/search?q=%E8%8B%8F%E5%B7%9E%E5%B9%BC%E5%84%BF%E5%B8%88%E8%8C%83%E9%AB%98%E7%AD%89%E4%B8%93%E7%A7%91%E5%AD%A6%E6%A0%A1%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 苏州托普信息职业技术学院 | ⚠️ | 首页可读，未定位到招聘栏目 | [搜索](https://cn.bing.com/search?q=%E8%8B%8F%E5%B7%9E%E6%89%98%E6%99%AE%E4%BF%A1%E6%81%AF%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 无锡南洋职业技术学院 | ⚠️ | 首页可读，未定位到招聘栏目 | [搜索](https://cn.bing.com/search?q=%E6%97%A0%E9%94%A1%E5%8D%97%E6%B4%8B%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 金肯职业技术学院 | ⚠️ | 首页可读，未定位到招聘栏目 | [搜索](https://cn.bing.com/search?q=%E9%87%91%E8%82%AF%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
@@ -267,21 +266,21 @@
 
 | 来源 | 状态 | 说明 |
 |---|---|---|
-| 南京市人力资源和社会保障局 | ✅ | 1 个页面，0 条相关标题 |
 | 高校人才网-江苏 | ✅ | 1 个页面，24 条相关标题 |
 | 高校人才网-高校招聘 | ✅ | 1 个页面，7 条相关标题 |
-| 江苏省教育厅 | ✅ | 3 个页面，0 条相关标题 |
+| 南京市人力资源和社会保障局 | ✅ | 1 个页面，0 条相关标题 |
 | 苏州市人力资源和社会保障局 | ✅ | 2 个页面，0 条相关标题 |
+| 江苏省教育厅 | ✅ | 3 个页面，0 条相关标题 |
 | 常州市人力资源和社会保障局 | ✅ | 1 个页面，0 条相关标题 |
 | 扬州市人力资源和社会保障局 | ❌ | FetchError: 入口网站打不开，也没能自动找到 |
 | 泰州市人力资源和社会保障局 | ✅ | 1 个页面，0 条相关标题 |
+| 江苏省人力资源和社会保障厅 | ✅ | 4 个页面，6 条相关标题 |
 | 南通市直属事业单位招录 | ❌ | FetchError: FetchError: HTTP 403 |
-| 南通市人力资源和社会保障局 | ❌ | FetchError: 入口网站打不开，也没能自动找到 |
+| 无锡市人力资源和社会保障局 | ✅ | 6 个页面，19 条相关标题 |
 | 盐城市人力资源和社会保障局 | ✅ | 3 个页面，2 条相关标题 |
 | 淮安市人力资源和社会保障局 | ✅ | 3 个页面，0 条相关标题 |
-| 连云港市人力资源和社会保障局 | ✅ | 2 个页面，6 条相关标题 |
-| 无锡市人力资源和社会保障局 | ✅ | 6 个页面，19 条相关标题 |
 | 宿迁市人力资源和社会保障局 | ❌ | FetchError: 入口网站打不开，也没能自动找到 |
-| 江苏省人力资源和社会保障厅 | ✅ | 4 个页面，6 条相关标题 |
+| 连云港市人力资源和社会保障局 | ✅ | 2 个页面，6 条相关标题 |
+| 南通市人力资源和社会保障局 | ❌ | FetchError: 入口网站打不开，也没能自动找到 |
 | 镇江市人力资源和社会保障局 | ❌ | FetchError: 入口网站打不开，也没能自动找到 |
 | 徐州市人力资源和社会保障局 | ❌ | FetchError: 入口网站打不开，也没能自动找到 |

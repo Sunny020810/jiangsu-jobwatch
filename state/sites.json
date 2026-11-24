@@ -2,7 +2,7 @@
  "苏州幼儿师范高等专科学校": {
   "home": "https://www.szys.net/",
   "home_failed": true,
-  "last_status": "error",
+  "last_status": "warn",
   "discovered": "2000-01-01",
   "note": "官网已验证",
   "configured_home": "https://www.szys.net/",
@@ -1153,10 +1153,10 @@
   "lists": [
    "https://www.yzpc.edu.cn/2554/list.htm"
   ],
-  "discovered": "2000-01-01",
-  "home_failed": true,
+  "discovered": "2026-11-24",
+  "home_failed": false,
   "note": "官网已验证",
-  "last_status": "error",
+  "last_status": "ok",
   "configured_home": "https://www.yzpc.edu.cn/",
   "manual_lists": []
  },
