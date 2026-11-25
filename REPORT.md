@@ -1,29 +1,34 @@
 # 江苏高职招聘日报（金融专业硕士）
 
-更新时间：2026-11-24 12:48（北京时间）　·　展示近 60 天公告　·　🆕 = 本次新发现
+更新时间：2026-11-25 11:35（北京时间）　·　展示近 60 天公告　·　🆕 = 本次新发现
 
-**本次新增**：重点 1　可能 3　其他 10　进展 2
+**本次新增**：重点 2　可能 4　其他 0　进展 2
 
-## 🔴 重点：金融对口（5）
+## 🔴 重点：金融对口（6）
 
 | 发布 | 学校 | 公告 | 说明 |
 |---|---|---|---|
+| 2026-11-24 | 盐城幼儿师范高等专科学校 等2所 | 🆕 [江苏财经职业技术学院2026年公开招聘合同制专业技术岗位人员公告](https://www.gaoxiaojob.com/announcement/detail/447777.html) | 报名截止 2026-12-06；【对口】经济管理学院教师 面议 江苏淮安 硕士研究生 专业:应用经济学,工商管理 学历:经济管理学院教师 面议 江苏淮安 硕士研；岗位表中有金融对口岗位；附件未能自动解析：江苏财经职业技术学院 2026 年合同制专业技术岗位人员招聘：下载失败（ConnectionError: HTTPConnectionPool(host='rsc.jscj.edu.cn', port=80): Max retries exceeded with url: /_upload/article/files/43/57/a85a96c94d1e835dc26b1bccc1ba/a9b |
 | 未知 | 苏州工业职业技术学院 | [苏州工业职业技术学院2026年上半年面向社会招聘高层次人才专题](https://rsszc.siit.edu.cn/2025/1030/c1236a107903/page.htm) | 报名截止 2026-06-13；正文提到「经济类」 |
 | 2026-11-19 | 南通科技职业学院 | [南通科技职业学院2026年公开招聘工作人员（合同制、租赁制）拟聘用人员公示](https://www.ntst.edu.cn/2026/1119/c23a56859/page.htm) | 【对口】专业:应用经济学 学历:硕士研究生 硕士；【可能】专业:工商管理 学历:硕士研究生 硕士；岗位表中有金融对口岗位 |
 | 2026-11-09 | 苏州托普信息职业技术学院 等2所 | [苏州百年职业学院2026年秋季教师招聘公告](https://www.gaoxiaojob.com/announcement/detail/430522.html) | 【对口】专职教师-电子商务 面议 江苏苏州 硕士研究生 专业:应用经济学,工商管理 学历:专职教师-电子商务 面议 江苏苏州 硕士；岗位表中有金融对口岗位 |
 | 2026-11-09 | 南京视觉艺术职业学院 | [南京视觉艺术职业学院2026年教育管理岗招聘公告](https://www.gaoxiaojob.com/announcement/detail/420127.html) | 正文提到「证券」 |
 | 2026-11-06 | 江苏食品药品职业技术学院 | [江苏食品药品职业技术学院2026下半年教师招聘拟聘用人员名单公示](https://www.jsfpc.edu.cn/2026/1105/c46a94680/page.htm) | 【对口】数字经济学院教师 专业:兰州财经大学/金融 学历:硕士研究生 人数:1；岗位表中有金融对口岗位 |
 
-## 🟡 可能符合，建议查看（50）
+## 🟡 可能符合，建议查看（54）
 
 | 发布 | 学校 | 公告 | 说明 |
 |---|---|---|---|
 | 2027-08-31 | 无锡职业技术大学 | [无锡职业技术大学2026年长期公开招聘高层次人才公告](https://www.wxit.edu.cn/info/1029/176831.htm) | 提到相近专业「审计」；正文提到附件/岗位表，但没抓到附件；⚠️需人工查看 |
 | 2026-12-31 | 江苏工程职业技术学院 | [江苏工程职业技术学院2026年公开招聘高层次人才公告-江苏工程职业技术学院人事处](https://rsc.jcet.edu.cn:443/info/1251/2419.htm) | 报名截止 2026-05-25；【可能】经济管理学院专任教师 专业:会计学、税务、会计、金融、金融学、审计、会计与金融 学历:博士研究生 博士 人数:1；专业含「金融」但仅招博士 |
 | 2026-11-30 | 无锡职业技术大学 | [无锡职业技术大学2026年招聘工作人员公告](https://www.wxit.edu.cn/info/1029/176391.htm) | 报名截止 2026-11-03；正文提到附件/岗位表，但没抓到附件；⚠️需人工查看 |
-| 2026-11-24 | 江苏安全技术职业学院 | 🆕 [央广网：江苏安全技术职业学院举办在徐州高校统战业务培训暨校地协同铸牢中华民族共同体意识学术沙龙 近日，由江苏安全技术职业学院承办的2026年在徐州高校统战业务培训暨铸牢中华民族共同体意识学术沙龙在云龙校区举办。12所在徐高校统战、学工、保卫、国际交流等条线负责同志及工作人员，学校党委统战部、各党总支负责人，统战委员、党支部书记、辅导员，马克思主义学院铸牢中华民族共同体意识教研室教师等100余人共研工作实务、共话工作提升。 2026-11-24](https://www.jscst.edu.cn/2026/1124/c2158a92277/page.htm) | 公告正文可能是图片；⚠️需人工查看 |
-| 2026-11-23 | 昆山登云科技职业学院 等2所 | 🆕 [昆山登云科技职业学院2026年智能制造学院院长招聘公告](https://www.gaoxiaojob.com/announcement/detail/447433.html) | 提到相近专业「经济学」 |
-| 2026-11-23 | 苏州高博职业学院 | 🆕 [苏州高博职业学院长期招聘公告](https://www.gaoxiaojob.com/announcement/detail/2868.html) | 【可能】药学专业教师 8-15万/年 江苏苏州 硕士研究生 全职 专业:药学,中药学,公共管理学 学历:药学专业教师 8-15万/年 江苏苏州 ；【可能】高速铁路客运服务教师 8-15万/年 江苏苏州 硕士研究生 全职 专业:交通运输工程,工商管理 学历:高速铁路客运服务教师 8-15万/年 江；【可能】电子商务专业教师 8-15万/年 江苏苏州 硕士研究生 全职 专业:工商管理 学历:电子商务专业教师 8-15万/年 江苏苏；【可能】乘务专业教师 8-15万/年 江苏苏州 硕士研究生 全职 专业:交通运输工程,工商管理 学历:乘务专业教师 8-15万/年 江苏苏州 ；相近专业「工商管理」；相 |
+| 未知 | 南通职业大学 | 🆕 [学生工作处开展辅导员、班主任团体辅导活动](https://xgc.ntvu.edu.cn/2020_11/27_10/content-18692.html) | 附件未能自动解析：详情页连续 3 天打不开（FetchError: HTTP 400）；⚠️需人工查看 |
+| 未知 | 盐城幼儿师范高等专科学校 | 🆕 [盐城幼儿师范高等专科学校2026年下半年公开招聘专业技术人员公告](https://www.yyz.edu.cn/2026/1123/c819a29712/page.htm) | 附件未能自动解析：详情页连续 3 天打不开（ConnectionError: HTTPConnectionPool(host='www.yyz.edu.cn', port=80): Max retries exceeded with url: /2026/1123/c819a29712/page.htm (Caused by NewConnectionError("HTTPConnection(host='www.yyz.edu.cn', port=80): Failed to establish a new connection: [Errno 101] Network is unreach |
+| 2026-11-24 | 江苏海事职业技术学院 | 🆕 [江苏海事职业技术学院2026年公开招聘专职辅导员公告](http://jshrss.jiangsu.gov.cn/art/2026/11/24/art_78506_11864029.html) | 报名截止 2026-11-24；提到相近专业「审计」 |
+| 2026-11-24 | 盐城幼儿师范高等专科学校 等2所 | 🆕 [盐城幼儿师范高等专科学校2026年下半年公开招聘11名专业技术人员公告](https://www.gaoxiaojob.com/announcement/detail/447628.html) | 报名截止 2026-12-03；【可能】行政管理教师 面议 江苏盐城 硕士研究生 专业:管理科学与工程,工商管理,公共管理学 学历:行政管理教师 面议 江苏盐城 硕士研究生；相近专业「工商管理」；附件未能自动解析：盐城幼儿师范高等专科学校 2026 年下半年公开招聘专业技术：下载失败（ConnectionError: HTTPConnectionPool(host='zzrsc.yyz.edu.cn', port=80): Max retries exceeded with url: /_upload/article/files/73/82/987d4ad144828954c9630a156f |
+| 2026-11-24 | 江苏安全技术职业学院 | [央广网：江苏安全技术职业学院举办在徐州高校统战业务培训暨校地协同铸牢中华民族共同体意识学术沙龙 近日，由江苏安全技术职业学院承办的2026年在徐州高校统战业务培训暨铸牢中华民族共同体意识学术沙龙在云龙校区举办。12所在徐高校统战、学工、保卫、国际交流等条线负责同志及工作人员，学校党委统战部、各党总支负责人，统战委员、党支部书记、辅导员，马克思主义学院铸牢中华民族共同体意识教研室教师等100余人共研工作实务、共话工作提升。 2026-11-24](https://www.jscst.edu.cn/2026/1124/c2158a92277/page.htm) | 公告正文可能是图片；⚠️需人工查看 |
+| 2026-11-23 | 昆山登云科技职业学院 等2所 | [昆山登云科技职业学院2026年智能制造学院院长招聘公告](https://www.gaoxiaojob.com/announcement/detail/447433.html) | 提到相近专业「经济学」 |
+| 2026-11-23 | 苏州高博职业学院 | [苏州高博职业学院长期招聘公告](https://www.gaoxiaojob.com/announcement/detail/2868.html) | 【可能】药学专业教师 8-15万/年 江苏苏州 硕士研究生 全职 专业:药学,中药学,公共管理学 学历:药学专业教师 8-15万/年 江苏苏州 ；【可能】高速铁路客运服务教师 8-15万/年 江苏苏州 硕士研究生 全职 专业:交通运输工程,工商管理 学历:高速铁路客运服务教师 8-15万/年 江；【可能】电子商务专业教师 8-15万/年 江苏苏州 硕士研究生 全职 专业:工商管理 学历:电子商务专业教师 8-15万/年 江苏苏；【可能】乘务专业教师 8-15万/年 江苏苏州 硕士研究生 全职 专业:交通运输工程,工商管理 学历:乘务专业教师 8-15万/年 江苏苏州 ；相近专业「工商管理」；相 |
 | 未知 | 江苏建筑职业技术大学 | [江苏建筑职业技术学院 江苏省绿色智慧城市和遗产保护协同创新中心主任招聘公告](http://www.jsjzi.edu.cn/2025/0529/c8a145814/page.htm) | 附件未能自动解析：详情页连续 3 天打不开（FetchError: HTTP 410）；⚠️需人工查看 |
 | 未知 | 江苏建筑职业技术大学 | [江苏建筑职业技术学院2025年公开招聘高层次人才公告](http://www.jsjzi.edu.cn/2025/0526/c8a145693/page.htm) | 附件未能自动解析：详情页连续 3 天打不开（FetchError: HTTP 410）；⚠️需人工查看 |
 | 未知 | 江苏建筑职业技术大学 | [江苏建筑职业技术学院湖西校区2025年公开招聘人事代理工作人员公告](http://www.jsjzi.edu.cn/2025/0113/c8a141636/page.htm) | 附件未能自动解析：详情页连续 3 天打不开（FetchError: HTTP 410）；⚠️需人工查看 |
@@ -74,16 +79,16 @@
 | 发布 | 学校 | 公告 | 说明 |
 |---|---|---|---|
 | 2026-12-07 | 镇江市高等专科学校 | [关于组织辅导员专项课题结项工作的通知](https://www.zjc.edu.cn/bgxt/viewnotice.php?id=8771) | 报名截止 2026-12-07 |
-| 2026-11-24 | 江苏食品药品职业技术学院 | 🆕 [副校长张军带队赴金湖县开展人才需求调研暨访企拓岗活动](https://www.jsfpc.edu.cn/2026/1123/c42a95246/page.htm) |  |
-| 未知 | 江苏海事职业技术学院 | 🆕 [关于开展高层次人才首聘期考核工作的通知](https://www.jmi.edu.cn/bd/e3/c933a114147/page.htm) |  |
-| 未知 | 苏州经贸职业技术学院 | 🆕 [深耕心理育人 筑牢安全防线——我院开展辅导员心...](http://www.szjm.edu.cn/news/xwcontent.jsp?urltype=news.NewsContentUrl&wbtreeid=1003&wbnewsid=19283) |  |
-| 未知 | 苏州经贸职业技术学院 | 🆕 [学院“薪火”辅导员素质能力提升工作室赴苏州职...](http://www.szjm.edu.cn/news/xwcontent.jsp?urltype=news.NewsContentUrl&wbtreeid=1003&wbnewsid=19285) |  |
-| 2026-11-24 | 无锡商业职业技术学院 | 🆕 [学校举办“园丁说”辅导员学习论坛](https://www.wxic.edu.cn/2026/1124/c193a120939/page.htm) |  |
-| 2026-11-24 | 江苏卫生健康职业学院 | 🆕 [康复医美学院、康养康育学院、护理学院联合举办AI赋能辅导员心理健康工作专题交流 2026-11-24](https://www.jshvc.edu.cn/2026/1123/c94a44727897/page.htm) |  |
-| 2026-11-23 | 盐城幼儿师范高等专科学校 | 🆕 [盐城市人力资源和社会保障局 通知公告 盐城幼儿师范高等专科学校2026年下半年公开招聘专业技术人员公告](https://jsychrss.yancheng.gov.cn/art/2026/11/23/art_3431_4470299.html) |  |
-| 2026-11-23 | 江苏航运职业技术学院 | 🆕 [学校徐波波老师荣获全国交通运输类高职院校辅导员素质能力大赛一等奖 2026-11-23](https://www.jssc.edu.cn/2026/1123/c98a67823/page.htm) |  |
-| 2026-11-23 | 常州机电职业技术学院 | 🆕 [常州机电职业技术学院2026年公开招聘预聘制人员考核通知](https://www.czimt.edu.cn/xxgkw/2026/1123/c5480a188916/page.htm) |  |
-| 2026-11-23 | 昆山登云科技职业学院 | 🆕 [23 2026/11 昆山登云科技职业学院智能制造学院院长招聘公告 昆山登云科技职业学院智能制造学院院长招聘公告 查看详情](https://www.dyc.edu.cn/2026/1123/c27a14140/page.htm) |  |
+| 2026-11-24 | 江苏食品药品职业技术学院 | [副校长张军带队赴金湖县开展人才需求调研暨访企拓岗活动](https://www.jsfpc.edu.cn/2026/1123/c42a95246/page.htm) |  |
+| 未知 | 江苏海事职业技术学院 | [关于开展高层次人才首聘期考核工作的通知](https://www.jmi.edu.cn/bd/e3/c933a114147/page.htm) |  |
+| 未知 | 苏州经贸职业技术学院 | [深耕心理育人 筑牢安全防线——我院开展辅导员心...](http://www.szjm.edu.cn/news/xwcontent.jsp?urltype=news.NewsContentUrl&wbtreeid=1003&wbnewsid=19283) |  |
+| 未知 | 苏州经贸职业技术学院 | [学院“薪火”辅导员素质能力提升工作室赴苏州职...](http://www.szjm.edu.cn/news/xwcontent.jsp?urltype=news.NewsContentUrl&wbtreeid=1003&wbnewsid=19285) |  |
+| 2026-11-24 | 无锡商业职业技术学院 | [学校举办“园丁说”辅导员学习论坛](https://www.wxic.edu.cn/2026/1124/c193a120939/page.htm) |  |
+| 2026-11-24 | 江苏卫生健康职业学院 | [康复医美学院、康养康育学院、护理学院联合举办AI赋能辅导员心理健康工作专题交流 2026-11-24](https://www.jshvc.edu.cn/2026/1123/c94a44727897/page.htm) |  |
+| 2026-11-23 | 盐城幼儿师范高等专科学校 | [盐城市人力资源和社会保障局 通知公告 盐城幼儿师范高等专科学校2026年下半年公开招聘专业技术人员公告](https://jsychrss.yancheng.gov.cn/art/2026/11/23/art_3431_4470299.html) |  |
+| 2026-11-23 | 江苏航运职业技术学院 | [学校徐波波老师荣获全国交通运输类高职院校辅导员素质能力大赛一等奖 2026-11-23](https://www.jssc.edu.cn/2026/1123/c98a67823/page.htm) |  |
+| 2026-11-23 | 常州机电职业技术学院 | [常州机电职业技术学院2026年公开招聘预聘制人员考核通知](https://www.czimt.edu.cn/xxgkw/2026/1123/c5480a188916/page.htm) |  |
+| 2026-11-23 | 昆山登云科技职业学院 | [23 2026/11 昆山登云科技职业学院智能制造学院院长招聘公告 昆山登云科技职业学院智能制造学院院长招聘公告 查看详情](https://www.dyc.edu.cn/2026/1123/c27a14140/page.htm) |  |
 | 未知 | 苏州工业职业技术学院 | [教师资格证申请流程](https://rsszc.siit.edu.cn/2017/1107/c4164a52595/page.htm) |  |
 | 2026-11-22 | 江苏医药职业学院 | [我校举办第六期辅导员高质量发展训练营第三场专题培训](https://www.jsmc.edu.cn/2026/1122/c788a85892/page.htm) |  |
 | 2026-11-22 | 江苏卫生健康职业学院 | [院长邵海亚“四联进五落实”走进药学与检验学院调研指导工作 11月20日上午，院长邵海亚走进药学与检验学院，出席学院党总支理论学习中心组（扩大）学习会议并指导，同步开展教师座谈，推动 “四联进五落实” 工作机制落地见效。会议由药学与检验学院党总支书记张威主持，学院领导班子成员、党总支支委、高级职称教师代表、民主党派教师代表及辅导员参会。会上，全体成员集中学习习近平总书记《关于〈中共中央关于持之以恒推进全面从严治党若干重大问题的决定〉的说明》，重点学习习近平总书记在全国卫生与健康大会上的重要讲话精神。交流研讨环节，药学与检验学院院长鲍真真围绕专业建设、校企合作、师资队伍、平台建设与社会服务一体化推进等内容发言；学院党总支副书记黄丹萍结合辅导员育人与学生管](https://www.jshvc.edu.cn/2026/1120/c55a44703009/page.htm) |  |
@@ -157,11 +162,13 @@
 | 2026-10-16 | 常州工业职业技术学院 | [我校召开新能源专业人才需求白皮书研讨会](https://www.ciit.edu.cn/2026/1021/c2353a145455/page.htm) |  |
 | 2026-10-10 | 正德职业技术学院 | [正德职业技术学院公开招聘人员公告](https://www.zdxy.cn/contents/1474/22540.html) | 报名截止 2026-10-18 |
 
-## 🔵 招聘进展（笔试/面试/公示等）（47）
+## 🔵 招聘进展（笔试/面试/公示等）（49）
 
 | 发布 | 学校 | 公告 | 说明 |
 |---|---|---|---|
-| 未知 | 江苏信息职业技术学院 | 🆕 [2026年编外受聘人员办理事业编制引进手续公示](https://www.jsit.edu.cn/content.jsp?urltype=news.NewsContentUrl&wbtreeid=1009&wbnewsid=29548) |  |
+| 2026-11-25 | 苏州职业技术大学 | 🆕 [2026年苏州职业技术大学公开招聘工作人员录用公示（第六批次）](https://www.jssvc.edu.cn/xxgg/202610/t20261025_597103.shtml) |  |
+| 2026-11-24 | 无锡职业技术大学 | 🆕 [无锡职业技术大学2026年工作人员招聘考核（计算机能力测试）成绩公告](https://www.wxit.edu.cn/info/1029/177891.htm) |  |
+| 未知 | 江苏信息职业技术学院 | [2026年编外受聘人员办理事业编制引进手续公示](https://www.jsit.edu.cn/content.jsp?urltype=news.NewsContentUrl&wbtreeid=1009&wbnewsid=29548) |  |
 | 未知 | 苏州工业职业技术学院 | [苏州工业职业技术学院 2026 年上半年面向社会招聘高层次人才录用公示](https://rsszc.siit.edu.cn/2026/0824/c1236a113234/page.htm) |  |
 | 未知 | 苏州工业职业技术学院 | [苏州工业职业技术学院事业单位公开招聘工作人员录用公示](https://rsszc.siit.edu.cn/2026/0709/c1236a113047/page.htm) |  |
 | 未知 | 苏州工业职业技术学院 | [苏州工业职业技术学院2026年公开招聘工作人员面试及总成绩公示](https://rsszc.siit.edu.cn/2026/0614/c1236a112626/page.htm) |  |
@@ -209,14 +216,12 @@
 | 2026-10-08 | 南通卫生健康职业学院 | [南通卫生健康职业学院2026年公开招聘工作人员拟聘用人员公示](https://www.nthvc.edu.cn/2026/1008/c1420a51245/page.htm) |  |
 | 2026-10-07 | 苏州信息职业技术学院 | [苏州信息职业技术学院2026年公开招聘高层次人才拟聘用人员公示 2026-10-07](https://www.szitu.edu.cn/detail/11696) |  |
 
-今日另经本地补查 38 所：正常 18 所，部分可读 15 所，未能读取 5 所；合并新增公告 5 条。下方健康检查为云端结果。
-
 ## 🩺 抓取健康情况
 
-- 学校官网：正常 60，提示 11，异常 26（共 97 所）
+- 学校官网：正常 59，提示 10，异常 28（共 97 所）
 - 招聘公告补搜：有结果 0 次，确认无结果 0 次，请求失败或无法识别结果页 22 次（按引擎统计：Bing 页面无法识别 22 次、DuckDuckGo 页面无法识别 22 次）
 - 查找官网入口：有结果 0 次，确认无结果 0 次，请求失败或无法识别结果页 61 次（按引擎统计：Bing 页面无法识别 61 次、DuckDuckGo 请求失败 33 次、DuckDuckGo 页面无法识别 28 次）
-- 详情页打不开 2 次（会自动重试 3 天），附件未能解析 0 个（已标为需人工查看）
+- 详情页打不开 2 次（会自动重试 3 天），附件未能解析 6 个（已标为需人工查看）
 
 ### 需要关注的学校
 
@@ -237,17 +242,19 @@
 | 无锡工艺职业技术学院 | ❌ | 配置的首页请求失败：ConnectTimeout: HTTPConnectionPool(host='www.wxgyxy.cn', port=80): Max retries exceeded with url: / (Caused by | [搜索](https://cn.bing.com/search?q=%E6%97%A0%E9%94%A1%E5%B7%A5%E8%89%BA%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 江苏航运职业技术学院 | ❌ | 配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.jssc.edu.cn', port=80): Max retries exceeded with url: / (Caused | [搜索](https://cn.bing.com/search?q=%E6%B1%9F%E8%8B%8F%E8%88%AA%E8%BF%90%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 徐州工业职业技术学院 | ❌ | 配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.xzcit.edu.cn', port=80): Max retries exceeded with url: / (Cause | [搜索](https://cn.bing.com/search?q=%E5%BE%90%E5%B7%9E%E5%B7%A5%E4%B8%9A%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
-| 扬州工业职业技术学院 | ❌ | 配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.ypi.edu.cn', port=80): Max retries exceeded with url: / (Caused  | [搜索](https://cn.bing.com/search?q=%E6%89%AC%E5%B7%9E%E5%B7%A5%E4%B8%9A%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 江苏财经职业技术学院 | ❌ | 配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.jscj.edu.cn', port=80): Max retries exceeded with url: / (Caused | [搜索](https://cn.bing.com/search?q=%E6%B1%9F%E8%8B%8F%E8%B4%A2%E7%BB%8F%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
+| 扬州工业职业技术学院 | ❌ | 配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.ypi.edu.cn', port=80): Max retries exceeded with url: / (Caused  | [搜索](https://cn.bing.com/search?q=%E6%89%AC%E5%B7%9E%E5%B7%A5%E4%B8%9A%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
+| 九州职业技术学院 | ❌ | 首页未能读取：ConnectionError: HTTPConnectionPool(host='www.jzp.edu.cn', port=80): Max retries exceeded with url: / (Caused by  | [搜索](https://cn.bing.com/search?q=%E4%B9%9D%E5%B7%9E%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 常州机电职业技术学院 | ❌ | 配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.czimt.edu.cn', port=80): Max retries exceeded with url: / (Cause | [搜索](https://cn.bing.com/search?q=%E5%B8%B8%E5%B7%9E%E6%9C%BA%E7%94%B5%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
+| 苏州幼儿师范高等专科学校 | ❌ | 配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.szys.net', port=80): Max retries exceeded with url: / (Caused by | [搜索](https://cn.bing.com/search?q=%E8%8B%8F%E5%B7%9E%E5%B9%BC%E5%84%BF%E5%B8%88%E8%8C%83%E9%AB%98%E7%AD%89%E4%B8%93%E7%A7%91%E5%AD%A6%E6%A0%A1%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 江苏城市职业学院 | ❌ | 配置的首页请求失败：ReadTimeout: HTTPConnectionPool(host='www.jscvc.cn', port=80): Read timed out. (read timeout=25)；搜索也未能确认官网 | [搜索](https://cn.bing.com/search?q=%E6%B1%9F%E8%8B%8F%E5%9F%8E%E5%B8%82%E8%81%8C%E4%B8%9A%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
-| 应天职业技术学院 | ❌ | 没有配置官网地址；搜索也未能确认官网 | [搜索](https://cn.bing.com/search?q=%E5%BA%94%E5%A4%A9%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 南通卫生健康职业学院 | ❌ | 配置的首页请求失败：ConnectTimeout: HTTPConnectionPool(host='www.nthvc.cn', port=80): Max retries exceeded with url: / (Caused by  | [搜索](https://cn.bing.com/search?q=%E5%8D%97%E9%80%9A%E5%8D%AB%E7%94%9F%E5%81%A5%E5%BA%B7%E8%81%8C%E4%B8%9A%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
-| 太湖创意职业技术学院 | ❌ | 首页有响应，但未匹配到校名（标题：）；搜索也未能确认官网 | [搜索](https://cn.bing.com/search?q=%E5%A4%AA%E6%B9%96%E5%88%9B%E6%84%8F%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 江苏航空职业技术学院 | ❌ | 配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.jatc.edu.cn', port=80): Max retries exceeded with url: / (Caused | [搜索](https://cn.bing.com/search?q=%E6%B1%9F%E8%8B%8F%E8%88%AA%E7%A9%BA%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
-| 无锡商业职业技术学院 | ❌ | 配置的首页请求失败：ReadTimeout: HTTPSConnectionPool(host='www.wxic.edu.cn', port=443): Read timed out. (read timeout=25)；搜索也未能确认官 | [搜索](https://cn.bing.com/search?q=%E6%97%A0%E9%94%A1%E5%95%86%E4%B8%9A%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 常州幼儿师范高等专科学校 | ❌ | 配置的首页请求失败：ConnectTimeout: HTTPConnectionPool(host='cyzedu.cn', port=80): Max retries exceeded with url: / (Caused by Con | [搜索](https://cn.bing.com/search?q=%E5%B8%B8%E5%B7%9E%E5%B9%BC%E5%84%BF%E5%B8%88%E8%8C%83%E9%AB%98%E7%AD%89%E4%B8%93%E7%A7%91%E5%AD%A6%E6%A0%A1%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
+| 应天职业技术学院 | ❌ | 没有配置官网地址；搜索也未能确认官网 | [搜索](https://cn.bing.com/search?q=%E5%BA%94%E5%A4%A9%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
+| 无锡商业职业技术学院 | ❌ | 配置的首页请求失败：ReadTimeout: HTTPSConnectionPool(host='www.wxic.edu.cn', port=443): Read timed out. (read timeout=25)；搜索也未能确认官 | [搜索](https://cn.bing.com/search?q=%E6%97%A0%E9%94%A1%E5%95%86%E4%B8%9A%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 常州铁道职业技术学院 | ❌ | 配置的首页请求失败：ConnectTimeout: HTTPConnectionPool(host='www.cztdxy.cn', port=80): Max retries exceeded with url: /main.htm (C | [搜索](https://cn.bing.com/search?q=%E5%B8%B8%E5%B7%9E%E9%93%81%E9%81%93%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
+| 太湖创意职业技术学院 | ❌ | 首页有响应，但未匹配到校名（标题：）；搜索也未能确认官网 | [搜索](https://cn.bing.com/search?q=%E5%A4%AA%E6%B9%96%E5%88%9B%E6%84%8F%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 江苏卫生健康职业学院 | ❌ | 配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.jshvc.edu.cn', port=80): Max retries exceeded with url: / (Cause | [搜索](https://cn.bing.com/search?q=%E6%B1%9F%E8%8B%8F%E5%8D%AB%E7%94%9F%E5%81%A5%E5%BA%B7%E8%81%8C%E4%B8%9A%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 昆山登云科技职业学院 | ❌ | 配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.dyc.edu.cn', port=80): Max retries exceeded with url: / (Caused  | [搜索](https://cn.bing.com/search?q=%E6%98%86%E5%B1%B1%E7%99%BB%E4%BA%91%E7%A7%91%E6%8A%80%E8%81%8C%E4%B8%9A%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 江苏工程职业技术学院 | ⚠️ | 已读取 3 个栏目；栏目未能读取：未读到公告列表内容 | [搜索](https://cn.bing.com/search?q=%E6%B1%9F%E8%8B%8F%E5%B7%A5%E7%A8%8B%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
@@ -256,7 +263,6 @@
 | 苏州信息职业技术学院 | ⚠️ | 首页可读，未定位到招聘栏目 | [搜索](https://cn.bing.com/search?q=%E8%8B%8F%E5%B7%9E%E4%BF%A1%E6%81%AF%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 江苏商贸职业学院 | ⚠️ | 已读取 1 个栏目；配置的首页请求失败：FetchError: HTTP 412；搜索也未能确认官网 | [搜索](https://cn.bing.com/search?q=%E6%B1%9F%E8%8B%8F%E5%95%86%E8%B4%B8%E8%81%8C%E4%B8%9A%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 江苏城乡建设职业学院 | ⚠️ | 已读取 3 个栏目；栏目未能读取：未读到公告列表内容 | [搜索](https://cn.bing.com/search?q=%E6%B1%9F%E8%8B%8F%E5%9F%8E%E4%B9%A1%E5%BB%BA%E8%AE%BE%E8%81%8C%E4%B8%9A%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
-| 苏州幼儿师范高等专科学校 | ⚠️ | 已读取 4 个栏目；配置的首页请求失败：ConnectionError: HTTPConnectionPool(host='www.szys.net', port=80): Max retries exceeded with url: /  | [搜索](https://cn.bing.com/search?q=%E8%8B%8F%E5%B7%9E%E5%B9%BC%E5%84%BF%E5%B8%88%E8%8C%83%E9%AB%98%E7%AD%89%E4%B8%93%E7%A7%91%E5%AD%A6%E6%A0%A1%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 苏州托普信息职业技术学院 | ⚠️ | 首页可读，未定位到招聘栏目 | [搜索](https://cn.bing.com/search?q=%E8%8B%8F%E5%B7%9E%E6%89%98%E6%99%AE%E4%BF%A1%E6%81%AF%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 无锡南洋职业技术学院 | ⚠️ | 首页可读，未定位到招聘栏目 | [搜索](https://cn.bing.com/search?q=%E6%97%A0%E9%94%A1%E5%8D%97%E6%B4%8B%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
 | 金肯职业技术学院 | ⚠️ | 首页可读，未定位到招聘栏目 | [搜索](https://cn.bing.com/search?q=%E9%87%91%E8%82%AF%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%20%E4%BA%BA%E4%BA%8B%E5%A4%84%20%E6%8B%9B%E8%81%98) |
@@ -266,21 +272,21 @@
 
 | 来源 | 状态 | 说明 |
 |---|---|---|
-| 高校人才网-江苏 | ✅ | 1 个页面，24 条相关标题 |
-| 高校人才网-高校招聘 | ✅ | 1 个页面，7 条相关标题 |
+| 高校人才网-江苏 | ✅ | 1 个页面，23 条相关标题 |
+| 高校人才网-高校招聘 | ✅ | 1 个页面，6 条相关标题 |
 | 南京市人力资源和社会保障局 | ✅ | 1 个页面，0 条相关标题 |
-| 苏州市人力资源和社会保障局 | ✅ | 2 个页面，0 条相关标题 |
 | 江苏省教育厅 | ✅ | 3 个页面，0 条相关标题 |
-| 常州市人力资源和社会保障局 | ✅ | 1 个页面，0 条相关标题 |
-| 扬州市人力资源和社会保障局 | ❌ | FetchError: 入口网站打不开，也没能自动找到 |
-| 泰州市人力资源和社会保障局 | ✅ | 1 个页面，0 条相关标题 |
 | 江苏省人力资源和社会保障厅 | ✅ | 4 个页面，6 条相关标题 |
-| 南通市直属事业单位招录 | ❌ | FetchError: FetchError: HTTP 403 |
+| 苏州市人力资源和社会保障局 | ✅ | 3 个页面，0 条相关标题 |
+| 常州市人力资源和社会保障局 | ✅ | 1 个页面，0 条相关标题 |
+| 泰州市人力资源和社会保障局 | ✅ | 1 个页面，0 条相关标题 |
 | 无锡市人力资源和社会保障局 | ✅ | 6 个页面，19 条相关标题 |
+| 扬州市人力资源和社会保障局 | ❌ | FetchError: 入口网站打不开，也没能自动找到 |
+| 南通市直属事业单位招录 | ❌ | FetchError: FetchError: HTTP 403 |
 | 盐城市人力资源和社会保障局 | ✅ | 3 个页面，2 条相关标题 |
 | 淮安市人力资源和社会保障局 | ✅ | 3 个页面，0 条相关标题 |
-| 宿迁市人力资源和社会保障局 | ❌ | FetchError: 入口网站打不开，也没能自动找到 |
 | 连云港市人力资源和社会保障局 | ✅ | 2 个页面，6 条相关标题 |
+| 宿迁市人力资源和社会保障局 | ❌ | FetchError: 入口网站打不开，也没能自动找到 |
 | 南通市人力资源和社会保障局 | ❌ | FetchError: 入口网站打不开，也没能自动找到 |
 | 镇江市人力资源和社会保障局 | ❌ | FetchError: 入口网站打不开，也没能自动找到 |
 | 徐州市人力资源和社会保障局 | ❌ | FetchError: 入口网站打不开，也没能自动找到 |
