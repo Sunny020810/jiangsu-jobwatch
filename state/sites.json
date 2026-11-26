@@ -1,15 +1,16 @@
 {
  "苏州幼儿师范高等专科学校": {
   "home": "https://www.szys.net/",
-  "home_failed": true,
-  "last_status": "error",
-  "discovered": "2000-01-01",
+  "home_failed": false,
+  "last_status": "ok",
+  "discovered": "2026-11-26",
   "note": "官网已验证",
   "configured_home": "https://www.szys.net/",
   "lists": [
    "https://www.szys.net/zqdh/gljg/rsc1",
    "https://www.szys.net/tzgg/gggs",
    "https://www.szys.net/xxgk1/rssz",
+   "https://www.szys.net:443/zqdh/gljg/rsc1",
    "https://www.szys.net/xxgk1"
   ],
   "manual_lists": [
@@ -534,16 +535,19 @@
  },
  "江苏财经职业技术学院": {
   "home": "https://www.jscj.edu.cn/",
-  "home_failed": true,
-  "last_status": "error",
+  "home_failed": false,
+  "last_status": "ok",
   "configured_home": "https://www.jscj.edu.cn/",
   "lists": [
-   "https://rsc.jscj.edu.cn/"
+   "https://rsc.jscj.edu.cn/",
+   "https://rsc.jscj.edu.cn/1968/list.htm",
+   "https://xxgk.jscj.edu.cn/"
   ],
   "manual_lists": [
    "https://rsc.jscj.edu.cn/"
   ],
-  "discovered": "2000-01-01"
+  "discovered": "2026-11-26",
+  "note": "官网已验证"
  },
  "江苏卫生健康职业学院": {
   "home": "https://www.jshvc.edu.cn/",
@@ -557,7 +561,7 @@
   "home": "https://www.szitu.edu.cn/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-25",
+  "discovered": "2026-11-26",
   "note": "官网已验证",
   "configured_home": "http://www.szitu.edu.cn/",
   "lists": [],
@@ -797,7 +801,7 @@
   "home": "https://www.wxcu.edu.cn/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-25",
+  "discovered": "2026-11-26",
   "note": "官网已验证",
   "configured_home": "https://www.wxcu.edu.cn/",
   "lists": [],
@@ -952,7 +956,7 @@
   "home": "https://www.szetop.edu.cn/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-25",
+  "discovered": "2026-11-26",
   "note": "官网已验证",
   "configured_home": "https://www.szetop.edu.cn/",
   "lists": [],
@@ -1013,7 +1017,7 @@
   "home": "http://www.wsoc.edu.cn/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-25",
+  "discovered": "2026-11-26",
   "note": "官网已验证",
   "configured_home": "http://www.wsoc.edu.cn/",
   "lists": [],
@@ -1036,7 +1040,7 @@
   "home": "https://www.njjku.com/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-25",
+  "discovered": "2026-11-26",
   "note": "官网已验证",
   "configured_home": "https://www.njjku.com/",
   "lists": [],
@@ -1046,7 +1050,7 @@
   "home": "http://www.czjdu.com/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-25",
+  "discovered": "2026-11-26",
   "note": "官网已验证",
   "configured_home": "http://www.czjdu.com/",
   "lists": [],
