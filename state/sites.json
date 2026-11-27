@@ -62,7 +62,7 @@
    "https://rsc.szit.edu.cn/tzgg.htm",
    "https://rsc.szit.edu.cn/"
   ],
-  "discovered": "2026-11-20",
+  "discovered": "2026-11-27",
   "home_failed": false,
   "note": "官网已验证",
   "last_status": "ok",
@@ -116,7 +116,7 @@
    "https://www.jmi.edu.cn/szdw/list.htm",
    "https://xxgk.jmi.edu.cn/"
   ],
-  "discovered": "2026-11-20",
+  "discovered": "2026-11-27",
   "home_failed": false,
   "note": "官网已验证",
   "last_status": "ok",
@@ -131,7 +131,7 @@
    "https://rsc.tzpc.edu.cn/413/list.htm",
    "https://rsc.tzpc.edu.cn/"
   ],
-  "discovered": "2026-11-20",
+  "discovered": "2026-11-27",
   "home_failed": false,
   "note": "官网已验证",
   "last_status": "ok",
@@ -145,7 +145,7 @@
    "https://www.szjm.edu.cn/xxgk/",
    "https://www.szjm.edu.cn/rsc/"
   ],
-  "discovered": "2026-11-20",
+  "discovered": "2026-11-27",
   "home_failed": false,
   "note": "官网已验证",
   "last_status": "ok",
@@ -171,7 +171,7 @@
    "https://www.ntst.edu.cn/1132/list.htm",
    "https://www.ntst.edu.cn/xxgk/list.htm"
   ],
-  "discovered": "2026-11-20",
+  "discovered": "2026-11-27",
   "home_failed": false,
   "note": "官网已验证",
   "last_status": "ok",
@@ -212,7 +212,7 @@
    "https://www.szhct.edu.cn/rczp.htm",
    "https://xxgk.szhct.edu.cn/"
   ],
-  "discovered": "2026-11-20",
+  "discovered": "2026-11-27",
   "home_failed": false,
   "note": "官网已验证",
   "last_status": "ok",
@@ -238,7 +238,7 @@
   "lists": [
    "https://xxgk.cztgi.edu.cn/"
   ],
-  "discovered": "2026-11-20",
+  "discovered": "2026-11-27",
   "home_failed": false,
   "note": "官网已验证",
   "last_status": "ok",
@@ -264,7 +264,7 @@
    "https://www.szai.edu.cn/zzrsc/list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1074",
    "http://www.szai.edu.cn/xxgk/"
   ],
-  "discovered": "2026-11-20",
+  "discovered": "2026-11-27",
   "home_failed": false,
   "note": "官网已验证",
   "last_status": "ok",
@@ -273,14 +273,14 @@
  },
  "南通职业大学": {
   "home": "https://www.ntvu.edu.cn/",
-  "home_failed": false,
-  "last_status": "ok",
+  "home_failed": true,
+  "last_status": "error",
   "configured_home": "https://www.ntvu.edu.cn/",
   "lists": [
    "https://xxgk.ntvu.edu.cn/"
   ],
   "manual_lists": [],
-  "discovered": "2026-11-24",
+  "discovered": "2000-01-01",
   "note": "官网已验证"
  },
  "常州工业职业技术学院": {
@@ -289,7 +289,7 @@
    "http://www.ciit.edu.cn/zhaopinxinxi/list.htm",
    "http://xxgk.ciit.edu.cn/"
   ],
-  "discovered": "2026-11-20",
+  "discovered": "2026-11-27",
   "home_failed": false,
   "note": "官网已验证",
   "last_status": "ok",
@@ -315,7 +315,7 @@
    "https://rsc.czie.edu.cn/24613/",
    "http://rsc.czie.edu.cn/24613/"
   ],
-  "discovered": "2026-11-20",
+  "discovered": "2026-11-27",
   "home_failed": false,
   "note": "官网已验证",
   "last_status": "ok",
@@ -342,7 +342,7 @@
   "lists": [
    "http://xxgk.njrts.edu.cn/"
   ],
-  "discovered": "2026-11-20",
+  "discovered": "2026-11-27",
   "home_failed": false,
   "note": "官网已验证",
   "last_status": "ok",
@@ -402,7 +402,7 @@
    "https://www.jsit.edu.cn/rsc/zlxz/yjsp.htm",
    "https://www.jsit.edu.cn/sxgk/tzgg.htm"
   ],
-  "discovered": "2026-11-20",
+  "discovered": "2026-11-27",
   "home_failed": false,
   "note": "官网已验证",
   "last_status": "ok",
@@ -491,7 +491,7 @@
    "https://rsc.zjc.edu.cn/list/rczp.htm",
    "https://rsc.zjc.edu.cn/"
   ],
-  "discovered": "2026-11-20",
+  "discovered": "2026-11-27",
   "home_failed": false,
   "note": "官网已验证",
   "last_status": "ok",
@@ -561,7 +561,7 @@
   "home": "https://www.szitu.edu.cn/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-26",
+  "discovered": "2026-11-27",
   "note": "官网已验证",
   "configured_home": "http://www.szitu.edu.cn/",
   "lists": [],
@@ -587,7 +587,7 @@
    "https://www.nith.edu.cn/xwgk/xxgk/jbxx.htm",
    "https://www.nith.edu.cn/xwgk/xxgkndbg.htm"
   ],
-  "discovered": "2026-11-20",
+  "discovered": "2026-11-27",
   "home_failed": false,
   "note": "官网已验证",
   "last_status": "ok",
@@ -646,7 +646,7 @@
    "https://www.siso.edu.cn/ywgk/ggtz.htm",
    "https://xxgk.siso.edu.cn/index.htm"
   ],
-  "discovered": "2026-11-20",
+  "discovered": "2026-11-27",
   "home_failed": false,
   "note": "官网已验证",
   "last_status": "ok",
@@ -658,7 +658,7 @@
   "lists": [
    "https://www.ntnc.edu.cn/878/list.htm"
   ],
-  "discovered": "2026-11-20",
+  "discovered": "2026-11-27",
   "home_failed": false,
   "note": "官网已验证",
   "last_status": "ok",
@@ -801,7 +801,7 @@
   "home": "https://www.wxcu.edu.cn/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-26",
+  "discovered": "2026-11-27",
   "note": "官网已验证",
   "configured_home": "https://www.wxcu.edu.cn/",
   "lists": [],
@@ -956,7 +956,7 @@
   "home": "https://www.szetop.edu.cn/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-26",
+  "discovered": "2026-11-27",
   "note": "官网已验证",
   "configured_home": "https://www.szetop.edu.cn/",
   "lists": [],
@@ -1017,7 +1017,7 @@
   "home": "http://www.wsoc.edu.cn/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-26",
+  "discovered": "2026-11-27",
   "note": "官网已验证",
   "configured_home": "http://www.wsoc.edu.cn/",
   "lists": [],
@@ -1040,7 +1040,7 @@
   "home": "https://www.njjku.com/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-26",
+  "discovered": "2026-11-27",
   "note": "官网已验证",
   "configured_home": "https://www.njjku.com/",
   "lists": [],
@@ -1050,7 +1050,7 @@
   "home": "http://www.czjdu.com/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-26",
+  "discovered": "2026-11-27",
   "note": "官网已验证",
   "configured_home": "http://www.czjdu.com/",
   "lists": [],
@@ -1073,9 +1073,9 @@
   "lists": [
    "https://www.niit.edu.cn/11/list.htm",
    "https://www.niit.edu.cn/12/list.htm",
-   "https://www.niit.edu.cn/30/a6/c4179a77990/page.htm"
+   "https://www.niit.edu.cn/34/d8/c4179a79064/page.htm"
   ],
-  "discovered": "2026-11-20",
+  "discovered": "2026-11-27",
   "home_failed": false,
   "note": "官网已验证",
   "last_status": "ok",
@@ -1087,7 +1087,7 @@
   "lists": [
    "https://www.jssvc.edu.cn/xxgg/"
   ],
-  "discovered": "2026-11-20",
+  "discovered": "2026-11-27",
   "home_failed": false,
   "note": "官网已验证",
   "last_status": "ok",
@@ -1116,7 +1116,7 @@
   "lists": [
    "https://www.wxit.edu.cn/index/rczp.htm"
   ],
-  "discovered": "2026-11-20",
+  "discovered": "2026-11-27",
   "home_failed": false,
   "note": "官网已验证",
   "last_status": "ok",
@@ -1130,7 +1130,7 @@
   "lists": [
    "https://rsc.jsviat.edu.cn/1421/list.htm"
   ],
-  "discovered": "2026-11-20",
+  "discovered": "2026-11-27",
   "home_failed": false,
   "note": "官网已验证",
   "last_status": "ok",
