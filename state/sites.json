@@ -35,7 +35,7 @@
   "home": "https://www.sgmart.edu.cn/",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "https://www.sgmart.edu.cn/",
   "lists": [
@@ -47,7 +47,7 @@
   "home": "http://www.juti.cn/",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "http://www.juti.cn/",
   "lists": [
@@ -88,7 +88,7 @@
   "home": "https://www.wxstc.cn/",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "https://www.wxstc.cn/",
   "lists": [
@@ -184,7 +184,7 @@
    "https://xwgk.jsmc.edu.cn/main.htm",
    "https://www.jsmc.edu.cn/746/list.htm"
   ],
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "home_failed": false,
   "note": "官网已验证",
   "last_status": "ok",
@@ -273,14 +273,14 @@
  },
  "南通职业大学": {
   "home": "https://www.ntvu.edu.cn/",
-  "home_failed": true,
-  "last_status": "error",
+  "home_failed": false,
+  "last_status": "ok",
   "configured_home": "https://www.ntvu.edu.cn/",
   "lists": [
    "https://xxgk.ntvu.edu.cn/"
   ],
   "manual_lists": [],
-  "discovered": "2000-01-01",
+  "discovered": "2026-11-28",
   "note": "官网已验证"
  },
  "常州工业职业技术学院": {
@@ -330,7 +330,7 @@
    "https://www.ivt.edu.cn/xinxigongkai.htm",
    "https://www.ivt.edu.cn/info/1086/13440.htm"
   ],
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "home_failed": false,
   "note": "官网已验证",
   "last_status": "ok",
@@ -369,7 +369,7 @@
    "https://rsc.jsfpc.edu.cn/1120/list.htm",
    "https://xxgk.jsfpc.edu.cn/"
   ],
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "home_failed": false,
   "note": "官网已验证",
   "last_status": "ok",
@@ -413,7 +413,7 @@
   "home": "https://www.sqzyxy.com/",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "https://www.sqzyxy.com",
   "lists": [
@@ -458,7 +458,7 @@
    "https://www.csit.edu.cn/3462/list.htm",
    "https://www.csit.edu.cn/gbrmwryzp/list.htm"
   ],
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "home_failed": false,
   "note": "官网已验证",
   "last_status": "ok",
@@ -469,7 +469,7 @@
   "home": "https://www.ycpc.edu.cn/",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "https://www.ycpc.edu.cn/",
   "lists": [
@@ -510,7 +510,7 @@
   "home": "https://www.ncc.edu.cn/",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "https://www.ncc.edu.cn/",
   "lists": [
@@ -525,7 +525,7 @@
   "home": "https://www.nimt.edu.cn/",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "https://www.nimt.edu.cn/",
   "lists": [
@@ -561,7 +561,7 @@
   "home": "https://www.szitu.edu.cn/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-27",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "http://www.szitu.edu.cn/",
   "lists": [],
@@ -571,7 +571,7 @@
   "home": "https://www.jsafc.edu.cn/",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "https://www.jsafc.edu.cn/",
   "lists": [
@@ -598,7 +598,7 @@
   "home": "https://www.xzsw.net.cn/",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "https://www.xzsw.net.cn/",
   "lists": [
@@ -613,7 +613,7 @@
   "home": "https://www.xzyz.edu.cn/",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "https://www.xzyz.edu.cn/",
   "lists": [
@@ -669,7 +669,7 @@
   "home": "https://www.jscn.edu.cn/",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "https://www.jscn.edu.cn/",
   "lists": [
@@ -685,7 +685,7 @@
   "lists": [
    "https://www.jscfa.edu.cn/xxgkw/ryzp/list.htm"
   ],
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "home_failed": false,
   "note": "官网已验证",
   "last_status": "ok",
@@ -732,14 +732,14 @@
   "manual_lists": [
    "https://www.jscst.edu.cn/2161/list.htm"
   ],
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证"
  },
  "江苏旅游职业学院": {
   "home": "https://www.jstc.edu.cn/",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "https://www.jstc.edu.cn/",
   "lists": [
@@ -801,7 +801,7 @@
   "home": "https://www.wxcu.edu.cn/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-27",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "https://www.wxcu.edu.cn/",
   "lists": [],
@@ -838,7 +838,7 @@
   "home": "https://www.ycac.edu.cn/",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "https://www.ycac.edu.cn/",
   "lists": [
@@ -850,7 +850,7 @@
   "home": "https://www.sqsf.cn/",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "https://www.sqsf.cn",
   "lists": [
@@ -865,7 +865,7 @@
   "home": "https://www.wxnc.edu.cn/",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "https://www.wxnc.edu.cn/",
   "lists": [
@@ -887,7 +887,7 @@
   "home": "https://www.szlyzyxy.cn/default.html",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "https://www.szlyzyxy.cn/default.html",
   "lists": [
@@ -907,7 +907,7 @@
   "home": "https://www.mdut.cn/",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "https://www.mdut.cn/",
   "lists": [
@@ -936,7 +936,7 @@
   "home": "http://www.usl.edu.cn/",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "http://www.usl.edu.cn/",
   "lists": [
@@ -956,7 +956,7 @@
   "home": "https://www.szetop.edu.cn/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-27",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "https://www.szetop.edu.cn/",
   "lists": [],
@@ -974,7 +974,7 @@
   "home": "http://www.yhjyjt.cn/",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "http://www.yhjyjt.cn/",
   "lists": [
@@ -991,7 +991,7 @@
   "home": "https://www.zdxy.cn/",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "https://www.zdxy.cn/",
   "lists": [
@@ -1003,7 +1003,7 @@
   "home": "https://www.zscollege.com/",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "https://www.zscollege.com/",
   "lists": [
@@ -1017,7 +1017,7 @@
   "home": "http://www.wsoc.edu.cn/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-27",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "http://www.wsoc.edu.cn/",
   "lists": [],
@@ -1027,7 +1027,7 @@
   "home": "http://www.jnys.cn/",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "http://www.jnys.cn/",
   "lists": [
@@ -1040,7 +1040,7 @@
   "home": "https://www.njjku.com/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-27",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "https://www.njjku.com/",
   "lists": [],
@@ -1050,7 +1050,7 @@
   "home": "http://www.czjdu.com/",
   "home_failed": false,
   "last_status": "warn",
-  "discovered": "2026-11-27",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "http://www.czjdu.com/",
   "lists": [],
@@ -1060,7 +1060,7 @@
   "home": "https://www.jhu.cn/",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "https://www.jhu.cn/",
   "lists": [
@@ -1100,7 +1100,7 @@
   "home": "https://www.jscu.cn/",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "https://www.jscu.cn/",
   "lists": [
@@ -1179,7 +1179,7 @@
   "home": "https://www.niva.cn/",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "https://www.niva.cn/",
   "lists": [
@@ -1193,7 +1193,7 @@
   "home": "http://www.gist.edu.cn/",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "http://www.gist.edu.cn/",
   "lists": [
@@ -1216,7 +1216,7 @@
   "home": "https://www.zdct.cn/",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "https://www.zdct.cn/",
   "lists": [
@@ -1231,12 +1231,12 @@
   "home": "https://www.yhvc.edu.cn/",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "https://www.yhvc.edu.cn/",
   "lists": [
    "https://www.yhvc.edu.cn/list_74/",
-   "https://www.yhvc.edu.cn/list_245/",
+   "https://www.yhvc.edu.cn/list_267/",
    "https://www.yhvc.edu.cn/list_58/",
    "https://www.yhvc.edu.cn/list_68/"
   ],
@@ -1249,7 +1249,7 @@
   "home": "https://www.scc.edu.cn/",
   "home_failed": false,
   "last_status": "ok",
-  "discovered": "2026-11-21",
+  "discovered": "2026-11-28",
   "note": "官网已验证",
   "configured_home": "https://www.scc.edu.cn/",
   "lists": [
@@ -1272,8 +1272,8 @@
  },
  "常州信息职业技术大学": {
   "home": "https://www.czit.edu.cn/index.htm",
-  "home_failed": false,
-  "last_status": "ok",
+  "home_failed": true,
+  "last_status": "warn",
   "discovered": "2026-11-21",
   "note": "官网已验证",
   "configured_home": "https://www.czit.edu.cn/index.htm",
